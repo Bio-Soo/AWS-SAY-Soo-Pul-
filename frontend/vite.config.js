@@ -13,9 +13,14 @@ import { resolve } from 'path';
 //   /ws/*   → localhost:8000  (WebSocket emr-updates)
 // production 에선 CloudFront 의 별도 behavior 또는 직접 도메인 (api.rare-link.kr) 으로 대체.
 
+// Base path priority:
+//   1. VITE_BASE env var (CI sets this to "/<repo>/" for GitHub Pages)
+//   2. Default "/" for CloudFront / S3
+const BASE = process.env.VITE_BASE || '/';
+
 // https://vitejs.dev/config/
 export default defineConfig({
-  base: '/',
+  base: BASE,
   plugins: [react()],
   server: {
     port: 5173,
