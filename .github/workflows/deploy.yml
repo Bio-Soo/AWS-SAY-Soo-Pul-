@@ -1,6 +1,9 @@
 name: Deploy Soo-Pul to AWS
 
 on:
+  # Manual-only: this workflow needs AWS secrets (AWS_DEPLOY_ROLE_ARN, AURORA_*, COGNITO_*, etc.)
+  # configured in Settings → Secrets and variables → Actions before it can run.
+  # See DEPLOY.md for required secrets list.
   workflow_dispatch:
     inputs:
       target:
@@ -9,13 +12,6 @@ on:
         default: 'all'
         type: choice
         options: [all, lambdas, stepfunctions, frontend, backend]
-  push:
-    branches: [main]
-    paths:
-      - 'lambdas/**'
-      - 'stepfunctions/**'
-      - 'frontend/**'
-      - 'backend/**'
 
 env:
   AWS_REGION: ap-northeast-2
