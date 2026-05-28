@@ -1485,12 +1485,17 @@ function WorklistScreen({ doctor, onLogout, onNavigate, onOpenPatient, onOpenAnn
 
   // ─── EMR 데이터 연동 상태 ────────────────────────────────────
   // linkedMrns: EMR → 시스템 연동 완료된 환자 MRN 집합.
-  //   demo (?demo=1): "연동하기" 클릭 시 frontend state 토글 (시뮬레이션)
-  //   일반 모드:      "연동하기" 클릭 시 GET /api/v1/patients/{mrn} 실제 호출 후 토글
+  //   demo (?demo=1 OR VITE_USE_MOCK!='false'): "연동하기" 클릭 시 frontend state 토글 (시뮬레이션)
+  //   일반 모드: "연동하기" 클릭 시 GET /api/v1/patients/{mrn} 실제 호출 후 토글
   // localStorage 에 persist — 발표 중 새로고침해도 유지. (demo 는 별도 key)
   const demoMode = (() => {
-    try { const v = new URLSearchParams(window.location.search).get('demo'); return v === '1' || v === 'true'; }
-    catch (_) { return false; }
+    try {
+      const v = new URLSearchParams(window.location.search).get('demo');
+      if (v === '1' || v === 'true') return true;
+      // GitHub Pages / static demo: mock mode forces demo (no backend reachable)
+      if (import.meta.env.VITE_USE_MOCK !== 'false' && import.meta.env.VITE_USE_BACKEND_SESSIONS !== '1') return true;
+      return false;
+    } catch (_) { return false; }
   })();
   const LINK_KEY = demoMode ? 'rl_linked_mrns_demo' : 'rl_linked_mrns';
   const [linkedMrns, setLinkedMrns] = useState(() => {
