@@ -1,10 +1,10 @@
-name: Deploy to GitHub Pages
+name: Deploy frontend to GitHub Pages
 
 on:
   push:
     branches: [main]
     paths:
-      - 'docs-pages/**'
+      - 'frontend/**'
       - '.github/workflows/github-pages.yml'
   workflow_dispatch:
 
@@ -18,21 +18,51 @@ concurrency:
   cancel-in-progress: false
 
 jobs:
+  build:
+    runs-on: ubuntu-latest
+    defaults:
+      run:
+        working-directory: frontend
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '18'
+          cache: 'npm'
+          cache-dependency-path: frontend/package-lock.json
+
+      - run: npm ci
+
+      - name: Build (Vite, mock mode, no AWS dependency)
+        env:
+          # GitHub Pages base path = /<repo-name>/
+          VITE_BASE: /${{ github.event.repository.name }}/
+          # Pure static demo — all API calls mocked, no Cognito, no SMART OAuth
+          VITE_USE_MOCK: 'true'
+          VITE_USE_BACKEND_SESSIONS: '0'
+          VITE_FHIR_AUTH_MODE: 'smart'
+          VITE_SESSION_TIMEOUT_MIN: '60'
+          # Empty Cognito creds (mock skips auth)
+          VITE_COGNITO_POOL_ID: ''
+          VITE_COGNITO_CLIENT_ID: ''
+        run: npm run build
+
+      - name: SPA 404 fallback
+        run: cp dist/index.html dist/404.html
+
+      - run: touch dist/.nojekyll
+
+      - uses: actions/upload-pages-artifact@v3
+        with:
+          path: frontend/dist
+
   deploy:
+    needs: build
     runs-on: ubuntu-latest
     environment:
       name: github-pages
       url: ${{ steps.deployment.outputs.page_url }}
     steps:
-      - uses: actions/checkout@v4
-
-      - name: Ensure .nojekyll
-        run: touch docs-pages/.nojekyll
-
-      - name: Upload Pages artifact
-        uses: actions/upload-pages-artifact@v3
-        with:
-          path: docs-pages
-
       - id: deployment
         uses: actions/deploy-pages@v4
