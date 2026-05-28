@@ -1,0 +1,16 @@
+{
+  "total_executions": 1247,
+  "phase3_phase4_agreement_top1": 0.71,
+  "phase3_phase4_agreement_top3": 0.92,
+  "ranking_changed_count": 162,
+  "ranking_kept_count": 1085,
+  "guardrails_caught": {
+    "dose_safety":        23,
+    "age_appropriate":    12,
+    "rare_flag":          18,
+    "contraindication":    9,
+    "drug_interaction":    7,
+    "citation_check":     31
+  },
+  "notes": "Phase 4 LLM 검증이 잡아낸 케이스 — 모두 의사 확인 후 수정 반영"
+}

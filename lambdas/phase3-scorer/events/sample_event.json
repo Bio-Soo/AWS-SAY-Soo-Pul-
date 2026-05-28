@@ -1,0 +1,8 @@
+{
+  "resource": "/score",
+  "path": "/score",
+  "httpMethod": "POST",
+  "headers": {"Content-Type": "application/json"},
+  "isBase64Encoded": false,
+  "body": "{\"patient_lab_findings\":[{\"itemid\":50912,\"name\":\"Creatinine\",\"value\":1.8,\"unit\":\"mg/dL\",\"ref_lower\":0.6,\"ref_upper\":1.2,\"interpretation\":\"High\",\"medical_term\":\"Elevated creatinine\",\"severity\":\"abnormal\",\"category\":\"blood_chem\"},{\"itemid\":\"EXT_CRP\",\"name\":\"C-Reactive Protein\",\"value\":120.0,\"unit\":\"mg/L\",\"ref_lower\":0,\"ref_upper\":5,\"interpretation\":\"High\",\"medical_term\":\"Elevated CRP (inflammation)\",\"severity\":\"abnormal\",\"category\":\"blood_chem\"},{\"itemid\":220277,\"name\":\"SpO2\",\"value\":89,\"unit\":\"%\",\"ref_lower\":95,\"ref_upper\":100,\"interpretation\":\"Low\",\"medical_term\":\"Hypoxemia\",\"severity\":\"abnormal\",\"category\":\"vitals\",\"hpo_id\":\"HP:0012418\"}],\"patient_micro_findings\":[{\"organism\":\"Streptococcus pneumoniae\",\"matched_diseases\":[]}],\"patient_symptom_matches\":[{\"symptom\":\"cough\",\"hpo_id\":\"HP:0012735\",\"hpo_kr\":\"기침\",\"frequency\":\"very_frequent\"},{\"symptom\":\"fever\",\"hpo_id\":\"HP:0001945\",\"hpo_kr\":\"발열\",\"frequency\":\"frequent\"},{\"symptom\":\"dyspnea\",\"hpo_id\":\"HP:0002094\",\"hpo_kr\":\"호흡곤란\",\"frequency\":\"frequent\"}],\"phase1_result\":{\"detected_findings\":[{\"finding\":\"consolidation\",\"present\":true,\"probability\":0.87,\"ai_keywords\":[\"consolidation\"],\"icd10_codes\":[\"J18\"]}],\"candidate_icd_codes\":[\"J18\",\"J13\",\"J14\"]},\"scoring_results\":[{\"name\":\"CURB-65\",\"score\":2,\"interpretation\":\"moderate\",\"components\":{}}],\"top_n\":10,\"include_rare\":false}"
+}

@@ -1,0 +1,5 @@
+# Lambda 핸들러 자체는 의존 없음. 모든 패키지는 phase5-deps Layer에 위치.
+# rag_llm_3.py는 lambda/ 디렉토리에 함께 패키징됨 (deploy.sh가 S3에서 복사).
+#
+# Layer 패키지: aiohttp, psycopg2-binary, pandas, requests
+# → layer/build_layer.sh 참고

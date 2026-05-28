@@ -1,0 +1,94 @@
+<!doctype html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8" />
+  <title>Soo-Pul · SMART Connected</title>
+  <style>
+    body {
+      font-family: -apple-system, 'Segoe UI', sans-serif;
+      margin: 0;
+      padding: 24px;
+      background: #F8FAFC;
+      color: #0A1628;
+    }
+    .container { max-width: 800px; margin: 0 auto; }
+    h1 { font-family: Georgia, serif; letter-spacing: -0.01em; }
+    .status {
+      padding: 12px 16px;
+      border-radius: 4px;
+      margin: 16px 0;
+      font-size: 14px;
+    }
+    .status.success { background: #E6F5F2; color: #0E8574; border: 1px solid #0E8574; }
+    .status.error   { background: #FEE4E4; color: #A32D2D; border: 1px solid #A32D2D; }
+    .status.loading { background: #EFF4FB; color: #0C447C; border: 1px solid #0C447C; }
+
+    .section {
+      background: white;
+      border: 1px solid #E2E8F0;
+      border-radius: 4px;
+      padding: 16px;
+      margin: 12px 0;
+    }
+    .section h3 {
+      margin: 0 0 12px;
+      font-size: 12px;
+      text-transform: uppercase;
+      letter-spacing: 0.1em;
+      color: #64748B;
+      font-family: 'IBM Plex Mono', monospace;
+    }
+    pre {
+      background: #F1F5F9;
+      padding: 12px;
+      border-radius: 4px;
+      overflow-x: auto;
+      font-size: 12px;
+      max-height: 300px;
+    }
+    .next-btn {
+      display: inline-block;
+      margin-top: 16px;
+      padding: 10px 20px;
+      background: #0C447C;
+      color: white;
+      text-decoration: none;
+      border-radius: 4px;
+      font-weight: 500;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <h1>Soo-Pul · SMART on FHIR Connected</h1>
+    <p style="color: #64748B; font-size: 14px;">
+      OAuth2 토큰 교환 결과 및 FHIR 서버에서 받은 환자 데이터를 표시합니다.
+      이 페이지는 W1 검증용이며, W2부터는 결과가 React 앱으로 직접 흘러갑니다.
+    </p>
+
+    <div id="status" class="status loading">⏳ FHIR 서버 연결 중...</div>
+
+    <div class="section" id="patient-section" style="display:none;">
+      <h3>📋 Selected Patient (FHIR Patient resource)</h3>
+      <div id="patient-summary"></div>
+      <pre id="patient-raw"></pre>
+    </div>
+
+    <div class="section" id="conditions-section" style="display:none;">
+      <h3>🩺 Conditions (FHIR Condition resources)</h3>
+      <div id="conditions-list"></div>
+    </div>
+
+    <div class="section" id="observations-section" style="display:none;">
+      <h3>🧪 Recent Observations (last 10)</h3>
+      <div id="observations-list"></div>
+    </div>
+
+    <div id="next-step" style="display:none; margin-top: 24px;">
+      <a href="/" class="next-btn">→ Soo-Pul 메인으로</a>
+    </div>
+  </div>
+
+  <script type="module" src="/src/app.js"></script>
+</body>
+</html>

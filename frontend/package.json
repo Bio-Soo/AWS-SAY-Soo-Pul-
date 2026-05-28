@@ -1,0 +1,27 @@
+{
+  "name": "rare-link-ai-frontend",
+  "private": true,
+  "version": "0.1.0",
+  "type": "module",
+  "description": "Rare-Link AI · Clinical Decision Support for Rare Pulmonary Disease · Frontend (SKKU AWS SAY 2기 2팀)",
+  "scripts": {
+    "dev": "vite",
+    "build": "vite build",
+    "preview": "vite preview --port 5173",
+    "lint": "echo 'Add ESLint here when team decides config'"
+  },
+  "dependencies": {
+    "amazon-cognito-identity-js": "^6.3.16",
+    "fhirclient": "^2.5.4",
+    "lucide-react": "^0.383.0",
+    "react": "^18.3.1",
+    "react-dom": "^18.3.1"
+  },
+  "devDependencies": {
+    "@vitejs/plugin-react": "^4.3.1",
+    "autoprefixer": "^10.4.19",
+    "postcss": "^8.4.38",
+    "tailwindcss": "^3.4.4",
+    "vite": "^5.3.1"
+  }
+}

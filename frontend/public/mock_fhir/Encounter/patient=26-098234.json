@@ -1,0 +1,29 @@
+{
+  "resourceType": "Bundle",
+  "type": "searchset",
+  "total": 1,
+  "entry": [
+    {
+      "resource": {
+        "resourceType": "Encounter",
+        "status": "in-progress",
+        "class": {
+          "system": "http://terminology.hl7.org/CodeSystem/v3-ActCode",
+          "code": "AMB"
+        },
+        "subject": {
+          "reference": "Patient/26-098234"
+        },
+        "period": {
+          "start": "2026-05-11T09:10:00+09:00"
+        },
+        "reasonCode": [
+          {
+            "text": "숨 차고 가래 늘어남 1주, 흡연력 50갑년"
+          }
+        ]
+      },
+      "fullUrl": "Encounter/?"
+    }
+  ]
+}

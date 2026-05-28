@@ -1,0 +1,2 @@
+# Lambda 런타임에 boto3 / botocore 기본 포함 — 여기서는 비움.
+# psycopg2-binary, Layer 에 포함 (layer/build_layer.sh 참조).

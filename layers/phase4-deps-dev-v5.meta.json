@@ -1,0 +1,10 @@
+{
+    "LayerArn": "arn:aws:lambda:ap-northeast-2:666803869796:layer:phase4-deps-dev",
+    "LayerVersionArn": "arn:aws:lambda:ap-northeast-2:666803869796:layer:phase4-deps-dev:5",
+    "Version": 5,
+    "Description": "v3_6 yaml added 2026-05-26 frontfix",
+    "CompatibleRuntimes": [
+        "python3.11"
+    ],
+    "CreatedDate": "2026-05-26T13:13:38.588+0000"
+}

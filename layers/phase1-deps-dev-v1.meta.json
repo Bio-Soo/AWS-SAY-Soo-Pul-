@@ -1,0 +1,10 @@
+{
+    "LayerArn": "arn:aws:lambda:ap-northeast-2:666803869796:layer:phase1-deps-dev",
+    "LayerVersionArn": "arn:aws:lambda:ap-northeast-2:666803869796:layer:phase1-deps-dev:1",
+    "Version": 1,
+    "Description": "psycopg2-binary for Aurora phase_execution_log INSERT",
+    "CompatibleRuntimes": [
+        "python3.11"
+    ],
+    "CreatedDate": "2026-05-18T14:14:57.631+0000"
+}

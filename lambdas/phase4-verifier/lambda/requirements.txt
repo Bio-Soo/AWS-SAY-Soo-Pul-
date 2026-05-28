@@ -1,0 +1,2 @@
+# Lambda 핸들러 자체는 의존 없음. 모든 패키지는 phase4-deps Layer에 위치.
+# boto3는 Lambda 런타임이 기본 제공 (Lambda Python 3.11 → boto3 1.34+).

@@ -1,0 +1,45 @@
+{
+  "resourceType": "Bundle",
+  "type": "searchset",
+  "total": 1,
+  "entry": [
+    {
+      "resource": {
+        "resourceType": "DocumentReference",
+        "status": "current",
+        "type": {
+          "coding": [
+            {
+              "system": "http://loinc.org",
+              "code": "11506-3",
+              "display": "Progress note"
+            }
+          ]
+        },
+        "subject": {
+          "reference": "Patient/26-204017"
+        },
+        "context": {
+          "encounter": [
+            {
+              "reference": "Encounter/26-204017-encounter"
+            }
+          ]
+        },
+        "date": "2026-05-11T10:00:00+09:00",
+        "description": "외래 재진 노트 — IPF 의증, KL-6/SP-D 상승, 양측 기저부 Velcro 수포음",
+        "content": [
+          {
+            "attachment": {
+              "contentType": "text/plain; charset=utf-8",
+              "language": "ko",
+              "data": "W+yEseq3oOq0gOuMgO2Vmeq1kOuzkeybkCDtmLjtnaHquLDrgrTqs7wg7Jm4656YXQrtmZjsnpA6IOuwleKXi+KXiyAoTS83MiksIE1STiAyNi0yMDQwMTcK7J287IucOiAyMDI2LTA1LTExIDEwOjAwICjsoJXrr7zsiJgg6rO87J6lKQoKIyDso7ztmLjshowgKENoaWVmIENvbXBsYWludCkKMuuFhCDsoITrtoDthLAg7KCQ7KeE7KCBIOyatOuPmeyEsSDtmLjtnaHqs6TrnoAsIOuniOuluOq4sOy5qCDsp4Dsho0KCiMg7ZiE67OR66ClIChIUEkpCjcy7IS4IOuCqOyEsS4gMuuFhCDsoITrtoDthLAg65Ox7IKwIOyLnOyeke2VmOuptCDsiKjsnbQg7LCo7IScIOupiOy2sOyVvCDtlaguIOyymOydjOyXlCDrhbjtmZQg7YOTLgo26rCc7JuUIOyghOu2gO2EsCDtj4nsp4AgMjAwbeuPhCDrqrsg6rG36rOgLCDstZzqt7zsl5Qg7Ji3IOqwiOyVhOyeheydhCDrlYzrj4QgU09CLgrrp4jrpbjquLDsuaggKOqwgOuemCDqsbDsnZgg7JeG7J2MKSAx64WEIOydtOyDgSDsp4Dsho0sIOyVvOqwhCDsi6ztlbTsp5AuCuyytOykkeqwkOyGjCDsl4bsnYwuIOuwnOyXtMK36rSA7KCI7Ya1wrfrsJzsp4Qg7JeG7J2MLiDtmZjqsr0g64W47Lac66ClKOqzsO2MoeydtMK37IOIwrfrqLzsp4ApIOyXhuydjC4K7YOAIOuzkeybkOyXkOyEnCBDT1BEIOydmOyLrO2VmOyXrCDtnaHsnoXsoJwg7LKY67Cp67Cb7JWY7Jy864KYIO2aqOqzvCDrr7jrr7jtlbQg67O47JuQIOydmOuisC4KCiMg6rO86rGw66ClIChQTUgpCuqzoOyngO2YiOymnSAoUm9zdXZhc3RhdGluIDEwbWcgcWQpCkdFUkQgKFBhbnRvcHJhem9sZSA0MG1nIHFkKQrtnaHsl7A6IO2PieyDnSDruYTtnaHsl7DsnpAK67Cp7IKs7ISgIOuFuOy2nOugpTog7JeG7J2MCuyVveusvOyEsSDtj5DroLQg7J2Y7IusIOyVveusvDog7JeG7J2MCuulmOuniO2LsOyKpCDsp4jtmZg6IOyXhuydjCAoQ1RELUlMRCDrsLDsoJwg7ZWE7JqUKQoKIyDqsIDsobHroKUgLyDsgqztmozroKUK67aA7LmcIOyCrOunnSDsm5Dsnbgg67aI66qFICg3MOuMgCDtm4TrsJgsIOunjOyEsSDquLDsuajsnbQg7J6I7JeI64uk6rOgIO2VqCDigJQgdGVsb21lcmUg64uo7LaVIOqwgOuKpeyEsT8pCuuqqOy5nDog66WY66eI7Yuw7IqkIOq0gOygiOyXvArsnpDrhYAgMuuqhSDqsbTqsJUK7IKs66y07KeBIOydgO2HtCwg64aN7LSMIOqxsOyjvCwg64aN7JW9IOuFuOy2nOugpSDsl4bsnYwKCiMg7Iug7LK06rKA7KeECu2ZnOugpeynle2bhDogQlAgMTI4Lzc2LCBIUiA4OCwgUlIgMjAsIFQgMzYuOOKEgywgU3BPMiA5MSUgUkEsIDZNV1Qg7ZuEIFNwTzIgODQlCuydvOuwmDog7JiB7JaRIOyWke2YuCwg7J2Y7IudIOuqheujjArqsIDsirQ6IOyWkey4oSDtj5Ag7ZWY67aAIO2doeq4sOunkCDrr7jshLgg7IiY7Y+s7J2MIChWZWxjcm8tbGlrZSBjcmFja2xlcyksIO2bhOuwqSDsmrDshLgKICAgICAgIO2DgOynhCDsoJXsg4EsIO2YuOq4sOyEsSDsspzrqoXsnYwg7JeG7J2MCuyLrOyepTogUzFTMiDsoJXsg4EsIFAyIOyVveqwhCDqsJXtlbTsp5AgKHB1bG1vbmFyeSBoeXBlcnRlbnNpb24g7J2Y7IusKQrshpDqsIDrnb06IOqzpOu0ieyngChjbHViYmluZykg66qF7ZmVICjslpHshpApCgojIOqygOyCrAotIENCQzogV0JDIDcsMjAwIC/OvEwsIEhiIDE0LjAsIFBsdCAyMjBLICjsoJXsg4EpCi0g7ZiI7LKt7ZmU7ZWZOiDsoJXsg4EgKOqwhMK37IugIOq4sOuKpSDsoJXsg4EpCi0g7J6Q6rCA66m07JetOiBBTkEgPDE6NDAsIFJGICgtKSwgYW50aS1DQ1AgKC0pLCBNUE8vUFIzIEFOQ0EgKC0pCiAg4oaSIENURC1JTEQg6rCA64ql7ISxIOuCruydjAotIO2PkOyErOycoO2ZlCDtkZzsp4DsnpA6CiAgLSBLTC02OiAxLDQ1MCBVL21MIChISCwg7KCV7IOBIDw1MDApCiAgLSBTUC1EOiAyMTUgbmcvbUwgKEgsIOygleyDgSA8MTEwKQogIC0gTERIOiAyODUgVS9MIChILCDsoJXsg4EgPDI1MCkKLSBCTlAgNzggcGcvbUwgKOygleyDgSkKLSDrj5nrp6XtmIjqsIDsiqQgKFJBKTogcEggNy40MiwgUGFPMiA3MSBtbUhnIChMKSwgUGFDTzIgMzYKCiMgUEZUICjsnpHrhYQg7Jm467aAKQotIEZWQyA2NSUgcHJlZGljdGVkLCBGRVYxIDcwJSBwcmVkLCBGRVYxL0ZWQyAwLjg1ICjsoJXsg4EpCiAg4oaSIOygnO2VnOyEsSDtmZjquLDsnqXslaAgKEhQOjAwMDIwOTEpCi0gRExDTyA0OCUgcHJlZGljdGVkICjtmITsoIAg6rCQ7IaMIOKAlCBnYXMgZXhjaGFuZ2Ug7J6l7JWgKQotIFRMQyA2MiUgcHJlZAoKIyDsmIHsg4EgKENYUiBQQSwgdmlldzFfZnJvbnRhbCkKLSDslpHsuKEg7Y+QIOq4sOyggOu2gCDrp53sg4Eg7J2M7JiBIChiaWJhc2lsYXIgcmV0aWN1bGFyIG9wYWNpdGllcykKLSDtj5Ag7Jqp7KCBIOqwkOyGjAotIOuqhe2Zle2VnCBob25leWNvbWJpbmfsnYAgQ1hS66GcIO2ZleyduCDslrTroKTsm4Ag4oCUIEhSQ1Qg7ZWE7JqUCltDaGVYcGVydCBBSTogTHVuZyBPcGFjaXR5IDAuODEsIOuLpOuluCDshozqsqwg7JeG7J2MXQoKIyBIUkNUICjrs4Trj4Qg7J2Y66KwIOq2jOqzoCkKLSBVSVAgcGF0dGVybiDtmZXsnbgg7ZWE7JqUOiBzdWJwbGV1cmFswrdiYXNhbCBwcmVkb21pbmFudCByZXRpY3VsYXRpb24sCiAgaG9uZXljb21iaW5nLCB0cmFjdGlvbiBicm9uY2hpZWN0YXNpcywgZ3JvdW5kLWdsYXNzIOy1nOyGjAoKIyDtj4nqsIAgLyDqs4Ttmo0KMS4g7Yq567Cc7ISxIO2PkOyErOycoOymnSDsnZjspp0gKElQRiwgSjg0LjExMiAvIE9SUEhBOjIwMzIpCiAgIC0gQVRTL0VSUyAyMDIyIOq4sOykgCDtj4nqsIA6CiAgICAgwrcg7J6E7IOBOiA+NjDshLgsIOuCqOyEsSwg66eM7ISxIOynhO2WieyEsSBkeXNwbmVhICsgZHJ5IGNvdWdoIOKckwogICAgIMK3IOyLoOyytDogYmliYXNpbGFyIFZlbGNybyBjcmFja2xlcyArIGNsdWJiaW5nIOKckwogICAgIMK3IOyYgeyDgTogYmliYXNpbGFyIHJldGljdWxhciBvcGFjaXRpZXMg4pyTCiAgICAgwrcg7J6Q6rCA66m07JetOiDsnYzshLEg4pyTCiAgICAgwrcgS0wtNi9TUC1EIO2YhOyggCDsg4Hsirkg4oaSIGZpYnJvc2lzIO2ZnOyEsSDsi5zsgqwKICAgLSBIUkNUIFVJUCBwYXR0ZXJuIO2ZleyduCDsi5wgQkFMwrdiaW9wc3kg67aI7ZWE7JqUCjIuIEhSQ1Qg7KaJ7IucIOydmOuisCAo6rCA64qlIOyLnCBpbnNwaXJhdG9yeSArIGV4cGlyYXRvcnkgKyBwcm9uZSkKMy4gUEZUIOyerO2PieqwgCAoRExDTywgNk1XVCkKNC4g64uk7ZWZ7KCcIO2YkeydmChNREQpIOKAlCBwdWxtb25vbG9neSArIHJhZGlvbG9neSArIHBhdGhvbG9neQo1LiDtla3shKzsnKDtmZTsoJwg7ZuE67O0IChQaXJmZW5pZG9uZSDrmJDripQgTmludGVkYW5pYikg4oCUIOynhOuLqCDtmZXsoJUg7ZuEIOyLnOyekQo2LiDtj5Ag7J6s7ZmcIOydmOuisAo3LiAx64WEIOuCtCAzMCUgRlZDIOqwkOyGjCDrmJDripQgUGFPMiA8IDU1IOyLnCDtj5DsnbTsi50g7Y+J6rCACg==",
+              "title": "patient-03-ipf.note.txt"
+            }
+          }
+        ]
+      },
+      "fullUrl": "DocumentReference/?"
+    }
+  ]
+}

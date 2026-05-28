@@ -1,0 +1,168 @@
+{
+  "execution_id": "exec-mock-26-415523",
+  "case_id": "26-415523",
+  "patient_summary": {
+    "mrn": "26-415523",
+    "age": 67,
+    "sex": "male",
+    "scenario": "ambiguous-lung-mass"
+  },
+  "started_at": "2026-05-12T08:30:00+09:00",
+  "overall_status": "DONE",
+  "phases": {
+    "phase1": {
+      "status": "succeeded",
+      "delay_ms": 1500,
+      "result": {
+        "positive_hpos": [
+          {
+            "code": "HP:0012735",
+            "label": "Cough"
+          },
+          {
+            "code": "HP:0002105",
+            "label": "Hemoptysis"
+          },
+          {
+            "code": "HP:0001824",
+            "label": "Weight loss"
+          },
+          {
+            "code": "HP:0002086",
+            "label": "Night sweats"
+          }
+        ]
+      }
+    },
+    "phase2": {
+      "status": "succeeded",
+      "delay_ms": 2000,
+      "result": {
+        "labels_top": [
+          {
+            "name": "Lung Lesion",
+            "score": 0.85
+          },
+          {
+            "name": "Lung Opacity",
+            "score": 0.71
+          },
+          {
+            "name": "Enlarged Cardiomediastinum",
+            "score": 0.62
+          }
+        ],
+        "heatmap_url": "/mock_fhir/heatmaps/26-415523.png"
+      }
+    },
+    "phase3": {
+      "status": "succeeded",
+      "delay_ms": 800,
+      "result": {
+        "label": "draft",
+        "top_n": [
+          {
+            "rank": 1,
+            "name": "Squamous cell lung carcinoma",
+            "name_kr": "편평세포 폐암",
+            "icd10": "C34.91",
+            "prob": 0.58,
+            "rare": false,
+            "dontMiss": true
+          },
+          {
+            "rank": 2,
+            "name": "Pulmonary tuberculosis (active)",
+            "name_kr": "활동성 폐결핵",
+            "icd10": "A15.0",
+            "prob": 0.42,
+            "rare": false,
+            "dontMiss": true
+          },
+          {
+            "rank": 3,
+            "name": "Lung abscess",
+            "name_kr": "폐농양",
+            "icd10": "J85.2",
+            "prob": 0.21,
+            "rare": false
+          },
+          {
+            "rank": 4,
+            "name": "Aspergilloma",
+            "name_kr": "폐 아스페르길로마",
+            "icd10": "B44.2",
+            "prob": 0.15,
+            "rare": false
+          }
+        ]
+      }
+    },
+    "phase4": {
+      "status": "succeeded",
+      "delay_ms": 4500,
+      "result": {
+        "revised_ranking": [
+          {
+            "rank": 1,
+            "name": "Squamous cell lung carcinoma",
+            "name_kr": "편평세포 폐암",
+            "icd10": "C34.91",
+            "prob": 0.58,
+            "rare": false,
+            "dontMiss": true
+          },
+          {
+            "rank": 2,
+            "name": "Pulmonary tuberculosis (active)",
+            "name_kr": "활동성 폐결핵",
+            "icd10": "A15.0",
+            "prob": 0.42,
+            "rare": false,
+            "dontMiss": true
+          },
+          {
+            "rank": 3,
+            "name": "Lung abscess",
+            "name_kr": "폐농양",
+            "icd10": "J85.2",
+            "prob": 0.21,
+            "rare": false
+          },
+          {
+            "rank": 4,
+            "name": "Aspergilloma",
+            "name_kr": "폐 아스페르길로마",
+            "icd10": "B44.2",
+            "prob": 0.15,
+            "rare": false
+          }
+        ],
+        "guardrails_passed": [
+          "dose_safety",
+          "age_appropriate",
+          "rare_flag",
+          "drug_interaction",
+          "contraindication",
+          "citation_check"
+        ],
+        "note": "**진단 불확실성 높음** — 조직검사 우선. CT(조영+), 기관지내시경+EBUS-TBNA, 객담 배양·TB-PCR, Aspergillus IgG/galactomannan, 쇄골상부 림프절 FNAC. PET-CT는 staging 단계."
+      }
+    },
+    "phase5": {
+      "status": "succeeded",
+      "delay_ms": 1500,
+      "result": {
+        "rare_candidates": []
+      }
+    },
+    "final": {
+      "status": "succeeded",
+      "delay_ms": 3500,
+      "result": {
+        "report_url": "/mock_fhir/reports/26-415523.md",
+        "similar_cases_count": 5
+      }
+    }
+  }
+}

@@ -1,0 +1,19 @@
+{
+  "resourceType": "Patient",
+  "identifier": [
+    {
+      "system": "https://rare-link.ai/mrn",
+      "value": "26-301102"
+    }
+  ],
+  "name": [
+    {
+      "family": "정",
+      "given": [
+        "○○"
+      ]
+    }
+  ],
+  "gender": "female",
+  "birthDate": "1991-05-11"
+}

@@ -1,0 +1,162 @@
+{
+  "execution_id": "exec-mock-26-204017",
+  "case_id": "26-204017",
+  "patient_summary": {
+    "mrn": "26-204017",
+    "age": 72,
+    "sex": "male",
+    "scenario": "rare-ipf"
+  },
+  "started_at": "2026-05-12T08:30:00+09:00",
+  "overall_status": "DONE",
+  "phases": {
+    "phase1": {
+      "status": "succeeded",
+      "delay_ms": 1500,
+      "result": {
+        "positive_hpos": [
+          {
+            "code": "HP:0002094",
+            "label": "Dyspnea"
+          },
+          {
+            "code": "HP:0031246",
+            "label": "Nonproductive cough"
+          },
+          {
+            "code": "HP:0030828",
+            "label": "Fine crackles"
+          },
+          {
+            "code": "HP:0006530",
+            "label": "Interstitial pulmonary abnormality"
+          },
+          {
+            "code": "HP:0002091",
+            "label": "Restrictive ventilatory defect"
+          }
+        ]
+      }
+    },
+    "phase2": {
+      "status": "succeeded",
+      "delay_ms": 2000,
+      "result": {
+        "labels_top": [
+          {
+            "name": "Lung Opacity",
+            "score": 0.81
+          }
+        ],
+        "heatmap_url": "/mock_fhir/heatmaps/26-204017.png"
+      }
+    },
+    "phase3": {
+      "status": "succeeded",
+      "delay_ms": 800,
+      "result": {
+        "label": "draft",
+        "top_n": [
+          {
+            "rank": 1,
+            "name": "Nonspecific interstitial pneumonia (NSIP)",
+            "name_kr": "비특이성 간질성 폐렴",
+            "icd10": "J84.89",
+            "prob": 0.51,
+            "rare": false,
+            "dontMiss": true
+          },
+          {
+            "rank": 2,
+            "name": "Hypersensitivity Pneumonitis (chronic)",
+            "name_kr": "과민성 폐렴 (만성)",
+            "icd10": "J67.9",
+            "prob": 0.42,
+            "rare": false
+          },
+          {
+            "rank": 3,
+            "name": "Sarcoidosis",
+            "name_kr": "사르코이드증",
+            "icd10": "D86.9",
+            "prob": 0.28,
+            "rare": false
+          }
+        ]
+      }
+    },
+    "phase4": {
+      "status": "succeeded",
+      "delay_ms": 4500,
+      "result": {
+        "revised_ranking": [
+          {
+            "rank": 1,
+            "name": "Nonspecific interstitial pneumonia (NSIP)",
+            "name_kr": "비특이성 간질성 폐렴",
+            "icd10": "J84.89",
+            "prob": 0.51,
+            "rare": false,
+            "dontMiss": true
+          },
+          {
+            "rank": 2,
+            "name": "Hypersensitivity Pneumonitis (chronic)",
+            "name_kr": "과민성 폐렴 (만성)",
+            "icd10": "J67.9",
+            "prob": 0.42,
+            "rare": false
+          },
+          {
+            "rank": 3,
+            "name": "Sarcoidosis",
+            "name_kr": "사르코이드증",
+            "icd10": "D86.9",
+            "prob": 0.28,
+            "rare": false
+          }
+        ],
+        "guardrails_passed": [
+          "dose_safety",
+          "age_appropriate",
+          "rare_flag",
+          "drug_interaction",
+          "contraindication",
+          "citation_check"
+        ],
+        "note": ""
+      }
+    },
+    "phase5": {
+      "status": "succeeded",
+      "delay_ms": 1500,
+      "result": {
+        "rare_candidates": [
+          {
+            "name": "Idiopathic Pulmonary Fibrosis (IPF)",
+            "name_kr": "특발성 폐섬유증",
+            "orpha": "ORPHA:2032",
+            "prob": 0.81,
+            "rare": true,
+            "dontMiss": true,
+            "rationale": "KL-6 1450 (↑↑), SP-D 215 (↑), 양측 기저부 Velcro 수포음, 비흡연자 72M, 진행성 dyspnea + dry cough",
+            "genes": [],
+            "next_steps": [
+              "HRCT (UIP pattern 확인)",
+              "MDD 협의 (호흡기·영상·병리)",
+              "Pirfenidone or Nintedanib 평가"
+            ]
+          }
+        ]
+      }
+    },
+    "final": {
+      "status": "succeeded",
+      "delay_ms": 3500,
+      "result": {
+        "report_url": "/mock_fhir/reports/26-204017.md",
+        "similar_cases_count": 5
+      }
+    }
+  }
+}

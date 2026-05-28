@@ -1,0 +1,140 @@
+{
+  "execution_id": "exec-mock-26-098234",
+  "case_id": "26-098234",
+  "patient_summary": {
+    "mrn": "26-098234",
+    "age": 69,
+    "sex": "male",
+    "scenario": "common-copd-exacerbation"
+  },
+  "started_at": "2026-05-12T08:30:00+09:00",
+  "overall_status": "DONE",
+  "phases": {
+    "phase1": {
+      "status": "succeeded",
+      "delay_ms": 1500,
+      "result": {
+        "positive_hpos": [
+          {
+            "code": "HP:0002094",
+            "label": "Dyspnea"
+          },
+          {
+            "code": "HP:0031246",
+            "label": "Productive cough"
+          },
+          {
+            "code": "HP:0030828",
+            "label": "Wheezing"
+          },
+          {
+            "code": "HP:0006510",
+            "label": "Chronic obstructive pulmonary disease"
+          }
+        ]
+      }
+    },
+    "phase2": {
+      "status": "succeeded",
+      "delay_ms": 2000,
+      "result": {
+        "labels_top": [
+          {
+            "name": "No Finding",
+            "score": 0.78
+          }
+        ],
+        "heatmap_url": "/mock_fhir/heatmaps/26-098234.png"
+      }
+    },
+    "phase3": {
+      "status": "succeeded",
+      "delay_ms": 800,
+      "result": {
+        "label": "draft",
+        "top_n": [
+          {
+            "rank": 1,
+            "name": "COPD with acute exacerbation",
+            "name_kr": "COPD 급성 악화",
+            "icd10": "J44.1",
+            "prob": 0.88,
+            "rare": false
+          },
+          {
+            "rank": 2,
+            "name": "Acute Bronchitis (smoker)",
+            "name_kr": "급성 기관지염",
+            "icd10": "J20.9",
+            "prob": 0.35,
+            "rare": false
+          },
+          {
+            "rank": 3,
+            "name": "Asthma exacerbation",
+            "name_kr": "천식 악화",
+            "icd10": "J45.901",
+            "prob": 0.21,
+            "rare": false
+          }
+        ]
+      }
+    },
+    "phase4": {
+      "status": "succeeded",
+      "delay_ms": 4500,
+      "result": {
+        "revised_ranking": [
+          {
+            "rank": 1,
+            "name": "COPD with acute exacerbation",
+            "name_kr": "COPD 급성 악화",
+            "icd10": "J44.1",
+            "prob": 0.88,
+            "rare": false
+          },
+          {
+            "rank": 2,
+            "name": "Acute Bronchitis (smoker)",
+            "name_kr": "급성 기관지염",
+            "icd10": "J20.9",
+            "prob": 0.35,
+            "rare": false
+          },
+          {
+            "rank": 3,
+            "name": "Asthma exacerbation",
+            "name_kr": "천식 악화",
+            "icd10": "J45.901",
+            "prob": 0.21,
+            "rare": false
+          }
+        ],
+        "guardrails_passed": [
+          "dose_safety",
+          "age_appropriate",
+          "rare_flag",
+          "drug_interaction",
+          "contraindication",
+          "citation_check"
+        ],
+        "note": ""
+      }
+    },
+    "phase5": {
+      "status": "succeeded",
+      "delay_ms": 1500,
+      "result": {
+        "rare_candidates": []
+      }
+    },
+    "final": {
+      "status": "succeeded",
+      "delay_ms": 3500,
+      "result": {
+        "report_url": "/mock_fhir/reports/26-098234.md",
+        "similar_cases_count": 5
+      }
+    }
+  }
+}

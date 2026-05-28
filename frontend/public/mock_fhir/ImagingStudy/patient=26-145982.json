@@ -1,0 +1,66 @@
+{
+  "resourceType": "Bundle",
+  "type": "searchset",
+  "total": 1,
+  "entry": [
+    {
+      "resource": {
+        "resourceType": "ImagingStudy",
+        "status": "available",
+        "subject": {
+          "reference": "Patient/26-145982"
+        },
+        "encounter": {
+          "reference": "Encounter/26-145982-encounter"
+        },
+        "started": "2026-05-11T08:35:00+09:00",
+        "modality": [
+          {
+            "system": "http://dicom.nema.org/resources/ontology/DCM",
+            "code": "DX",
+            "display": "Digital Radiography"
+          }
+        ],
+        "numberOfSeries": 1,
+        "numberOfInstances": 1,
+        "series": [
+          {
+            "uid": "1.2.840.10008.synthetic.p1.cap.s1",
+            "number": 1,
+            "modality": {
+              "system": "http://dicom.nema.org/resources/ontology/DCM",
+              "code": "DX"
+            },
+            "bodySite": {
+              "system": "http://snomed.info/sct",
+              "code": "51185008",
+              "display": "Thoracic structure"
+            },
+            "instance": [
+              {
+                "uid": "1.2.840.10008.synthetic.p1.cap.s1.i1",
+                "sopClass": {
+                  "system": "urn:ietf:rfc:3986",
+                  "code": "urn:oid:1.2.840.10008.5.1.4.1.1.1.1"
+                },
+                "number": 1,
+                "title": "view1_frontal.jpg"
+              }
+            ],
+            "endpoint": [
+              {
+                "reference": "Endpoint/26-145982-endpoint"
+              }
+            ]
+          }
+        ],
+        "note": [
+          {
+            "text": "CheXpert source: dataset_resized_448/valid/patient64579/study1/view1_frontal.jpg (Lung Opacity, Consolidation, Pneumonia positive)"
+          }
+        ]
+      },
+      "fullUrl": "ImagingStudy/?"
+    }
+  ]
+}

@@ -1,0 +1,164 @@
+AWSTemplateFormatVersion: '2010-09-09'
+Transform: AWS::Serverless-2016-10-31
+Description: >
+  Phase 4 — LLM Verification + Reranking (Bedrock Claude Sonnet 4.6).
+  Lambda + Bedrock invoke + Guard Rail 6종 + Phase 3 fallback.
+
+Parameters:
+  Stage:
+    Type: String
+    AllowedValues: [dev, staging, prod]
+    Default: dev
+  BedrockModelId:
+    Type: String
+    Default: anthropic.claude-sonnet-4-6
+    Description: Bedrock model identifier (lung_dx default)
+  BedrockRegion:
+    Type: String
+    Default: us-east-1
+    Description: Region where Bedrock model is available
+  LogRetentionDays:
+    Type: Number
+    Default: 90
+
+Globals:
+  Function:
+    Runtime: python3.11
+    Timeout: 300
+    Tracing: Active
+    Environment:
+      Variables:
+        STAGE: !Ref Stage
+        BEDROCK_MODEL_ID: !Ref BedrockModelId
+        BEDROCK_REGION: !Ref BedrockRegion
+        PYTHONPATH: /opt/python
+        LUNG_DX_DATA_DIR: /opt/python/data
+
+Resources:
+  # ── Layer: lung_dx Phase 4 코드 + 의존성 + yaml data ────────────
+  # (data 는 deps Layer 의 /python/data/ 에 함께 — 별도 DataLayer 안 만듦)
+  Phase4DepsLayer:
+    Type: AWS::Serverless::LayerVersion
+    Properties:
+      LayerName: !Sub phase4-deps-${Stage}
+      Description: lung_dx phase4 verifier + boto3 (Bedrock)
+      ContentUri: ./layer/deps-build/
+      CompatibleRuntimes: [python3.11]
+      RetentionPolicy: Retain
+
+  # ── Lambda: verifier ─────────────────────────────────────────────
+  Phase4VerifierFunction:
+    Type: AWS::Serverless::Function
+    Properties:
+      FunctionName: !Sub phase4-verifier-${Stage}
+      CodeUri: ./lambda/
+      Handler: handler.lambda_handler
+      MemorySize: 512
+      ReservedConcurrentExecutions: 3
+      Layers:
+        - !Ref Phase4DepsLayer
+      Events:
+        ApiPost:
+          Type: Api
+          Properties:
+            RestApiId: !Ref Phase4Api
+            Path: /verify
+            Method: POST
+        ApiHealth:
+          Type: Api
+          Properties:
+            RestApiId: !Ref Phase4Api
+            Path: /health
+            Method: GET
+      # VPC config — RDS 사설 IP 접근 위해 VPC 내부 배치
+      VpcConfig:
+        SecurityGroupIds:
+          - sg-03b9bc5d95699b797   # fhir-ec2-sg — RDS 5432 ingress 허용
+        SubnetIds:
+          - subnet-02eed659772bac6aa   # private-1 (AZ 2a)
+          - subnet-09ba10cf625d73da0   # private-4 (AZ 2c) — multi-AZ HA
+      Policies:
+        - AWSLambdaBasicExecutionRole
+        - AWSLambdaVPCAccessExecutionRole
+        - AWSXrayWriteOnlyAccess
+        # Bedrock InvokeModel — 모델 ARN 한정 (least privilege)
+        - Statement:
+            - Effect: Allow
+              Action:
+                - bedrock:InvokeModel
+                - bedrock:InvokeModelWithResponseStream
+              Resource:
+                - !Sub arn:aws:bedrock:${BedrockRegion}::foundation-model/${BedrockModelId}
+        # Secrets Manager — Aurora credentials (Phase 5와 동일 패턴, phase_execution_log INSERT용)
+        - Statement:
+            - Effect: Allow
+              Action:
+                - secretsmanager:GetSecretValue
+              Resource:
+                - !Sub "arn:aws:secretsmanager:ap-northeast-2:*:secret:soopul/aurora/app-user*"
+
+  # ── API Gateway REST ─────────────────────────────────────────────
+  Phase4Api:
+    Type: AWS::Serverless::Api
+    Properties:
+      Name: !Sub phase4-api-${Stage}
+      StageName: !Ref Stage
+      TracingEnabled: true
+      EndpointConfiguration:
+        Type: REGIONAL
+      MethodSettings:
+        - ResourcePath: /*
+          HttpMethod: '*'
+          LoggingLevel: ERROR
+          MetricsEnabled: true
+          ThrottlingBurstLimit: 50
+          ThrottlingRateLimit: 20
+
+  Phase4VerifierLogs:
+    Type: AWS::Logs::LogGroup
+    Properties:
+      LogGroupName: !Sub /aws/lambda/${Phase4VerifierFunction}
+      RetentionInDays: !Ref LogRetentionDays
+
+  # ── 알람: 5xx 에러 ───────────────────────────────────────────────
+  Phase4ErrorAlarm:
+    Type: AWS::CloudWatch::Alarm
+    Properties:
+      AlarmName: !Sub phase4-errors-${Stage}
+      MetricName: Errors
+      Namespace: AWS/Lambda
+      Dimensions:
+        - Name: FunctionName
+          Value: !Ref Phase4VerifierFunction
+      Statistic: Sum
+      Period: 300
+      EvaluationPeriods: 1
+      Threshold: 5
+      ComparisonOperator: GreaterThanThreshold
+      TreatMissingData: notBreaching
+
+  # ── 알람: Bedrock throttle ───────────────────────────────────────
+  Phase4ThrottleAlarm:
+    Type: AWS::CloudWatch::Alarm
+    Properties:
+      AlarmName: !Sub phase4-bedrock-throttle-${Stage}
+      MetricName: Throttles
+      Namespace: AWS/Lambda
+      Dimensions:
+        - Name: FunctionName
+          Value: !Ref Phase4VerifierFunction
+      Statistic: Sum
+      Period: 300
+      EvaluationPeriods: 1
+      Threshold: 1
+      ComparisonOperator: GreaterThanThreshold
+      TreatMissingData: notBreaching
+
+Outputs:
+  ApiEndpoint:
+    Value: !Sub https://${Phase4Api}.execute-api.${AWS::Region}.amazonaws.com/${Stage}
+  VerifyUrl:
+    Value: !Sub https://${Phase4Api}.execute-api.${AWS::Region}.amazonaws.com/${Stage}/verify
+  LambdaArn:
+    Description: Lambda ARN (Step Functions integration용)
+    Value: !GetAtt Phase4VerifierFunction.Arn

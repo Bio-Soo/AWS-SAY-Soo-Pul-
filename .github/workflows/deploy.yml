@@ -1,0 +1,100 @@
+name: Deploy Soo-Pul to AWS
+
+on:
+  workflow_dispatch:
+    inputs:
+      target:
+        description: 'What to deploy'
+        required: true
+        default: 'all'
+        type: choice
+        options: [all, lambdas, stepfunctions, frontend, backend]
+  push:
+    branches: [main]
+    paths:
+      - 'lambdas/**'
+      - 'stepfunctions/**'
+      - 'frontend/**'
+      - 'backend/**'
+
+env:
+  AWS_REGION: ap-northeast-2
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+    permissions:
+      id-token: write    # for OIDC AWS auth
+      contents: read
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Configure AWS credentials (OIDC)
+        uses: aws-actions/configure-aws-credentials@v4
+        with:
+          role-to-assume: ${{ secrets.AWS_DEPLOY_ROLE_ARN }}
+          aws-region: ${{ env.AWS_REGION }}
+
+      - name: Render .env from GitHub secrets
+        run: |
+          cat > .env <<EOF
+          AWS_ACCOUNT_ID=${{ secrets.AWS_ACCOUNT_ID }}
+          AWS_REGION=${{ env.AWS_REGION }}
+          S3_BUCKET=${{ secrets.S3_BUCKET }}
+          AURORA_CLUSTER_ENDPOINT=${{ secrets.AURORA_CLUSTER_ENDPOINT }}
+          AURORA_DB_NAME=${{ secrets.AURORA_DB_NAME }}
+          AURORA_SCHEMA=${{ secrets.AURORA_SCHEMA }}
+          AURORA_DB_USER=${{ secrets.AURORA_DB_USER }}
+          SECRET_AURORA_MASTER=${{ secrets.SECRET_AURORA_MASTER }}
+          SECRET_AURORA_APP_USER=${{ secrets.SECRET_AURORA_APP_USER }}
+          VPC_ID=${{ secrets.VPC_ID }}
+          LAMBDA_SUBNET_IDS=${{ secrets.LAMBDA_SUBNET_IDS }}
+          LAMBDA_SECURITY_GROUP=${{ secrets.LAMBDA_SECURITY_GROUP }}
+          COGNITO_USER_POOL_ID=${{ secrets.COGNITO_USER_POOL_ID }}
+          COGNITO_CLIENT_ID=${{ secrets.COGNITO_CLIENT_ID }}
+          STEPFN_NAME=${{ secrets.STEPFN_NAME }}
+          STEPFN_ROLE_NAME=${{ secrets.STEPFN_ROLE_NAME }}
+          BEDROCK_REGION=${{ env.AWS_REGION }}
+          BEDROCK_MODEL_PHASE4=${{ secrets.BEDROCK_MODEL_PHASE4 }}
+          BEDROCK_MODEL_RAG=${{ secrets.BEDROCK_MODEL_RAG }}
+          SAGEMAKER_ENDPOINT=${{ secrets.SAGEMAKER_ENDPOINT }}
+          EC2_INSTANCE_ID=${{ secrets.EC2_INSTANCE_ID }}
+          CLOUDFRONT_DISTRIBUTION_ID=${{ secrets.CLOUDFRONT_DISTRIBUTION_ID }}
+          CLOUDFRONT_DOMAIN=${{ secrets.CLOUDFRONT_DOMAIN }}
+          CRON_PRELOAD_TOKEN=${{ secrets.CRON_PRELOAD_TOKEN }}
+          EOF
+
+      - name: Install AWS SAM CLI
+        if: contains(fromJSON('["all","lambdas"]'), inputs.target || 'all')
+        uses: aws-actions/setup-sam@v2
+        with: { use-installer: true }
+
+      - name: Setup Node.js
+        if: contains(fromJSON('["all","frontend"]'), inputs.target || 'all')
+        uses: actions/setup-node@v4
+        with:
+          node-version: '18'
+          cache: 'npm'
+          cache-dependency-path: 'frontend/package-lock.json'
+
+      - name: Deploy Lambdas
+        if: contains(fromJSON('["all","lambdas"]'), inputs.target || 'all')
+        run: |
+          chmod +x scripts/*.sh
+          ./scripts/deploy-all-lambdas.sh
+
+      - name: Deploy Step Functions
+        if: contains(fromJSON('["all","stepfunctions"]'), inputs.target || 'all')
+        run: ./scripts/deploy-stepfunctions.sh
+
+      - name: Deploy Frontend
+        if: contains(fromJSON('["all","frontend"]'), inputs.target || 'all')
+        run: ./scripts/deploy-frontend.sh
+
+      - name: Deploy Backend (EC2 via SSM)
+        if: contains(fromJSON('["all","backend"]'), inputs.target || 'all')
+        run: ./scripts/deploy-backend.sh
+
+      - name: E2E verification
+        if: contains(fromJSON('["all"]'), inputs.target || 'all')
+        run: ./scripts/verify-e2e.sh

@@ -1,0 +1,148 @@
+{
+  "execution_id": "exec-mock-26-145982",
+  "case_id": "26-145982",
+  "patient_summary": {
+    "mrn": "26-145982",
+    "age": 66,
+    "sex": "male",
+    "scenario": "common-cap"
+  },
+  "started_at": "2026-05-12T08:30:00+09:00",
+  "overall_status": "DONE",
+  "phases": {
+    "phase1": {
+      "status": "succeeded",
+      "delay_ms": 1500,
+      "result": {
+        "positive_hpos": [
+          {
+            "code": "HP:0001945",
+            "label": "Fever"
+          },
+          {
+            "code": "HP:0012735",
+            "label": "Cough"
+          },
+          {
+            "code": "HP:0002094",
+            "label": "Dyspnea"
+          },
+          {
+            "code": "HP:0033712",
+            "label": "Pleuritic chest pain"
+          }
+        ]
+      }
+    },
+    "phase2": {
+      "status": "succeeded",
+      "delay_ms": 2000,
+      "result": {
+        "labels_top": [
+          {
+            "name": "Pneumonia",
+            "score": 0.92
+          },
+          {
+            "name": "Consolidation",
+            "score": 0.88
+          },
+          {
+            "name": "Lung Opacity",
+            "score": 0.85
+          }
+        ],
+        "heatmap_url": "/mock_fhir/heatmaps/26-145982.png"
+      }
+    },
+    "phase3": {
+      "status": "succeeded",
+      "delay_ms": 800,
+      "result": {
+        "label": "draft",
+        "top_n": [
+          {
+            "rank": 1,
+            "name": "Community-acquired Pneumonia",
+            "name_kr": "지역사회획득 폐렴",
+            "icd10": "J18.9",
+            "prob": 0.92,
+            "rare": false
+          },
+          {
+            "rank": 2,
+            "name": "Acute Bronchitis",
+            "name_kr": "급성 기관지염",
+            "icd10": "J20.9",
+            "prob": 0.41,
+            "rare": false
+          },
+          {
+            "rank": 3,
+            "name": "Lung abscess",
+            "name_kr": "폐농양",
+            "icd10": "J85.2",
+            "prob": 0.18,
+            "rare": false
+          }
+        ]
+      }
+    },
+    "phase4": {
+      "status": "succeeded",
+      "delay_ms": 4500,
+      "result": {
+        "revised_ranking": [
+          {
+            "rank": 1,
+            "name": "Community-acquired Pneumonia",
+            "name_kr": "지역사회획득 폐렴",
+            "icd10": "J18.9",
+            "prob": 0.92,
+            "rare": false
+          },
+          {
+            "rank": 2,
+            "name": "Acute Bronchitis",
+            "name_kr": "급성 기관지염",
+            "icd10": "J20.9",
+            "prob": 0.41,
+            "rare": false
+          },
+          {
+            "rank": 3,
+            "name": "Lung abscess",
+            "name_kr": "폐농양",
+            "icd10": "J85.2",
+            "prob": 0.18,
+            "rare": false
+          }
+        ],
+        "guardrails_passed": [
+          "dose_safety",
+          "age_appropriate",
+          "rare_flag",
+          "drug_interaction",
+          "contraindication",
+          "citation_check"
+        ],
+        "note": ""
+      }
+    },
+    "phase5": {
+      "status": "succeeded",
+      "delay_ms": 1500,
+      "result": {
+        "rare_candidates": []
+      }
+    },
+    "final": {
+      "status": "succeeded",
+      "delay_ms": 3500,
+      "result": {
+        "report_url": "/mock_fhir/reports/26-145982.md",
+        "similar_cases_count": 5
+      }
+    }
+  }
+}

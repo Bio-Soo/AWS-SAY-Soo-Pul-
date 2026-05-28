@@ -1,0 +1,189 @@
+AWSTemplateFormatVersion: '2010-09-09'
+Transform: AWS::Serverless-2016-10-31
+Description: >
+  Phase 1 — Symptom → HPO 추출 (Bedrock Claude + HPO official ontology).
+  Lambda + Bedrock invoke + S3 (HPO JSON) + Aurora (phase1_result, phase_execution_log).
+
+Parameters:
+  Stage:
+    Type: String
+    AllowedValues: [dev, staging, prod]
+    Default: dev
+  BedrockModelId:
+    Type: String
+    Default: anthropic.claude-3-5-sonnet-20240620-v1:0
+    Description: Bedrock model identifier (symptom_llm_4.py default)
+  BedrockRegion:
+    Type: String
+    Default: ap-northeast-2
+    Description: Region where Bedrock model is available
+  S3Bucket:
+    Type: String
+    Default: say2-2team-bucket
+    Description: Team S3 bucket (Phase_1/hpo_official.json 위치)
+  HpoJsonKey:
+    Type: String
+    Default: Phase_1/hpo_official.json
+    Description: S3 key of official HPO OBO graph JSON (22MB)
+  LogRetentionDays:
+    Type: Number
+    Default: 90
+
+Globals:
+  Function:
+    Runtime: python3.11
+    Timeout: 120
+    Tracing: Active
+    Environment:
+      Variables:
+        STAGE: !Ref Stage
+        BEDROCK_MODEL_ID: !Ref BedrockModelId
+        BEDROCK_REGION: !Ref BedrockRegion
+        S3_BUCKET: !Ref S3Bucket
+        HPO_JSON_KEY: !Ref HpoJsonKey
+        HPO_JSON_LOCAL: /tmp/hpo_official.json
+        PYTHONPATH: /opt/python
+
+Resources:
+  # ── Layer: deps (boto3 patch + psycopg2) ────────────────────────
+  Phase1DepsLayer:
+    Type: AWS::Serverless::LayerVersion
+    Properties:
+      LayerName: !Sub phase1-deps-${Stage}
+      Description: psycopg2-binary for Aurora phase_execution_log INSERT
+      ContentUri: ./layer/deps-build/
+      CompatibleRuntimes: [python3.11]
+      RetentionPolicy: Retain
+
+  # ── Lambda: symptom-LLM ─────────────────────────────────────────
+  Phase1SymptomFunction:
+    Type: AWS::Serverless::Function
+    Properties:
+      FunctionName: !Sub phase1-symptom-${Stage}
+      CodeUri: ./lambda/
+      Handler: handler.lambda_handler
+      MemorySize: 1024
+      ReservedConcurrentExecutions: 3
+      Layers:
+        - !Ref Phase1DepsLayer
+      Events:
+        ApiPost:
+          Type: Api
+          Properties:
+            RestApiId: !Ref Phase1Api
+            Path: /extract
+            Method: POST
+        ApiHealth:
+          Type: Api
+          Properties:
+            RestApiId: !Ref Phase1Api
+            Path: /health
+            Method: GET
+      # VPC config — Aurora 접속 (phase_execution_log INSERT)
+      VpcConfig:
+        SecurityGroupIds:
+          - sg-08d35c498d8886a98       # say2-2team-sg-lambda (Aurora 5432 ingress 허용)
+        SubnetIds:
+          - subnet-02eed659772bac6aa   # private-a (NAT Gateway 경유 → Bedrock + S3 + Secrets)
+          - subnet-08f8d0eaa597b4f04   # private-b
+      Policies:
+        - AWSLambdaBasicExecutionRole
+        - AWSLambdaVPCAccessExecutionRole
+        - AWSXrayWriteOnlyAccess
+        # Bedrock InvokeModel — Claude 3.5 Sonnet (HPO 추출용)
+        - Statement:
+            - Effect: Allow
+              Action:
+                - bedrock:InvokeModel
+                - bedrock:InvokeModelWithResponseStream
+              Resource:
+                - !Sub arn:aws:bedrock:${BedrockRegion}::foundation-model/${BedrockModelId}
+        # S3 — hpo_official.json 읽기 (S3 Gateway Endpoint 경유)
+        - Statement:
+            - Effect: Allow
+              Action:
+                - s3:GetObject
+              Resource:
+                - !Sub arn:aws:s3:::${S3Bucket}/${HpoJsonKey}
+        # KMS — say2-2team-bucket 의 SSE-KMS 객체 복호화
+        - Statement:
+            - Effect: Allow
+              Action:
+                - kms:Decrypt
+              Resource: '*'
+              Condition:
+                StringEquals:
+                  'kms:ViaService': !Sub 's3.${AWS::Region}.amazonaws.com'
+        # Secrets Manager — Aurora credentials
+        - Statement:
+            - Effect: Allow
+              Action:
+                - secretsmanager:GetSecretValue
+              Resource:
+                - !Sub "arn:aws:secretsmanager:ap-northeast-2:*:secret:soopul/aurora/app-user*"
+
+  # ── API Gateway REST ────────────────────────────────────────────
+  Phase1Api:
+    Type: AWS::Serverless::Api
+    Properties:
+      Name: !Sub phase1-api-${Stage}
+      StageName: !Ref Stage
+      TracingEnabled: true
+      EndpointConfiguration:
+        Type: REGIONAL
+      MethodSettings:
+        - ResourcePath: /*
+          HttpMethod: '*'
+          LoggingLevel: ERROR
+          MetricsEnabled: true
+          ThrottlingBurstLimit: 50
+          ThrottlingRateLimit: 20
+
+  Phase1SymptomLogs:
+    Type: AWS::Logs::LogGroup
+    Properties:
+      LogGroupName: !Sub /aws/lambda/${Phase1SymptomFunction}
+      RetentionInDays: !Ref LogRetentionDays
+
+  # ── 알람: 5xx 에러 ───────────────────────────────────────────────
+  Phase1ErrorAlarm:
+    Type: AWS::CloudWatch::Alarm
+    Properties:
+      AlarmName: !Sub phase1-errors-${Stage}
+      MetricName: Errors
+      Namespace: AWS/Lambda
+      Dimensions:
+        - Name: FunctionName
+          Value: !Ref Phase1SymptomFunction
+      Statistic: Sum
+      Period: 300
+      EvaluationPeriods: 1
+      Threshold: 5
+      ComparisonOperator: GreaterThanThreshold
+      TreatMissingData: notBreaching
+
+  # ── 알람: Bedrock throttle ───────────────────────────────────────
+  Phase1ThrottleAlarm:
+    Type: AWS::CloudWatch::Alarm
+    Properties:
+      AlarmName: !Sub phase1-bedrock-throttle-${Stage}
+      MetricName: Throttles
+      Namespace: AWS/Lambda
+      Dimensions:
+        - Name: FunctionName
+          Value: !Ref Phase1SymptomFunction
+      Statistic: Sum
+      Period: 300
+      EvaluationPeriods: 1
+      Threshold: 1
+      ComparisonOperator: GreaterThanThreshold
+      TreatMissingData: notBreaching
+
+Outputs:
+  ApiEndpoint:
+    Value: !Sub https://${Phase1Api}.execute-api.${AWS::Region}.amazonaws.com/${Stage}
+  ExtractUrl:
+    Value: !Sub https://${Phase1Api}.execute-api.${AWS::Region}.amazonaws.com/${Stage}/extract
+  LambdaArn:
+    Description: Lambda ARN (Step Functions integration용)
+    Value: !GetAtt Phase1SymptomFunction.Arn

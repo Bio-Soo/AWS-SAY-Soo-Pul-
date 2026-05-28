@@ -1,0 +1,19 @@
+{
+  "resourceType": "Patient",
+  "identifier": [
+    {
+      "system": "https://rare-link.ai/mrn",
+      "value": "26-415523"
+    }
+  ],
+  "name": [
+    {
+      "family": "최",
+      "given": [
+        "○○"
+      ]
+    }
+  ],
+  "gender": "male",
+  "birthDate": "1959-05-11"
+}

@@ -1,0 +1,9 @@
+{
+  "total_executions": 1247,
+  "items": [
+    { "kind": "no_retry",    "label": "재시도 없음",   "count": 985 },
+    { "kind": "rerun_image", "label": "이미지 재분석", "count": 142 },
+    { "kind": "rerun_all",   "label": "전체 재분석",   "count": 67  },
+    { "kind": "rerun_rare",  "label": "희귀 재시도",   "count": 53  }
+  ]
+}

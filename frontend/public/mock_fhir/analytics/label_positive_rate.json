@@ -1,0 +1,19 @@
+{
+  "total_cases": 1247,
+  "items": [
+    { "name": "Lung Opacity",                "positive": 519, "rate": 0.416 },
+    { "name": "Cardiomegaly",                "positive": 386, "rate": 0.310 },
+    { "name": "Pleural Effusion",            "positive": 274, "rate": 0.220 },
+    { "name": "Pneumonia",                   "positive": 218, "rate": 0.175 },
+    { "name": "Atelectasis",                 "positive": 193, "rate": 0.155 },
+    { "name": "Edema",                       "positive": 162, "rate": 0.130 },
+    { "name": "Consolidation",               "positive": 148, "rate": 0.119 },
+    { "name": "Lung Lesion",                 "positive": 87,  "rate": 0.070 },
+    { "name": "Support Devices",             "positive": 78,  "rate": 0.063 },
+    { "name": "Pneumothorax",                "positive": 41,  "rate": 0.033 },
+    { "name": "Enlarged Cardiomediastinum",  "positive": 36,  "rate": 0.029 },
+    { "name": "Pleural Other",               "positive": 22,  "rate": 0.018 },
+    { "name": "Fracture",                    "positive": 15,  "rate": 0.012 },
+    { "name": "No Finding",                  "positive": 312, "rate": 0.250 }
+  ]
+}

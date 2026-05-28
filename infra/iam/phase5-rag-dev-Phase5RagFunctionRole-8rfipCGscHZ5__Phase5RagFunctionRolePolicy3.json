@@ -1,0 +1,21 @@
+{
+    "Version": "2012-10-17",
+    "Statement": [
+        {
+            "Action": [
+                "bedrock:InvokeModel",
+                "bedrock:InvokeModelWithResponseStream"
+            ],
+            "Resource": [
+                "arn:aws:bedrock:*::foundation-model/anthropic.claude-3-5-sonnet-20240620-v1:0",
+                "arn:aws:bedrock:*::foundation-model/anthropic.claude-3-5-sonnet-20241022-v2:0",
+                "arn:aws:bedrock:*::foundation-model/anthropic.claude-sonnet-4-6",
+                "arn:aws:bedrock:*::foundation-model/anthropic.claude-sonnet-4-20250514-v1:0",
+                "arn:aws:bedrock:ap-northeast-2:666803869796:inference-profile/apac.anthropic.claude-3-5-sonnet-20241022-v2:0",
+                "arn:aws:bedrock:ap-northeast-2:666803869796:inference-profile/apac.anthropic.claude-3-5-sonnet-20240620-v1:0",
+                "arn:aws:bedrock:ap-northeast-2:666803869796:inference-profile/apac.anthropic.claude-sonnet-4-20250514-v1:0"
+            ],
+            "Effect": "Allow"
+        }
+    ]
+}

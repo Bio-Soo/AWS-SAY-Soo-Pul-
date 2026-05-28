@@ -1,0 +1,73 @@
+# Environments / secrets
+.env
+.env.local
+.env.*.local
+.env.production
+.env.development.local
+.env.staging
+*.pem
+*.key
+credentials.json
+secrets.json
+db.env
+
+# Note: .env.example and .env.development are intentionally committed
+# (commit-safe templates / non-secret dev defaults)
+!.env.example
+!.env.development
+
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+*.egg-info/
+.pytest_cache/
+.coverage
+.venv/
+venv/
+env/
+.aws-sam/
+
+# Node / frontend
+node_modules/
+dist/
+build/
+.vite/
+*.log
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+.pnpm-debug.log*
+
+# IDE / OS
+.vscode/
+.idea/
+.DS_Store
+Thumbs.db
+*.swp
+*.swo
+*~
+
+# Build artifacts / temp
+/tmp/
+tmp/
+*.zip.bak
+*.bak
+
+# Optional: large model files (download separately or use Git LFS)
+# *.pth
+# *.tar.gz
+# *.xlsx
+
+# AWS local state
+.aws/
+samconfig.toml
+
+# Test outputs
+test_out/
+*.test.json
+
+# Jupyter
+.ipynb_checkpoints/

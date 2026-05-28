@@ -1,0 +1,51 @@
+{
+  "resourceType": "Bundle",
+  "type": "searchset",
+  "total": 1,
+  "entry": [
+    {
+      "resource": {
+        "resourceType": "Condition",
+        "clinicalStatus": {
+          "coding": [
+            {
+              "system": "http://terminology.hl7.org/CodeSystem/condition-clinical",
+              "code": "active"
+            }
+          ]
+        },
+        "verificationStatus": {
+          "coding": [
+            {
+              "system": "http://terminology.hl7.org/CodeSystem/condition-ver-status",
+              "code": "provisional"
+            }
+          ]
+        },
+        "code": {
+          "coding": [
+            {
+              "system": "http://hl7.org/fhir/sid/icd-10-cm",
+              "code": "J84.112",
+              "display": "Idiopathic pulmonary fibrosis"
+            },
+            {
+              "system": "http://www.orpha.net",
+              "code": "2032",
+              "display": "Idiopathic pulmonary fibrosis"
+            }
+          ],
+          "text": "특발성 폐섬유증 의증 (IPF)"
+        },
+        "subject": {
+          "reference": "Patient/26-204017"
+        },
+        "encounter": {
+          "reference": "Encounter/26-204017-encounter"
+        },
+        "recordedDate": "2026-05-11T10:00:00+09:00"
+      },
+      "fullUrl": "Condition/?"
+    }
+  ]
+}

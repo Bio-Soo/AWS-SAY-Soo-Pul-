@@ -1,0 +1,50 @@
+{
+    "Version": "2012-10-17",
+    "Statement": [
+        {
+            "Effect": "Allow",
+            "Action": [
+                "s3:PutObject",
+                "s3:GetObject"
+            ],
+            "Resource": [
+                "arn:aws:s3:::say2-2team-bucket/RAG/pcf_cache/*"
+            ]
+        },
+        {
+            "Effect": "Allow",
+            "Action": [
+                "s3:ListBucket"
+            ],
+            "Resource": [
+                "arn:aws:s3:::say2-2team-bucket"
+            ],
+            "Condition": {
+                "StringLike": {
+                    "s3:prefix": [
+                        "RAG/pcf_cache/*"
+                    ]
+                }
+            }
+        },
+        {
+            "Effect": "Allow",
+            "Action": [
+                "kms:GenerateDataKey",
+                "kms:Decrypt"
+            ],
+            "Resource": [
+                "arn:aws:kms:ap-northeast-2:666803869796:key/4a1be264-1ccf-4a2c-a937-3e6847a751d5"
+            ]
+        },
+        {
+            "Effect": "Allow",
+            "Action": [
+                "bedrock:GetPrompt"
+            ],
+            "Resource": [
+                "arn:aws:bedrock:ap-northeast-2:666803869796:prompt/NAOHDQW1B2"
+            ]
+        }
+    ]
+}

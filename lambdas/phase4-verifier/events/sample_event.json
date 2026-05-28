@@ -1,0 +1,8 @@
+{
+  "resource": "/verify",
+  "path": "/verify",
+  "httpMethod": "POST",
+  "headers": {"Content-Type": "application/json"},
+  "isBase64Encoded": false,
+  "body": "{\"mode\":\"mock\",\"phase3_ranking\":[{\"disease_key\":\"community_acquired_pneumonia\",\"score\":0.78,\"hp_matches\":[\"HP:0012735\",\"HP:0001945\",\"HP:0002094\"]},{\"disease_key\":\"viral_pneumonia\",\"score\":0.61,\"hp_matches\":[\"HP:0012735\",\"HP:0001945\"]},{\"disease_key\":\"copd_exacerbation\",\"score\":0.42,\"hp_matches\":[\"HP:0002094\"]}],\"matched_hp_ids\":[\"HP:0012735\",\"HP:0001945\",\"HP:0002094\"],\"patient_age\":72,\"patient_sex\":\"M\",\"patient_history\":[\"COPD 10y\",\"Type 2 DM\"],\"patient_medications\":[\"prednisone 10mg daily\",\"metformin 1000mg\"],\"xray_findings\":[\"right lower lobe consolidation\"],\"lab_summary\":[{\"name\":\"WBC\",\"value\":14.2,\"unit\":\"K/uL\",\"interpretation\":\"High\"},{\"name\":\"CRP\",\"value\":120,\"unit\":\"mg/L\",\"interpretation\":\"High\"},{\"name\":\"SpO2\",\"value\":89,\"unit\":\"%\",\"interpretation\":\"Low\"}],\"clinical_scores\":{\"CURB-65\":2,\"qSOFA\":1,\"NEWS2\":5}}"
+}

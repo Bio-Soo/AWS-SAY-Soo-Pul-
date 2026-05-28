@@ -1,0 +1,51 @@
+{
+  "resourceType": "Bundle",
+  "type": "searchset",
+  "total": 1,
+  "entry": [
+    {
+      "resource": {
+        "resourceType": "Condition",
+        "clinicalStatus": {
+          "coding": [
+            {
+              "system": "http://terminology.hl7.org/CodeSystem/condition-clinical",
+              "code": "active"
+            }
+          ]
+        },
+        "verificationStatus": {
+          "coding": [
+            {
+              "system": "http://terminology.hl7.org/CodeSystem/condition-ver-status",
+              "code": "provisional"
+            }
+          ]
+        },
+        "code": {
+          "coding": [
+            {
+              "system": "http://hl7.org/fhir/sid/icd-10-cm",
+              "code": "J84.81",
+              "display": "Lymphangioleiomyomatosis"
+            },
+            {
+              "system": "http://www.orpha.net",
+              "code": "538",
+              "display": "Lymphangioleiomyomatosis"
+            }
+          ],
+          "text": "림프관평활근종증 의증 (LAM)"
+        },
+        "subject": {
+          "reference": "Patient/26-301102"
+        },
+        "encounter": {
+          "reference": "Encounter/26-301102-encounter"
+        },
+        "recordedDate": "2026-05-11T10:50:00+09:00"
+      },
+      "fullUrl": "Condition/?"
+    }
+  ]
+}

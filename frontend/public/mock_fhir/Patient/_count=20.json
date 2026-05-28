@@ -1,0 +1,117 @@
+{
+  "resourceType": "Bundle",
+  "type": "searchset",
+  "total": 5,
+  "entry": [
+    {
+      "resource": {
+        "resourceType": "Patient",
+        "identifier": [
+          {
+            "system": "https://rare-link.ai/mrn",
+            "value": "26-145982"
+          }
+        ],
+        "name": [
+          {
+            "family": "김",
+            "given": [
+              "○○"
+            ]
+          }
+        ],
+        "gender": "male",
+        "birthDate": "1960-05-11"
+      },
+      "fullUrl": "Patient/?"
+    },
+    {
+      "resource": {
+        "resourceType": "Patient",
+        "identifier": [
+          {
+            "system": "https://rare-link.ai/mrn",
+            "value": "26-098234"
+          }
+        ],
+        "name": [
+          {
+            "family": "이",
+            "given": [
+              "○○"
+            ]
+          }
+        ],
+        "gender": "male",
+        "birthDate": "1957-05-11"
+      },
+      "fullUrl": "Patient/?"
+    },
+    {
+      "resource": {
+        "resourceType": "Patient",
+        "identifier": [
+          {
+            "system": "https://rare-link.ai/mrn",
+            "value": "26-204017"
+          }
+        ],
+        "name": [
+          {
+            "family": "박",
+            "given": [
+              "○○"
+            ]
+          }
+        ],
+        "gender": "male",
+        "birthDate": "1954-05-11"
+      },
+      "fullUrl": "Patient/?"
+    },
+    {
+      "resource": {
+        "resourceType": "Patient",
+        "identifier": [
+          {
+            "system": "https://rare-link.ai/mrn",
+            "value": "26-301102"
+          }
+        ],
+        "name": [
+          {
+            "family": "정",
+            "given": [
+              "○○"
+            ]
+          }
+        ],
+        "gender": "female",
+        "birthDate": "1991-05-11"
+      },
+      "fullUrl": "Patient/?"
+    },
+    {
+      "resource": {
+        "resourceType": "Patient",
+        "identifier": [
+          {
+            "system": "https://rare-link.ai/mrn",
+            "value": "26-415523"
+          }
+        ],
+        "name": [
+          {
+            "family": "최",
+            "given": [
+              "○○"
+            ]
+          }
+        ],
+        "gender": "male",
+        "birthDate": "1959-05-11"
+      },
+      "fullUrl": "Patient/?"
+    }
+  ]
+}

@@ -1,0 +1,29 @@
+{
+  "resourceType": "Bundle",
+  "type": "searchset",
+  "total": 1,
+  "entry": [
+    {
+      "resource": {
+        "resourceType": "Encounter",
+        "status": "in-progress",
+        "class": {
+          "system": "http://terminology.hl7.org/CodeSystem/v3-ActCode",
+          "code": "AMB"
+        },
+        "subject": {
+          "reference": "Patient/26-204017"
+        },
+        "period": {
+          "start": "2026-05-11T10:00:00+09:00"
+        },
+        "reasonCode": [
+          {
+            "text": "2년 전부터 점진적 운동성 호흡곤란, 마른기침 지속"
+          }
+        ]
+      },
+      "fullUrl": "Encounter/?"
+    }
+  ]
+}

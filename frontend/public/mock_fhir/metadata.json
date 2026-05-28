@@ -1,0 +1,93 @@
+{
+  "resourceType": "CapabilityStatement",
+  "id": "rare-link-local-mock",
+  "status": "active",
+  "date": "2026-05-12",
+  "publisher": "Rare-Link AI · SKKU AWS SAY 2-2",
+  "kind": "instance",
+  "software": {
+    "name": "rare-link-local-mock",
+    "version": "1.0"
+  },
+  "implementation": {
+    "description": "Static JSON mock served from /mock_fhir/",
+    "url": "/mock_fhir"
+  },
+  "fhirVersion": "4.0.1",
+  "format": [
+    "application/fhir+json"
+  ],
+  "rest": [
+    {
+      "mode": "server",
+      "resource": [
+        {
+          "type": "Patient",
+          "interaction": [
+            {
+              "code": "read"
+            },
+            {
+              "code": "search-type"
+            }
+          ]
+        },
+        {
+          "type": "Observation",
+          "interaction": [
+            {
+              "code": "read"
+            },
+            {
+              "code": "search-type"
+            }
+          ]
+        },
+        {
+          "type": "Condition",
+          "interaction": [
+            {
+              "code": "read"
+            },
+            {
+              "code": "search-type"
+            }
+          ]
+        },
+        {
+          "type": "Encounter",
+          "interaction": [
+            {
+              "code": "read"
+            },
+            {
+              "code": "search-type"
+            }
+          ]
+        },
+        {
+          "type": "ImagingStudy",
+          "interaction": [
+            {
+              "code": "read"
+            },
+            {
+              "code": "search-type"
+            }
+          ]
+        },
+        {
+          "type": "DocumentReference",
+          "interaction": [
+            {
+              "code": "read"
+            },
+            {
+              "code": "search-type"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

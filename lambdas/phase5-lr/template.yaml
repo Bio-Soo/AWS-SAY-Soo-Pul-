@@ -1,0 +1,160 @@
+AWSTemplateFormatVersion: '2010-09-09'
+Transform: AWS::Serverless-2016-10-31
+Description: >
+  Phase 5 LR — LIRICAL Likelihood Ratio scoring (rare disease listing).
+  Reads phase1+phase2+lab raw from Aurora, computes LR per disease,
+  writes phase5_rare_disease_listing + phase_execution_log.
+
+Parameters:
+  Stage:
+    Type: String
+    Default: dev
+    AllowedValues: [dev, staging, prod]
+  LogRetentionDays:
+    Type: Number
+    Default: 30
+
+Globals:
+  Function:
+    Runtime: python3.11
+    Architectures: [x86_64]
+    Timeout: 300
+    MemorySize: 1024
+    Tracing: Active
+    Environment:
+      Variables:
+        DATA_DIR: /opt/data
+        PYTHONPATH: /opt/python
+        STAGE: !Ref Stage
+        LOG_LEVEL: INFO
+
+Resources:
+  # ── Layers ──────────────────────────────────────────────────────
+  Phase5LRDepsLayer:
+    Type: AWS::Serverless::LayerVersion
+    Properties:
+      LayerName: !Sub phase5-lr-deps-${Stage}
+      Description: psycopg2-binary + PyYAML
+      ContentUri: layer/deps-build/
+      CompatibleRuntimes: [python3.11]
+      CompatibleArchitectures: [x86_64]
+      RetentionPolicy: Delete
+
+  Phase5LRDataLayer:
+    Type: AWS::Serverless::LayerVersion
+    Properties:
+      LayerName: !Sub phase5-lr-data-${Stage}
+      Description: hpo_background_freq.json + rare_disease_profiles_v3_1.yaml
+      ContentUri: layer/data-build/
+      CompatibleRuntimes: [python3.11]
+      CompatibleArchitectures: [x86_64]
+      RetentionPolicy: Delete
+
+  # ── Lambda ──────────────────────────────────────────────────────
+  Phase5LRFunction:
+    Type: AWS::Serverless::Function
+    DependsOn: Phase5LRLogs
+    Properties:
+      FunctionName: !Sub phase5-lr-${Stage}
+      CodeUri: lambda/
+      Handler: handler.lambda_handler
+      Description: Phase 5 LIRICAL LR scoring + phase_execution_log INSERT
+      Layers:
+        - !Ref Phase5LRDepsLayer
+        - !Ref Phase5LRDataLayer
+      VpcConfig:
+        SecurityGroupIds:
+          - sg-03b9bc5d95699b797   # fhir-ec2-sg — RDS 5432 접근 권한 보유
+        SubnetIds:
+          - subnet-02eed659772bac6aa   # private-1 (AZ 2a)
+          - subnet-09ba10cf625d73da0   # private-4 (AZ 2c) — multi-AZ HA
+      Policies:
+        - AWSLambdaBasicExecutionRole
+        - AWSLambdaVPCAccessExecutionRole
+        - AWSXrayWriteOnlyAccess
+        - Statement:
+            - Effect: Allow
+              Action:
+                - secretsmanager:GetSecretValue
+              Resource:
+                - !Sub arn:aws:secretsmanager:ap-northeast-2:*:secret:soopul/aurora/app-user*
+      Events:
+        RunPost:
+          Type: Api
+          Properties:
+            RestApiId: !Ref Phase5LRApi
+            Path: /run
+            Method: POST
+        HealthGet:
+          Type: Api
+          Properties:
+            RestApiId: !Ref Phase5LRApi
+            Path: /health
+            Method: GET
+      Tags:
+        project: pre-2-2team
+
+  # ── API Gateway ─────────────────────────────────────────────────
+  Phase5LRApi:
+    Type: AWS::Serverless::Api
+    Properties:
+      Name: !Sub phase5-lr-api-${Stage}
+      StageName: !Ref Stage
+      TracingEnabled: true
+      EndpointConfiguration:
+        Type: REGIONAL
+      MethodSettings:
+        - ResourcePath: /*
+          HttpMethod: '*'
+          LoggingLevel: ERROR
+          MetricsEnabled: true
+          ThrottlingBurstLimit: 100
+          ThrottlingRateLimit: 50
+      Tags:
+        project: pre-2-2team
+
+  # ── CloudWatch Log Group ───────────────────────────────────────
+  Phase5LRLogs:
+    Type: AWS::Logs::LogGroup
+    Properties:
+      LogGroupName: !Sub /aws/lambda/phase5-lr-${Stage}
+      RetentionInDays: !Ref LogRetentionDays
+
+  # ── Alarms ──────────────────────────────────────────────────────
+  Phase5LRErrorAlarm:
+    Type: AWS::CloudWatch::Alarm
+    Properties:
+      AlarmName: !Sub phase5-lr-errors-${Stage}
+      AlarmDescription: Phase 5 LR Lambda error rate threshold
+      MetricName: Errors
+      Namespace: AWS/Lambda
+      Dimensions:
+        - Name: FunctionName
+          Value: !Ref Phase5LRFunction
+      Statistic: Sum
+      Period: 300
+      EvaluationPeriods: 1
+      Threshold: 5
+      ComparisonOperator: GreaterThanThreshold
+      TreatMissingData: notBreaching
+
+Outputs:
+  ApiEndpoint:
+    Description: Phase5 LR API Gateway base URL
+    Value: !Sub https://${Phase5LRApi}.execute-api.${AWS::Region}.amazonaws.com/${Stage}
+    Export:
+      Name: !Sub ${AWS::StackName}-ApiEndpoint
+  RunUrl:
+    Description: POST endpoint to trigger LR scoring
+    Value: !Sub https://${Phase5LRApi}.execute-api.${AWS::Region}.amazonaws.com/${Stage}/run
+    Export:
+      Name: !Sub ${AWS::StackName}-RunUrl
+  LambdaArn:
+    Description: Phase 5 LR Lambda function ARN (Step Functions integration)
+    Value: !GetAtt Phase5LRFunction.Arn
+    Export:
+      Name: !Sub ${AWS::StackName}-LambdaArn
+  DepsLayerArn:
+    Value: !Ref Phase5LRDepsLayer
+  DataLayerArn:
+    Value: !Ref Phase5LRDataLayer

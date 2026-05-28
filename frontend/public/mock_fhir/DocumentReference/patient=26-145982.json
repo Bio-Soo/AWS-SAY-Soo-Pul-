@@ -1,0 +1,45 @@
+{
+  "resourceType": "Bundle",
+  "type": "searchset",
+  "total": 1,
+  "entry": [
+    {
+      "resource": {
+        "resourceType": "DocumentReference",
+        "status": "current",
+        "type": {
+          "coding": [
+            {
+              "system": "http://loinc.org",
+              "code": "11506-3",
+              "display": "Progress note"
+            }
+          ]
+        },
+        "subject": {
+          "reference": "Patient/26-145982"
+        },
+        "context": {
+          "encounter": [
+            {
+              "reference": "Encounter/26-145982-encounter"
+            }
+          ]
+        },
+        "date": "2026-05-11T08:30:00+09:00",
+        "description": "외래 초진 노트 — 발열·기침·호흡곤란 3일, CAP 의증",
+        "content": [
+          {
+            "attachment": {
+              "contentType": "text/plain; charset=utf-8",
+              "language": "ko",
+              "data": "W+yEseq3oOq0gOuMgO2Vmeq1kOuzkeybkCDtmLjtnaHquLDrgrTqs7wg7Jm4656YXQrtmZjsnpA6IOq5gOKXi+KXiyAoTS82NSksIE1STiAyNi0xNDU5ODIK7J287IucOiAyMDI2LTA1LTExIDA4OjMwICjsoJXrr7zsiJgg6rO87J6lKQoKIyDso7ztmLjshowgKENoaWVmIENvbXBsYWludCkK67Cc7Je0LCDquLDsuagsIO2YuO2doeqzpOuegCAz7J28CgojIO2YhOuzkeugpSAoSFBJKQo2NeyEuCDrgqjshLEuIO2PieyGjCDqsbTqsJXtlZjrjZgg7J6Q66GcLCAz7J28IOyghOu2gO2EsCDrsJzsl7Qo7LK07JioIDM564+EIOydtOyDgSkg7Iuc7J6RLgrriITrn7Ag6rCA656YIOuPmeuwmO2VnCDquLDsuagg7KCQ7KCQIOyLrO2VtOyngOqzoCwg7Ja07KCc67aA7YSw64qUIOyViOyglSDsi5zsl5Drj4Qg7Iio7J20IOywqOyEnCDrgrTsm5AuCuyasOy4oSDqsIDsirQg7Ya17KadLCDtnaHquLAg7IucIOuNlCDsi6ztlbTsp5Ao7Z2J66eJ7ISxIOyWkeyDgSkuIOyLneyCrOufiSDsoIjrsJjsnLzroZwg6rCQ7IaMLgrstZzqt7wg7Jm47Lac66ClIOyXhuydjC4g67Cx7IugIOygkeyiheugpTogMjPqsIAg7Y+Q66C06rWs6regIOuwseyLoChQUFNWMjMpIOuvuOygkeyihSwg7J247ZSM66Oo7JeU7J6QIOuvuOygkeyihS4KCiMg6rO86rGw66ClIChQTUgpCuqzoO2YiOyVlSAoQW1sb2RpcGluZSA1bWcgcWQpLCDri7nrh6ggKE1ldGZvcm1pbiA1MDBtZyBiaWQpLiBIYkExYyA3LjIlLgrtnaHsl7A6IDMw6rCR64WELCA164WEIOyghCDquIjsl7AuIOydjOyjvDog7IKs7ZqM7KCBLgoKIyDqsIDsobHroKUgLyDsgqztmozroKUK67aA7LmcIO2PkOyVlCDsgqzrp50oODDshLgpLiDtmLjtnaHquLAg7KeI7ZmYIOqwgOyhseugpSDsl4bsnYwuCuuPheqxsC4g7IaQ7J6Q64WAIDLrqoUg7J6Q7KO8IOuwqeusuC4KCiMg7Iug7LK06rKA7KeECu2ZnOugpeynle2bhDogQlAgMTA1LzY1LCBIUiAxMTUsIFJSIDMyLCBUIDM5LjLihIMsIFNwTzIgODglIFJBCuydvOuwmDog6riJ7ISxIOuzkeyDiSwg7J2Y7IudIOuqheujjCwg67Cc7ZWcIOuPmeuwmArqsIDsirQ6IOyasO2VmOu2gCDtmLjtnaHsnYwg6rCQ7IaMLCDtm4Ttj5DquLDshLEg7IiY7Y+s7J2MIOyyreynhOuQqCwg7YOA7KeEIOustOuUmCDsnYwK7Ius7J6lOiDruYjrp6Ug7Jm4IO2KueydtOyGjOqyrCDsl4bsnYwsIFMxUzIg7KCV7IOBCuuzteu2gDog7Y+J7YOELCDslZXthrUg7JeG7J2MCgojIOqygOyCrCAoODozNSDsi5ztlokpCi0gQ0JDOiBXQkMgMTgsNTAwIC/OvEwgKEgsIO2YuOykkeq1rCA4OCUpLCBIYiAxMy41LCBQbHQgMjIwSwotIO2YiOyyre2ZlO2VmTogQlVOIDI4IChIKSwgQ3IgMS4xLCBOYSAxMzIgKEwpLCBLIDQuMiwgR2x1Y29zZSAxNjgKLSDsl7zspp06IENSUCAxNTAgbWcvTCAoSEgpLCBQcm9jYWxjaXRvbmluIDMuMiBuZy9tTCAoSCkKLSDrj5nrp6XtmIjqsIDsiqQgKFJBKTogcEggNy40MywgUGFPMiA1OCBtbUhnIChMKSwgUGFDTzIgMzIsIEhDTzMgMjIKLSBMYWN0YXRlIDMuNSBtbW9sL0wgKEgpCi0g6rCd64u0IOq3uOuejOyXvOyDiTog6re4656M7JaR7ISxIOyMjeq1rOq3oCDri6TsiJgg4oaSIFMuIHBuZXVtb25pYWUg7J2Y7IusCgojIOyYgeyDgSAoQ1hSIFBBLCB2aWV3MV9mcm9udGFsKQotIOyasO2VmOyXvSDrtoTrqoXtlZwgY29uc29saWRhdGlvbgotIEFpciBicm9uY2hvZ3JhbSArCi0g7JaR7LihIOuKkeunieyCvOy2nCDsl4bsnYwKLSDsi6zruYTrjIAg7JeG7J2MCltDaGVYcGVydCBBSTogUG5ldW1vbmlhIDAuOTIsIENvbnNvbGlkYXRpb24gMC44OCwgTHVuZyBPcGFjaXR5IDAuODVdCgojIENVUkItNjUg7Y+J6rCACi0gQ29uZnVzaW9uOiDinJcKLSBVcmVhID4gNyBtbW9sL0w6IOKckyAoQlVOIDI4LCB1cmVhIO2ZmOyCsCAxMCkKLSBSZXNwaXJhdG9yeSByYXRlIOKJpSAzMDog4pyTCi0gQlAgKFNCUCA8IDkwIG9yIERCUCDiiaQgNjApOiDinJMgKEJQIDEwNS82NSwgREJQPTY1IGJvcmRlcmxpbmUpCi0gQWdlIOKJpSA2NTog4pyTCuKGkiBTY29yZSAzICjspJHspp0sIGhvc3BpdGFsIGFkbWlzc2lvbiDqtozqs6ApCgojIO2PieqwgCAvIOqzhO2ajQoxLiDsp4Dsl63sgqztmoztmo3rk50g7Y+Q66C0IChDQVApIOKAlCBTLiBwbmV1bW9uaWFlIOy2lOyglQoyLiDsnZHquInsi6Qg7J2Y66KwIOKGkiDsnoXsm5Ag7ZuEIOygleunpSDtla3sg53soJwg7Iuc7J6RIOq2jOqzoAogICAtIENlZnRyaWF4b25lIDJnIElWIHEyNGggKyBBeml0aHJvbXljaW4gNTAwbWcgSVYgcTI0aAozLiDsgrDshowg6rO16riJIG5hc2FsIDNML21pbiDsi5zsnpEgKOuqqe2RnCBTcE8yIOKJpSA5MiUpCjQuIO2YiOyVoeuwsOyWkSAyIHNldHMsIOqwneuLtOuwsOyWkcK3UENSIOqygOyytCDsnZjrorAKNS4gMjRoIO2bhCDtla3sg53soJwg67CY7J2RIO2PieqwgAo=",
+              "title": "patient-01-cap.note.txt"
+            }
+          }
+        ]
+      },
+      "fullUrl": "DocumentReference/?"
+    }
+  ]
+}

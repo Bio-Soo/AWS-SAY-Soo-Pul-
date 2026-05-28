@@ -1,0 +1,67 @@
+{
+    "FunctionName": "phase3-scorer-dev",
+    "FunctionArn": "arn:aws:lambda:ap-northeast-2:666803869796:function:phase3-scorer-dev",
+    "Runtime": "python3.11",
+    "Role": "arn:aws:iam::666803869796:role/phase3-scorer-dev-Phase3ScorerFunctionRole-C3L9raUZH0TD",
+    "Handler": "handler.lambda_handler",
+    "CodeSize": 7838,
+    "Description": "diag-1779789933",
+    "Timeout": 300,
+    "MemorySize": 2048,
+    "LastModified": "2026-05-26T11:58:51.000+0000",
+    "CodeSha256": "Do7nen8OWP90+fsdyH/0H3VwlloHBwy0BfQ5KLi5U6g=",
+    "Version": "$LATEST",
+    "VpcConfig": {
+        "SubnetIds": [
+            "subnet-02eed659772bac6aa",
+            "subnet-08f8d0eaa597b4f04"
+        ],
+        "SecurityGroupIds": [
+            "sg-03b9bc5d95699b797"
+        ],
+        "VpcId": "vpc-06dd0ad1f2335ea74",
+        "Ipv6AllowedForDualStack": false
+    },
+    "Environment": {
+        "Variables": {
+            "PYTHONPATH": "/opt/python",
+            "DATA_DIR": "/opt/data",
+            "STAGE": "dev",
+            "LUNG_DX_DATA_DIR": "/opt/data"
+        }
+    },
+    "TracingConfig": {
+        "Mode": "Active"
+    },
+    "RevisionId": "5e80ef3c-d906-4b32-a17b-155a4364ec24",
+    "Layers": [
+        {
+            "Arn": "arn:aws:lambda:ap-northeast-2:666803869796:layer:phase3-deps-dev:9",
+            "CodeSize": 33505770
+        },
+        {
+            "Arn": "arn:aws:lambda:ap-northeast-2:666803869796:layer:phase3-data-dev:6",
+            "CodeSize": 656399
+        }
+    ],
+    "State": "Active",
+    "LastUpdateStatus": "Successful",
+    "PackageType": "Zip",
+    "Architectures": [
+        "x86_64"
+    ],
+    "EphemeralStorage": {
+        "Size": 512
+    },
+    "SnapStart": {
+        "ApplyOn": "None",
+        "OptimizationStatus": "Off"
+    },
+    "RuntimeVersionConfig": {
+        "RuntimeVersionArn": "arn:aws:lambda:ap-northeast-2::runtime:a0dd170e909c9230a7e18f978320f0053271b75d0b703c836ab4f98f2e3f6a5a"
+    },
+    "LoggingConfig": {
+        "LogFormat": "Text",
+        "LogGroup": "/aws/lambda/phase3-scorer-dev"
+    }
+}

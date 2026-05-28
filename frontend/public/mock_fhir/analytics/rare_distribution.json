@@ -1,0 +1,12 @@
+{
+  "total": 153,
+  "items": [
+    { "name_kr": "특발성 폐섬유증 (IPF)",         "orpha": "ORPHA:2032",  "count": 28 },
+    { "name_kr": "비특이성 간질성 폐렴 (NSIP)",     "orpha": "ORPHA:79126", "count": 21 },
+    { "name_kr": "사르코이드증",                   "orpha": "ORPHA:797",   "count": 16 },
+    { "name_kr": "림프관평활근종증 (LAM)",          "orpha": "ORPHA:538",   "count": 12 },
+    { "name_kr": "과민성 폐장염",                  "orpha": "ORPHA:64744", "count": 11 },
+    { "name_kr": "랑게르한스세포 조직구증",        "orpha": "ORPHA:99874", "count": 9  },
+    { "name_kr": "기타 희귀 ILD",                  "orpha": null,          "count": 56 }
+  ]
+}

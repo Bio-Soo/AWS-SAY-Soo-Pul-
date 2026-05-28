@@ -1,0 +1,7 @@
+[
+  {"Name":"institution","AttributeDataType":"String","Mutable":true,"StringAttributeConstraints":{"MinLength":"0","MaxLength":"256"}},
+  {"Name":"department","AttributeDataType":"String","Mutable":true,"StringAttributeConstraints":{"MinLength":"0","MaxLength":"256"}},
+  {"Name":"role","AttributeDataType":"String","Mutable":true,"StringAttributeConstraints":{"MinLength":"0","MaxLength":"256"}},
+  {"Name":"license_no","AttributeDataType":"String","Mutable":true,"StringAttributeConstraints":{"MinLength":"0","MaxLength":"64"}},
+  {"Name":"emr_vendor","AttributeDataType":"String","Mutable":true,"StringAttributeConstraints":{"MinLength":"0","MaxLength":"64"}}
+]

@@ -1,0 +1,45 @@
+{
+  "resourceType": "Bundle",
+  "type": "searchset",
+  "total": 1,
+  "entry": [
+    {
+      "resource": {
+        "resourceType": "DocumentReference",
+        "status": "current",
+        "type": {
+          "coding": [
+            {
+              "system": "http://loinc.org",
+              "code": "11506-3",
+              "display": "Progress note"
+            }
+          ]
+        },
+        "subject": {
+          "reference": "Patient/26-098234"
+        },
+        "context": {
+          "encounter": [
+            {
+              "reference": "Encounter/26-098234-encounter"
+            }
+          ]
+        },
+        "date": "2026-05-11T09:10:00+09:00",
+        "description": "외래 재진 노트 — COPD 급성 악화 의증, 흡연력 50갑년",
+        "content": [
+          {
+            "attachment": {
+              "contentType": "text/plain; charset=utf-8",
+              "language": "ko",
+              "data": "W+yEseq3oOq0gOuMgO2Vmeq1kOuzkeybkCDtmLjtnaHquLDrgrTqs7wg7Jm4656YXQrtmZjsnpA6IOydtOKXi+KXiyAoTS82OSksIE1STiAyNi0wOTgyMzQK7J287IucOiAyMDI2LTA1LTExIDA5OjEwICjsoJXrr7zsiJgg6rO87J6lKQoKIyDso7ztmLjshowgKENoaWVmIENvbXBsYWludCkK7IioIOywqOqzoCDqsIDrnpgg64qY7Ja064KoIDHso7wKCiMg7ZiE67OR66ClIChIUEkpCjY57IS4IOuCqOyEsSwgMTDrhYQg7KCEIENPUEQgR09MRCBJSSDsp4Tri6jrsJvqs6Ag7KCV6riwIOyZuOuemCBmb2xsb3ctdXAg7KSRLgox7KO8IOyghOu2gO2EsCDqsIDrnpgg7JaRIO2PieyGjOuztOuLpCAy67CwIOydtOyDgSwg7IOJ6rmUIOuIhOugh+qyjCDrs4DtlaguCuqzhOuLqCDtlZwg7Li164+EIOuquyDsmKzrnbzqsIAgU09CIOygkOygkCDsi6ztlbTsp5Ao7Y+J7IaMIE1NUkMgMiDihpIgMykuCuyVvOqwhCDsspzrqoXsnYwg64+Z67CYLiDtnaHsl7AgNTDqsJHrhYQsIDbqsJzsm5Qg7KCEIOq4iOyXsCDsmYTro4wuCgojIOqzvOqxsOugpSAoUE1IKQpDT1BEIEdPTEQgSUkgKEZFVjEgNjIlIHByZWRpY3RlZCwgRkVWMS9GVkMgMC41OCDCtyDsnpHrhYQgUEZUKQrqs6DtmIjslZUsIOunjOyEsSDsi6DrtoDsoIQgc3RhZ2UgMyAoZUdGUiA0OCkK7Jyg7KeAIOyVveygnDogVGlvdHJvcGl1bSAxOG1jZyBxZCArIEZvcm1vdGVyb2wvQnVkZXNvbmlkZSBJQ1MtTEFCQSBiaWQKU0FCQSjsgrTrtoDtg4DrqrApIOydkeq4iSDsgqzsmqkg4oCUIOy1nOq3vCAy7KO8IOunpOydvCDsgqzsmqkgKOyVhe2ZlCDsi6DtmLgpCgojIOqwgOyhseugpSAvIOyCrO2ajOugpQrrtoDsuZwg7Y+Q6riw7KKFIOyCrOunnS4g7Z2h7JewIDUw6rCR64WEICgyMOyEuOu2gO2EsCwgNuqwnOyblCDsoIQg6riI7JewKS4K7IKw7JeF7LK0IOuztOydvOufrOqztSAzNeuFhCwg67aE7KeEIOuFuOy2nOugpSDsnojsnYwuCgojIOyLoOyytOqygOynhArtmZzroKXsp5Xtm4Q6IEJQIDEzOC84MiwgSFIgMTA1LCBSUiAyNiwgVCAzNy404oSDLCBTcE8yIDg5JSBSQQrsnbzrsJg6IOyVve2VnCDssq3sg4nspp0sIOyeheyIoCDslb3qsIQg7ZG466aELCDrs7TsobDtmLjtnaHqt7wg7IKs7JqpCuqwgOyKtDog7Ya1IOuqqOyWkSDqsIDsirQoYmFycmVsIGNoZXN0KSwg7JaR7LihIO2YuOq4sOyEsSDsspzrqoXsnYwg66+466eM7ISxCiAgICAgICDtmLjquLAg7Jew7J6lIChJOkUgcmF0aW8gMTozKQogICAgICAg7JaRIO2PkCDquLDsoIDrtoAg7IiY7Y+s7J2MIOyXhuydjArsi6zsnqU6IOu5iOunpSwgUzIg7Y+Q64+Z66el7YyQIOu2gOu2hCDqsJXtlbTsp5AKCiMg6rKA7IKsCi0gQ0JDOiBXQkMgMTIsNTAwIC/OvEwgKEgsIO2YuOykkeq1rCA3NSUpLCBIYiAxNC4yLCBQbHQgMjQ1SwotIO2YiOyyre2ZlO2VmTogQlVOIDI0LCBDciAxLjUgKEgpLCBOYSAxMzgsIEsgNC4wCi0g7Je87KadOiBDUlAgMzggbWcvTCAoSCksIFByb2NhbGNpdG9uaW4gMC4xNSAo7KCV7IOBKQotIOuPmeunpe2YiOqwgOyKpCAoUkEpOiBwSCA3LjMyIChMKSwgUGFPMiA2MiBtbUhnIChMKSwgUGFDTzIgNTggbW1IZyAoSCksIEhDTzMgMjgKICDihpIg66eM7ISxIO2YuO2doeu2gOyghCArIOq4ieyEsSDslYXtmZQgKOunjOyEsSDrs7Tsg4HrkJwg7Zi47Z2h7ISxIOyCsOymnSkKLSBCTlAgOTUgcGcvbUwgKOygleyDgSkKCiMg7JiB7IOBIChDWFIgUEEsIHZpZXcxX2Zyb250YWwpCi0g7JaR7LihIO2PkCDqs7ztjL3ssL0gKGh5cGVyaW5mbGF0aW9uKQotIO2aoeqyqeuniSDtjrjtj4ntmZQKLSDrqoXtmZXtlZwg7Lmo7JykLCDripHrp4nsgrzstpwg7JeG7J2MCi0g7Ius67mE64yAIOyXhuydjApbQ2hlWHBlcnQgQUk6IE5vIEZpbmRpbmcgMC43OCDigJQgQ09QRCDsoJXrn4kg7Y+J6rCA7JeQIENYUiDtlZzsoJXsoIEsIOyehOyDgSDsp4Tri6hdCgojIO2PieqwgCAvIOqzhO2ajQoxLiBDT1BEIOq4ieyEsSDslYXtmZQgKEFudGhvbmlzZW4gdHlwZSBJSSDigJQg7Zi47Z2h6rOk656AICsg6rCA656Y65+JIOymneqwgCkKMi4g7J6F7JuQIOqysOyglSDigJQgUlIgMjYsIFNwTzIgODklLCBwSCA3LjMyIOKGkiDspJHrk7Hrj4Qg7JWF7ZmUCjMuIOyVveusvCDsuZjro4w6CiAgIC0g7KCV66elIOuplO2LuO2UhOugiOuTnOuLiOyGlOuhoCA0MG1nIHExMmggw5cgNeydvCAo7J207ZuEIOqyveq1rCBQRCDsoJDqsJApCiAgIC0g7IK067aA7YOA66qwICsg7J207ZSE65287Yq466Gc7ZS87JuAIOu2hOustCBxNmgKICAgLSBBbW94aWNpbGxpbi9jbGF2dWxhbmF0ZSAxLjJnIElWIHE4aCDDlyA17J28ICjqsIDrnpgg7IOJ6rmUIOuzgO2ZlCkKNC4gTklWIChCaVBBUCkg7KCB7JqpIOqygO2GoCDigJQgcEggPCA3LjM1ICsgUGFDTzIg4omlIDQ1CjUuIOyCsOyGjCBuYXNhbCAyTCAoU3BPMiDrqqntkZwgODh+OTIlLCBDTzIgcmV0YWluZXIg7KO87J2YKQo2LiDslYjsoJUg7ZuEIFBGVCDsnqztj4nqsIAgKyDtj5Ag7J6s7ZmcIOydmOuisAo=",
+              "title": "patient-02-copd.note.txt"
+            }
+          }
+        ]
+      },
+      "fullUrl": "DocumentReference/?"
+    }
+  ]
+}

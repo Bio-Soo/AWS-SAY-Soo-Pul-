@@ -1,0 +1,14 @@
+{
+    "Endpoint": "patient-db-cluster.cluster-cxmiyawwwhbt.ap-northeast-2.rds.amazonaws.com",
+    "Engine": "aurora-postgresql",
+    "EngineVersion": "16.11",
+    "DatabaseName": null,
+    "Port": 5432,
+    "VpcSecurityGroups": [
+        {
+            "VpcSecurityGroupId": "sg-019a357627f1594db",
+            "Status": "active"
+        }
+    ],
+    "DBSubnetGroup": "patient-db-subnet-group"
+}

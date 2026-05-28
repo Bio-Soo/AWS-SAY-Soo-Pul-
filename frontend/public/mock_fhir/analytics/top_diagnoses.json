@@ -1,0 +1,16 @@
+{
+  "items": [
+    { "name_kr": "지역사회획득 폐렴",      "name_en": "Community-acquired Pneumonia",  "icd10": "J18.9",   "count": 156, "rare": false },
+    { "name_kr": "COPD 급성 악화",         "name_en": "COPD acute exacerbation",        "icd10": "J44.1",   "count": 89,  "rare": false },
+    { "name_kr": "급성 기관지염",           "name_en": "Acute Bronchitis",               "icd10": "J20.9",   "count": 74,  "rare": false },
+    { "name_kr": "울혈성 심부전",           "name_en": "Congestive Heart Failure",       "icd10": "I50.9",   "count": 61,  "rare": false },
+    { "name_kr": "기관지천식 악화",         "name_en": "Asthma exacerbation",            "icd10": "J45.901", "count": 52,  "rare": false },
+    { "name_kr": "흉수",                  "name_en": "Pleural Effusion",               "icd10": "J91.8",   "count": 38,  "rare": false },
+    { "name_kr": "특발성 폐섬유증",         "name_en": "Idiopathic Pulmonary Fibrosis",  "icd10": "J84.112", "orpha": "ORPHA:2032", "count": 28, "rare": true,  "dontMiss": true },
+    { "name_kr": "폐결핵 (활동성)",        "name_en": "Pulmonary TB (active)",          "icd10": "A15.0",   "count": 24,  "rare": false, "dontMiss": true },
+    { "name_kr": "폐색전증",               "name_en": "Pulmonary Embolism",             "icd10": "I26.99",  "count": 19,  "rare": false, "dontMiss": true },
+    { "name_kr": "사르코이드증",            "name_en": "Sarcoidosis",                    "icd10": "D86.0",   "orpha": "ORPHA:797",   "count": 16, "rare": true },
+    { "name_kr": "비특이성 간질성 폐렴",     "name_en": "Nonspecific Interstitial Pneumonia (NSIP)", "icd10": "J84.89", "orpha": "ORPHA:79126", "count": 13, "rare": true },
+    { "name_kr": "림프관평활근종증",        "name_en": "Lymphangioleiomyomatosis",       "icd10": "J84.81",  "orpha": "ORPHA:538",   "count": 12, "rare": true, "dontMiss": true }
+  ]
+}

@@ -1,0 +1,13 @@
+{
+    "Statement": [
+        {
+            "Action": [
+                "secretsmanager:GetSecretValue"
+            ],
+            "Resource": [
+                "arn:aws:secretsmanager:ap-northeast-2:*:secret:soopul/aurora/app-user*"
+            ],
+            "Effect": "Allow"
+        }
+    ]
+}

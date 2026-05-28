@@ -1,0 +1,44 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Soo-Pul · SMART Launch</title>
+  <style>
+    body {
+      font-family: -apple-system, sans-serif;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      min-height: 100vh;
+      margin: 0;
+      background: #0C447C;
+      color: white;
+    }
+    .loading {
+      text-align: center;
+    }
+    .spinner {
+      width: 32px;
+      height: 32px;
+      border: 3px solid rgba(255,255,255,0.2);
+      border-top-color: white;
+      border-radius: 50%;
+      animation: spin 1s linear infinite;
+      margin: 0 auto 16px;
+    }
+    @keyframes spin { to { transform: rotate(360deg); } }
+    code { background: rgba(255,255,255,0.1); padding: 2px 6px; border-radius: 3px; }
+  </style>
+</head>
+<body>
+  <div class="loading">
+    <div class="spinner"></div>
+    <div>Soo-Pul · SMART on FHIR</div>
+    <div style="opacity: 0.6; font-size: 13px; margin-top: 8px;">
+      OAuth2 토큰 교환 중...
+    </div>
+  </div>
+
+  <script type="module" src="/src/launch.js"></script>
+</body>
+</html>

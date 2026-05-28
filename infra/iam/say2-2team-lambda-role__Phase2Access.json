@@ -1,0 +1,43 @@
+{
+    "Version": "2012-10-17",
+    "Statement": [
+        {
+            "Effect": "Allow",
+            "Action": [
+                "s3:GetObject",
+                "s3:PutObject"
+            ],
+            "Resource": "arn:aws:s3:::say2-2team-bucket/Phase_2/*"
+        },
+        {
+            "Sid": "ReadCxrSources",
+            "Effect": "Allow",
+            "Action": [
+                "s3:GetObject"
+            ],
+            "Resource": [
+                "arn:aws:s3:::say2-2team-bucket/cheXpert_data/*",
+                "arn:aws:s3:::say2-2team-bucket/mock-emr/*"
+            ]
+        },
+        {
+            "Effect": "Allow",
+            "Action": "s3:ListBucket",
+            "Resource": "arn:aws:s3:::say2-2team-bucket",
+            "Condition": {
+                "StringLike": {
+                    "s3:prefix": [
+                        "Phase_2/*",
+                        "cheXpert_data/*",
+                        "mock-emr/*"
+                    ]
+                }
+            }
+        },
+        {
+            "Effect": "Allow",
+            "Action": "sagemaker:InvokeEndpoint",
+            "Resource": "arn:aws:sagemaker:ap-northeast-2:666803869796:endpoint/say2-2team-soonet-endpoint"
+        }
+    ]
+}

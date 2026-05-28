@@ -1,0 +1,157 @@
+{
+  "Comment": "Soo-Pul rare pulmonary disease diagnostic pipeline. Phase 1+2 parallel → Phase 3 → Phase 4 → Phase 5 LR → RAG report. Use $ACCOUNT/$REGION as substitution variables (deploy-stepfunctions.sh handles this).",
+  "StartAt": "ParallelStart",
+  "States": {
+    "ParallelStart": {
+      "Type": "Parallel",
+      "Next": "Phase3Scorer",
+      "Branches": [
+        {
+          "StartAt": "Phase1Symptom",
+          "States": {
+            "Phase1Symptom": {
+              "Type": "Task",
+              "Resource": "arn:aws:states:::lambda:invoke",
+              "Parameters": {
+                "FunctionName": "arn:aws:lambda:$REGION:$ACCOUNT:function:phase1-symptom-dev",
+                "Payload": {
+                  "session_id.$": "$.session_id",
+                  "patient_fhir_id.$": "$.patient_fhir_id",
+                  "symptom_text.$": "$.symptom_text"
+                }
+              },
+              "ResultSelector": { "phase1_result.$": "$.Payload" },
+              "ResultPath": "$.phase1",
+              "Catch": [
+                {
+                  "ErrorEquals": ["States.ALL"],
+                  "ResultPath": "$.phase1_error",
+                  "Next": "Phase1Skipped"
+                }
+              ],
+              "End": true
+            },
+            "Phase1Skipped": {
+              "Type": "Pass",
+              "Result": { "phase1_result": { "statusCode": 500, "skipped": true } },
+              "ResultPath": "$.phase1",
+              "End": true
+            }
+          }
+        },
+        {
+          "StartAt": "Phase2Xray",
+          "States": {
+            "Phase2Xray": {
+              "Type": "Task",
+              "Resource": "arn:aws:states:::lambda:invoke",
+              "Parameters": {
+                "FunctionName": "arn:aws:lambda:$REGION:$ACCOUNT:function:say2-2team-phase2-vision",
+                "Payload": {
+                  "session_id.$": "$.session_id",
+                  "patient_id.$": "$.patient_fhir_id",
+                  "xray_s3_key.$": "$.cxr_s3_key"
+                }
+              },
+              "ResultSelector": { "phase2_result.$": "$.Payload" },
+              "ResultPath": "$.phase2",
+              "Catch": [
+                {
+                  "ErrorEquals": ["States.ALL"],
+                  "ResultPath": "$.phase2_error",
+                  "Next": "Phase2Skipped"
+                }
+              ],
+              "End": true
+            },
+            "Phase2Skipped": {
+              "Type": "Pass",
+              "Result": { "phase2_result": { "statusCode": 500, "skipped": true } },
+              "ResultPath": "$.phase2",
+              "End": true
+            }
+          }
+        }
+      ],
+      "ResultPath": "$.parallel_results"
+    },
+    "Phase3Scorer": {
+      "Type": "Task",
+      "Resource": "arn:aws:states:::lambda:invoke",
+      "Parameters": {
+        "FunctionName": "arn:aws:lambda:$REGION:$ACCOUNT:function:phase3-scorer-dev",
+        "Payload": {
+          "session_id.$": "$.session_id",
+          "patient_id.$": "$.patient_fhir_id"
+        }
+      },
+      "ResultPath": "$.phase3",
+      "Catch": [
+        {
+          "ErrorEquals": ["States.ALL"],
+          "ResultPath": "$.phase3_skip",
+          "Next": "Phase4Verifier"
+        }
+      ],
+      "Next": "Phase4Verifier"
+    },
+    "Phase4Verifier": {
+      "Type": "Task",
+      "Resource": "arn:aws:states:::lambda:invoke",
+      "Parameters": {
+        "FunctionName": "arn:aws:lambda:$REGION:$ACCOUNT:function:phase4-verifier-dev",
+        "Payload": {
+          "session_id.$": "$.session_id"
+        }
+      },
+      "ResultPath": "$.phase4",
+      "Catch": [
+        {
+          "ErrorEquals": ["States.ALL"],
+          "ResultPath": "$.phase4_skip",
+          "Next": "Phase5LR"
+        }
+      ],
+      "Next": "Phase5LR"
+    },
+    "Phase5LR": {
+      "Type": "Task",
+      "Resource": "arn:aws:states:::lambda:invoke",
+      "Parameters": {
+        "FunctionName": "arn:aws:lambda:$REGION:$ACCOUNT:function:phase5-lr-dev",
+        "Payload": {
+          "session_id.$": "$.session_id"
+        }
+      },
+      "ResultPath": "$.phase5lr",
+      "Catch": [
+        {
+          "ErrorEquals": ["States.ALL"],
+          "ResultPath": "$.phase5lr_skip",
+          "Next": "RAGSynthesis"
+        }
+      ],
+      "Next": "RAGSynthesis"
+    },
+    "RAGSynthesis": {
+      "Type": "Task",
+      "Resource": "arn:aws:states:::lambda:invoke",
+      "Parameters": {
+        "FunctionName": "arn:aws:lambda:$REGION:$ACCOUNT:function:report-rag-dev",
+        "Payload": {
+          "session_id.$": "$.session_id"
+        }
+      },
+      "ResultPath": "$.rag",
+      "Retry": [
+        {
+          "ErrorEquals": ["States.ALL"],
+          "IntervalSeconds": 5,
+          "MaxAttempts": 2,
+          "BackoffRate": 2
+        }
+      ],
+      "End": true
+    }
+  }
+}

@@ -1,0 +1,54 @@
+{
+    "Version": "2012-10-17",
+    "Statement": [
+        {
+            "Sid": "InvokePhaseLambdas",
+            "Effect": "Allow",
+            "Action": [
+                "lambda:InvokeFunction"
+            ],
+            "Resource": [
+                "arn:aws:lambda:ap-northeast-2:666803869796:function:phase1-symptom-dev",
+                "arn:aws:lambda:ap-northeast-2:666803869796:function:phase1-symptom-dev:*",
+                "arn:aws:lambda:ap-northeast-2:666803869796:function:say2-2team-phase2-vision",
+                "arn:aws:lambda:ap-northeast-2:666803869796:function:say2-2team-phase2-vision:*",
+                "arn:aws:lambda:ap-northeast-2:666803869796:function:phase3-scorer-dev",
+                "arn:aws:lambda:ap-northeast-2:666803869796:function:phase3-scorer-dev:*",
+                "arn:aws:lambda:ap-northeast-2:666803869796:function:phase4-verifier-dev",
+                "arn:aws:lambda:ap-northeast-2:666803869796:function:phase4-verifier-dev:*",
+                "arn:aws:lambda:ap-northeast-2:666803869796:function:phase5-lr-dev",
+                "arn:aws:lambda:ap-northeast-2:666803869796:function:phase5-lr-dev:*",
+                "arn:aws:lambda:ap-northeast-2:666803869796:function:phase5-rag-dev",
+                "arn:aws:lambda:ap-northeast-2:666803869796:function:phase5-rag-dev:*",
+                "arn:aws:lambda:ap-northeast-2:666803869796:function:report-rag-dev",
+                "arn:aws:lambda:ap-northeast-2:666803869796:function:report-rag-dev:*"
+            ]
+        },
+        {
+            "Sid": "CloudWatchLogsForStepFunctions",
+            "Effect": "Allow",
+            "Action": [
+                "logs:CreateLogDelivery",
+                "logs:GetLogDelivery",
+                "logs:UpdateLogDelivery",
+                "logs:DeleteLogDelivery",
+                "logs:ListLogDeliveries",
+                "logs:PutResourcePolicy",
+                "logs:DescribeResourcePolicies",
+                "logs:DescribeLogGroups"
+            ],
+            "Resource": "*"
+        },
+        {
+            "Sid": "XRayTracing",
+            "Effect": "Allow",
+            "Action": [
+                "xray:PutTraceSegments",
+                "xray:PutTelemetryRecords",
+                "xray:GetSamplingRules",
+                "xray:GetSamplingTargets"
+            ],
+            "Resource": "*"
+        }
+    ]
+}

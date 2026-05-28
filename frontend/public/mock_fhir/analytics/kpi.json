@@ -1,0 +1,14 @@
+{
+  "clinical": {
+    "total_patients":              { "value": 1247, "delta": 18,    "delta_unit": "today",    "trend": "up" },
+    "rare_detection_rate":         { "value": 0.123, "delta": 0.021,  "delta_unit": "pp/7d",   "trend": "up" },
+    "doctor_agreement_top3":       { "value": 0.84,  "delta": -0.015, "delta_unit": "pp/7d",   "trend": "down" },
+    "avg_processing_seconds":      { "value": 58,    "delta": -4,     "delta_unit": "s/7d",    "trend": "down-good" }
+  },
+  "ai": {
+    "top1_accuracy":               { "value": 0.71,  "delta": 0.03,   "delta_unit": "pp/30d",  "trend": "up" },
+    "top3_accuracy":               { "value": 0.92,  "delta": 0.01,   "delta_unit": "pp/30d",  "trend": "up" },
+    "phase4_revised_ratio":        { "value": 0.13,  "delta": -0.02,  "delta_unit": "pp/30d",  "trend": "down-good" },
+    "retry_rate":                  { "value": 0.21,  "delta": 0.04,   "delta_unit": "pp/30d",  "trend": "up-bad" }
+  }
+}

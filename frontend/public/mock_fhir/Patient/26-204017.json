@@ -1,0 +1,19 @@
+{
+  "resourceType": "Patient",
+  "identifier": [
+    {
+      "system": "https://rare-link.ai/mrn",
+      "value": "26-204017"
+    }
+  ],
+  "name": [
+    {
+      "family": "박",
+      "given": [
+        "○○"
+      ]
+    }
+  ],
+  "gender": "male",
+  "birthDate": "1954-05-11"
+}

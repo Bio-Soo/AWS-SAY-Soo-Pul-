@@ -1,0 +1,62 @@
+{
+    "FunctionName": "say2-2team-phase2-vision",
+    "FunctionArn": "arn:aws:lambda:ap-northeast-2:666803869796:function:say2-2team-phase2-vision",
+    "Runtime": "python3.11",
+    "Role": "arn:aws:iam::666803869796:role/say2-2team-lambda-role",
+    "Handler": "phase2_handler.lambda_handler",
+    "CodeSize": 5446,
+    "Description": "",
+    "Timeout": 600,
+    "MemorySize": 1024,
+    "LastModified": "2026-05-26T23:24:23.000+0000",
+    "CodeSha256": "LX2S1tUdu4ZaJGpUwTBPLHu2D68BY/f0zKQbHWnkJjk=",
+    "Version": "$LATEST",
+    "VpcConfig": {
+        "SubnetIds": [
+            "subnet-02eed659772bac6aa"
+        ],
+        "SecurityGroupIds": [
+            "sg-08d35c498d8886a98"
+        ],
+        "VpcId": "vpc-06dd0ad1f2335ea74",
+        "Ipv6AllowedForDualStack": false
+    },
+    "Environment": {
+        "Variables": {
+            "S3_BUCKET": "say2-2team-bucket",
+            "S3_PREFIX": "Phase_2",
+            "XRAY_THRESHOLD": "0.3",
+            "SAGEMAKER_ENDPOINT": "say2-2team-soonet-endpoint"
+        }
+    },
+    "TracingConfig": {
+        "Mode": "PassThrough"
+    },
+    "RevisionId": "7a1c2d43-214c-4f69-8d0d-73ec2241118c",
+    "Layers": [
+        {
+            "Arn": "arn:aws:lambda:ap-northeast-2:666803869796:layer:phase1-deps-dev:1",
+            "CodeSize": 3020103
+        }
+    ],
+    "State": "Active",
+    "LastUpdateStatus": "Successful",
+    "PackageType": "Zip",
+    "Architectures": [
+        "x86_64"
+    ],
+    "EphemeralStorage": {
+        "Size": 512
+    },
+    "SnapStart": {
+        "ApplyOn": "None",
+        "OptimizationStatus": "Off"
+    },
+    "RuntimeVersionConfig": {
+        "RuntimeVersionArn": "arn:aws:lambda:ap-northeast-2::runtime:a0dd170e909c9230a7e18f978320f0053271b75d0b703c836ab4f98f2e3f6a5a"
+    },
+    "LoggingConfig": {
+        "LogFormat": "Text",
+        "LogGroup": "/aws/lambda/say2-2team-phase2-vision"
+    }
+}

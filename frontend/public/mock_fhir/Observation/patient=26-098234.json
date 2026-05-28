@@ -1,0 +1,499 @@
+{
+  "resourceType": "Bundle",
+  "type": "searchset",
+  "total": 11,
+  "entry": [
+    {
+      "resource": {
+        "resourceType": "Observation",
+        "status": "final",
+        "category": [
+          {
+            "coding": [
+              {
+                "system": "http://terminology.hl7.org/CodeSystem/observation-category",
+                "code": "exam"
+              }
+            ]
+          }
+        ],
+        "code": {
+          "coding": [
+            {
+              "system": "http://purl.obolibrary.org/obo/hp.owl",
+              "code": "HP:0002094",
+              "display": "Dyspnea"
+            }
+          ],
+          "text": "호흡곤란"
+        },
+        "subject": {
+          "reference": "Patient/26-098234"
+        },
+        "effectiveDateTime": "2026-05-11T09:10:00+09:00",
+        "interpretation": [
+          {
+            "coding": [
+              {
+                "system": "http://terminology.hl7.org/CodeSystem/v3-ObservationInterpretation",
+                "code": "POS"
+              }
+            ]
+          }
+        ]
+      },
+      "fullUrl": "Observation/?"
+    },
+    {
+      "resource": {
+        "resourceType": "Observation",
+        "status": "final",
+        "category": [
+          {
+            "coding": [
+              {
+                "system": "http://terminology.hl7.org/CodeSystem/observation-category",
+                "code": "exam"
+              }
+            ]
+          }
+        ],
+        "code": {
+          "coding": [
+            {
+              "system": "http://purl.obolibrary.org/obo/hp.owl",
+              "code": "HP:0031246",
+              "display": "Productive cough"
+            }
+          ],
+          "text": "가래 동반 기침"
+        },
+        "subject": {
+          "reference": "Patient/26-098234"
+        },
+        "effectiveDateTime": "2026-05-11T09:10:00+09:00",
+        "interpretation": [
+          {
+            "coding": [
+              {
+                "system": "http://terminology.hl7.org/CodeSystem/v3-ObservationInterpretation",
+                "code": "POS"
+              }
+            ]
+          }
+        ]
+      },
+      "fullUrl": "Observation/?"
+    },
+    {
+      "resource": {
+        "resourceType": "Observation",
+        "status": "final",
+        "category": [
+          {
+            "coding": [
+              {
+                "system": "http://terminology.hl7.org/CodeSystem/observation-category",
+                "code": "exam"
+              }
+            ]
+          }
+        ],
+        "code": {
+          "coding": [
+            {
+              "system": "http://purl.obolibrary.org/obo/hp.owl",
+              "code": "HP:0030828",
+              "display": "Wheezing"
+            }
+          ],
+          "text": "천명음"
+        },
+        "subject": {
+          "reference": "Patient/26-098234"
+        },
+        "effectiveDateTime": "2026-05-11T09:10:00+09:00",
+        "interpretation": [
+          {
+            "coding": [
+              {
+                "system": "http://terminology.hl7.org/CodeSystem/v3-ObservationInterpretation",
+                "code": "POS"
+              }
+            ]
+          }
+        ]
+      },
+      "fullUrl": "Observation/?"
+    },
+    {
+      "resource": {
+        "resourceType": "Observation",
+        "status": "final",
+        "category": [
+          {
+            "coding": [
+              {
+                "system": "http://terminology.hl7.org/CodeSystem/observation-category",
+                "code": "exam"
+              }
+            ]
+          }
+        ],
+        "code": {
+          "coding": [
+            {
+              "system": "http://purl.obolibrary.org/obo/hp.owl",
+              "code": "HP:0006510",
+              "display": "Chronic obstructive pulmonary disease"
+            }
+          ],
+          "text": "COPD 과거력"
+        },
+        "subject": {
+          "reference": "Patient/26-098234"
+        },
+        "effectiveDateTime": "2026-05-11T09:10:00+09:00",
+        "interpretation": [
+          {
+            "coding": [
+              {
+                "system": "http://terminology.hl7.org/CodeSystem/v3-ObservationInterpretation",
+                "code": "POS"
+              }
+            ]
+          }
+        ]
+      },
+      "fullUrl": "Observation/?"
+    },
+    {
+      "resource": {
+        "resourceType": "Observation",
+        "status": "final",
+        "category": [
+          {
+            "coding": [
+              {
+                "system": "http://terminology.hl7.org/CodeSystem/observation-category",
+                "code": "laboratory"
+              }
+            ]
+          }
+        ],
+        "code": {
+          "coding": [
+            {
+              "system": "http://loinc.org",
+              "code": "6690-2",
+              "display": "Leukocytes [#/volume] in Blood"
+            }
+          ],
+          "text": "WBC"
+        },
+        "subject": {
+          "reference": "Patient/26-098234"
+        },
+        "effectiveDateTime": "2026-05-11T09:10:00+09:00",
+        "valueQuantity": {
+          "value": 12.5,
+          "unit": "10*3/uL"
+        },
+        "interpretation": [
+          {
+            "coding": [
+              {
+                "system": "http://terminology.hl7.org/CodeSystem/v3-ObservationInterpretation",
+                "code": "H"
+              }
+            ]
+          }
+        ],
+        "referenceRange": [
+          {
+            "low": {
+              "value": 4.0
+            },
+            "high": {
+              "value": 11.0
+            }
+          }
+        ]
+      },
+      "fullUrl": "Observation/?"
+    },
+    {
+      "resource": {
+        "resourceType": "Observation",
+        "status": "final",
+        "category": [
+          {
+            "coding": [
+              {
+                "system": "http://terminology.hl7.org/CodeSystem/observation-category",
+                "code": "laboratory"
+              }
+            ]
+          }
+        ],
+        "code": {
+          "coding": [
+            {
+              "system": "http://loinc.org",
+              "code": "2744-1",
+              "display": "pH of Arterial blood"
+            }
+          ],
+          "text": "ABG pH"
+        },
+        "subject": {
+          "reference": "Patient/26-098234"
+        },
+        "effectiveDateTime": "2026-05-11T09:10:00+09:00",
+        "valueQuantity": {
+          "value": 7.32
+        },
+        "interpretation": [
+          {
+            "coding": [
+              {
+                "system": "http://terminology.hl7.org/CodeSystem/v3-ObservationInterpretation",
+                "code": "L"
+              }
+            ]
+          }
+        ],
+        "referenceRange": [
+          {
+            "low": {
+              "value": 7.35
+            },
+            "high": {
+              "value": 7.45
+            }
+          }
+        ]
+      },
+      "fullUrl": "Observation/?"
+    },
+    {
+      "resource": {
+        "resourceType": "Observation",
+        "status": "final",
+        "category": [
+          {
+            "coding": [
+              {
+                "system": "http://terminology.hl7.org/CodeSystem/observation-category",
+                "code": "laboratory"
+              }
+            ]
+          }
+        ],
+        "code": {
+          "coding": [
+            {
+              "system": "http://loinc.org",
+              "code": "2019-8",
+              "display": "Carbon dioxide [Partial pressure] in Arterial blood"
+            }
+          ],
+          "text": "PaCO2"
+        },
+        "subject": {
+          "reference": "Patient/26-098234"
+        },
+        "effectiveDateTime": "2026-05-11T09:10:00+09:00",
+        "valueQuantity": {
+          "value": 58,
+          "unit": "mmHg"
+        },
+        "interpretation": [
+          {
+            "coding": [
+              {
+                "system": "http://terminology.hl7.org/CodeSystem/v3-ObservationInterpretation",
+                "code": "H"
+              }
+            ]
+          }
+        ],
+        "referenceRange": [
+          {
+            "low": {
+              "value": 35
+            },
+            "high": {
+              "value": 45
+            }
+          }
+        ]
+      },
+      "fullUrl": "Observation/?"
+    },
+    {
+      "resource": {
+        "resourceType": "Observation",
+        "status": "final",
+        "category": [
+          {
+            "coding": [
+              {
+                "system": "http://terminology.hl7.org/CodeSystem/observation-category",
+                "code": "laboratory"
+              }
+            ]
+          }
+        ],
+        "code": {
+          "coding": [
+            {
+              "system": "http://loinc.org",
+              "code": "2703-7",
+              "display": "Oxygen [Partial pressure] in Arterial blood"
+            }
+          ],
+          "text": "PaO2"
+        },
+        "subject": {
+          "reference": "Patient/26-098234"
+        },
+        "effectiveDateTime": "2026-05-11T09:10:00+09:00",
+        "valueQuantity": {
+          "value": 62,
+          "unit": "mmHg"
+        },
+        "interpretation": [
+          {
+            "coding": [
+              {
+                "system": "http://terminology.hl7.org/CodeSystem/v3-ObservationInterpretation",
+                "code": "L"
+              }
+            ]
+          }
+        ],
+        "referenceRange": [
+          {
+            "low": {
+              "value": 80
+            }
+          }
+        ]
+      },
+      "fullUrl": "Observation/?"
+    },
+    {
+      "resource": {
+        "resourceType": "Observation",
+        "status": "final",
+        "category": [
+          {
+            "coding": [
+              {
+                "system": "http://terminology.hl7.org/CodeSystem/observation-category",
+                "code": "vital-signs"
+              }
+            ]
+          }
+        ],
+        "code": {
+          "coding": [
+            {
+              "system": "http://loinc.org",
+              "code": "8867-4",
+              "display": "Heart rate"
+            }
+          ]
+        },
+        "subject": {
+          "reference": "Patient/26-098234"
+        },
+        "effectiveDateTime": "2026-05-11T09:10:00+09:00",
+        "valueQuantity": {
+          "value": 105,
+          "unit": "/min"
+        }
+      },
+      "fullUrl": "Observation/?"
+    },
+    {
+      "resource": {
+        "resourceType": "Observation",
+        "status": "final",
+        "category": [
+          {
+            "coding": [
+              {
+                "system": "http://terminology.hl7.org/CodeSystem/observation-category",
+                "code": "vital-signs"
+              }
+            ]
+          }
+        ],
+        "code": {
+          "coding": [
+            {
+              "system": "http://loinc.org",
+              "code": "9279-1",
+              "display": "Respiratory rate"
+            }
+          ]
+        },
+        "subject": {
+          "reference": "Patient/26-098234"
+        },
+        "effectiveDateTime": "2026-05-11T09:10:00+09:00",
+        "valueQuantity": {
+          "value": 26,
+          "unit": "/min"
+        }
+      },
+      "fullUrl": "Observation/?"
+    },
+    {
+      "resource": {
+        "resourceType": "Observation",
+        "status": "final",
+        "category": [
+          {
+            "coding": [
+              {
+                "system": "http://terminology.hl7.org/CodeSystem/observation-category",
+                "code": "vital-signs"
+              }
+            ]
+          }
+        ],
+        "code": {
+          "coding": [
+            {
+              "system": "http://loinc.org",
+              "code": "2708-6",
+              "display": "Oxygen saturation"
+            }
+          ]
+        },
+        "subject": {
+          "reference": "Patient/26-098234"
+        },
+        "effectiveDateTime": "2026-05-11T09:10:00+09:00",
+        "valueQuantity": {
+          "value": 89,
+          "unit": "%"
+        },
+        "interpretation": [
+          {
+            "coding": [
+              {
+                "system": "http://terminology.hl7.org/CodeSystem/v3-ObservationInterpretation",
+                "code": "L"
+              }
+            ]
+          }
+        ]
+      },
+      "fullUrl": "Observation/?"
+    }
+  ]
+}

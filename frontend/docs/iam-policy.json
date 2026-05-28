@@ -1,0 +1,178 @@
+{
+  "Version": "2012-10-17",
+  "Statement": [
+    {
+      "Sid": "STS_Identity_ReadOnly",
+      "Effect": "Allow",
+      "Action": [
+        "sts:GetCallerIdentity"
+      ],
+      "Resource": "*"
+    },
+    {
+      "Sid": "S3_FrontendBucket_DeployAndConfig",
+      "Effect": "Allow",
+      "Action": [
+        "s3:ListBucket",
+        "s3:GetBucketLocation",
+        "s3:GetBucketWebsite",
+        "s3:PutBucketWebsite",
+        "s3:DeleteBucketWebsite",
+        "s3:GetBucketPolicy",
+        "s3:PutBucketPolicy",
+        "s3:DeleteBucketPolicy",
+        "s3:GetPublicAccessBlock",
+        "s3:PutPublicAccessBlock",
+        "s3:GetBucketCORS",
+        "s3:PutBucketCORS"
+      ],
+      "Resource": "arn:aws:s3:::say2-2team-bucket"
+    },
+    {
+      "Sid": "S3_FrontendBucket_ObjectRW_FrontendPrefix",
+      "Effect": "Allow",
+      "Action": [
+        "s3:GetObject",
+        "s3:PutObject",
+        "s3:DeleteObject",
+        "s3:PutObjectAcl",
+        "s3:GetObjectAcl"
+      ],
+      "Resource": "arn:aws:s3:::say2-2team-bucket/Frontend/*"
+    },
+    {
+      "Sid": "EC2_FhirInstance_DescribeAndConnect",
+      "Effect": "Allow",
+      "Action": [
+        "ec2:DescribeInstances",
+        "ec2:DescribeAddresses",
+        "ec2:DescribeSecurityGroups",
+        "ec2:DescribeImages",
+        "ec2:DescribeKeyPairs",
+        "ec2-instance-connect:SendSSHPublicKey"
+      ],
+      "Resource": "*"
+    },
+    {
+      "Sid": "SSM_SessionManager_Connect",
+      "Effect": "Allow",
+      "Action": [
+        "ssm:DescribeInstanceInformation",
+        "ssm:StartSession",
+        "ssm:TerminateSession",
+        "ssm:DescribeSessions",
+        "ssm:GetConnectionStatus"
+      ],
+      "Resource": [
+        "arn:aws:ec2:ap-northeast-2:666803869796:instance/i-0f3f223fd40217b12",
+        "arn:aws:ssm:ap-northeast-2:*:document/AWS-StartSSHSession",
+        "arn:aws:ssm:ap-northeast-2:*:document/SSM-SessionManagerRunShell"
+      ]
+    },
+    {
+      "Sid": "CloudFront_Distribution_Manage",
+      "Effect": "Allow",
+      "Action": [
+        "cloudfront:ListDistributions",
+        "cloudfront:GetDistribution",
+        "cloudfront:GetDistributionConfig",
+        "cloudfront:CreateDistribution",
+        "cloudfront:UpdateDistribution",
+        "cloudfront:CreateInvalidation",
+        "cloudfront:ListInvalidations",
+        "cloudfront:GetInvalidation",
+        "cloudfront:ListOriginAccessControls",
+        "cloudfront:CreateOriginAccessControl",
+        "cloudfront:GetOriginAccessControl"
+      ],
+      "Resource": "*"
+    },
+    {
+      "Sid": "Cognito_UserPool_Manage_TestUsers",
+      "Effect": "Allow",
+      "Action": [
+        "cognito-idp:ListUserPools",
+        "cognito-idp:DescribeUserPool",
+        "cognito-idp:DescribeUserPoolClient",
+        "cognito-idp:ListUserPoolClients",
+        "cognito-idp:ListUsers",
+        "cognito-idp:AdminGetUser",
+        "cognito-idp:AdminCreateUser",
+        "cognito-idp:AdminDeleteUser",
+        "cognito-idp:AdminSetUserPassword",
+        "cognito-idp:AdminUpdateUserAttributes",
+        "cognito-idp:AdminInitiateAuth",
+        "cognito-idp:AdminRespondToAuthChallenge"
+      ],
+      "Resource": "arn:aws:cognito-idp:ap-northeast-2:666803869796:userpool/<USER_POOL_ID>"
+    },
+    {
+      "Sid": "SageMaker_Endpoint_Describe",
+      "Effect": "Allow",
+      "Action": [
+        "sagemaker:ListEndpoints",
+        "sagemaker:DescribeEndpoint",
+        "sagemaker:DescribeEndpointConfig"
+      ],
+      "Resource": "*"
+    },
+    {
+      "Sid": "SageMaker_Runtime_Invoke",
+      "Effect": "Allow",
+      "Action": [
+        "sagemaker:InvokeEndpoint"
+      ],
+      "Resource": "arn:aws:sagemaker:ap-northeast-2:666803869796:endpoint/say2-2team-soonet-endpoint"
+    },
+    {
+      "Sid": "Lambda_HPO_LR_And_RAG_Invoke",
+      "Effect": "Allow",
+      "Action": [
+        "lambda:ListFunctions",
+        "lambda:GetFunction",
+        "lambda:InvokeFunction"
+      ],
+      "Resource": [
+        "arn:aws:lambda:ap-northeast-2:666803869796:function:rare-link-hpo-lr-*",
+        "arn:aws:lambda:ap-northeast-2:666803869796:function:rare-link-rag-*"
+      ]
+    },
+    {
+      "Sid": "DynamoDB_VendorRegistry_RW",
+      "Effect": "Allow",
+      "Action": [
+        "dynamodb:ListTables",
+        "dynamodb:DescribeTable",
+        "dynamodb:GetItem",
+        "dynamodb:Query",
+        "dynamodb:Scan",
+        "dynamodb:PutItem",
+        "dynamodb:UpdateItem",
+        "dynamodb:DeleteItem"
+      ],
+      "Resource": [
+        "arn:aws:dynamodb:ap-northeast-2:666803869796:table/rare-link-emr-vendors",
+        "arn:aws:dynamodb:ap-northeast-2:666803869796:table/rare-link-emr-vendors/index/*"
+      ]
+    },
+    {
+      "Sid": "APIGateway_VendorRegistry_Invoke",
+      "Effect": "Allow",
+      "Action": [
+        "execute-api:Invoke"
+      ],
+      "Resource": "arn:aws:execute-api:ap-northeast-2:666803869796:<API_ID>/*/*/*"
+    },
+    {
+      "Sid": "CloudWatchLogs_ReadOnly_Debugging",
+      "Effect": "Allow",
+      "Action": [
+        "logs:DescribeLogGroups",
+        "logs:DescribeLogStreams",
+        "logs:GetLogEvents",
+        "logs:FilterLogEvents"
+      ],
+      "Resource": "arn:aws:logs:ap-northeast-2:666803869796:log-group:/aws/*:*"
+    }
+  ]
+}

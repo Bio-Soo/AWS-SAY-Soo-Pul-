@@ -1,0 +1,35 @@
+{
+    "Vpcs": [
+        {
+            "OwnerId": "666803869796",
+            "InstanceTenancy": "default",
+            "CidrBlockAssociationSet": [
+                {
+                    "AssociationId": "vpc-cidr-assoc-0a565ce308251ba23",
+                    "CidrBlock": "10.0.0.0/24",
+                    "CidrBlockState": {
+                        "State": "associated"
+                    }
+                }
+            ],
+            "IsDefault": false,
+            "Tags": [
+                {
+                    "Key": "Name",
+                    "Value": "say2-2team"
+                },
+                {
+                    "Key": "project",
+                    "Value": "pre-2-2team"
+                }
+            ],
+            "BlockPublicAccessStates": {
+                "InternetGatewayBlockMode": "off"
+            },
+            "VpcId": "vpc-06dd0ad1f2335ea74",
+            "State": "available",
+            "CidrBlock": "10.0.0.0/24",
+            "DhcpOptionsId": "dopt-099978869a4598649"
+        }
+    ]
+}

@@ -1,0 +1,66 @@
+{
+    "FunctionName": "phase5-lr-dev",
+    "FunctionArn": "arn:aws:lambda:ap-northeast-2:666803869796:function:phase5-lr-dev",
+    "Runtime": "python3.11",
+    "Role": "arn:aws:iam::666803869796:role/phase5-lr-dev-Phase5LRFunctionRole-G7TpsbpnVlWs",
+    "Handler": "handler.lambda_handler",
+    "CodeSize": 9978,
+    "Description": "Phase 5 LIRICAL LR scoring + phase_execution_log INSERT",
+    "Timeout": 600,
+    "MemorySize": 1024,
+    "LastModified": "2026-05-26T07:58:29.000+0000",
+    "CodeSha256": "/kiUnnfsLOat1ipKpEDA+jCvRjUnWqVstzShRZ5q8Kw=",
+    "Version": "$LATEST",
+    "VpcConfig": {
+        "SubnetIds": [
+            "subnet-02eed659772bac6aa"
+        ],
+        "SecurityGroupIds": [
+            "sg-03b9bc5d95699b797"
+        ],
+        "VpcId": "vpc-06dd0ad1f2335ea74",
+        "Ipv6AllowedForDualStack": false
+    },
+    "Environment": {
+        "Variables": {
+            "PYTHONPATH": "/opt/python",
+            "DATA_DIR": "/opt/data",
+            "STAGE": "dev",
+            "LOG_LEVEL": "INFO"
+        }
+    },
+    "TracingConfig": {
+        "Mode": "Active"
+    },
+    "RevisionId": "9e0a2f4c-0279-4a45-a242-8cb9b1dc0ace",
+    "Layers": [
+        {
+            "Arn": "arn:aws:lambda:ap-northeast-2:666803869796:layer:phase5-lr-deps-dev:1",
+            "CodeSize": 3783476
+        },
+        {
+            "Arn": "arn:aws:lambda:ap-northeast-2:666803869796:layer:phase5-lr-data-dev:1",
+            "CodeSize": 194593
+        }
+    ],
+    "State": "Active",
+    "LastUpdateStatus": "Successful",
+    "PackageType": "Zip",
+    "Architectures": [
+        "x86_64"
+    ],
+    "EphemeralStorage": {
+        "Size": 512
+    },
+    "SnapStart": {
+        "ApplyOn": "None",
+        "OptimizationStatus": "Off"
+    },
+    "RuntimeVersionConfig": {
+        "RuntimeVersionArn": "arn:aws:lambda:ap-northeast-2::runtime:a0dd170e909c9230a7e18f978320f0053271b75d0b703c836ab4f98f2e3f6a5a"
+    },
+    "LoggingConfig": {
+        "LogFormat": "Text",
+        "LogGroup": "/aws/lambda/phase5-lr-dev"
+    }
+}

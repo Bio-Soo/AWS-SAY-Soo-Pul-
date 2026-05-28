@@ -1,0 +1,2537 @@
+{
+  "_metadata": {
+    "version": "v1.0",
+    "date": "2026-04-29",
+    "sources": [
+      "Excel v6 (일반/기타_폐질환_데이터베이스_v6.xlsx)",
+      "WHO ICD-10 Vol.1 (2019 official)"
+    ],
+    "description": "ICD-10 sub-code 표준 명칭 reference (사견 배제 — 공인 출처만)",
+    "total_codes": 504,
+    "excel_count": 141,
+    "who_count": 45,
+    "missing_count": 318
+  },
+  "icd_names": {
+    "J35": {
+      "kr": "편도 및 아데노이드의 만성 질환",
+      "en": "Chronic diseases of tonsils and adenoids",
+      "source": "Excel v6"
+    },
+    "J20.2": {
+      "kr": "",
+      "en": "",
+      "source": "unavailable"
+    },
+    "J63.2": {
+      "kr": "",
+      "en": "",
+      "source": "unavailable"
+    },
+    "J95.5": {
+      "kr": "",
+      "en": "",
+      "source": "unavailable"
+    },
+    "J68.2": {
+      "kr": "",
+      "en": "",
+      "source": "unavailable"
+    },
+    "J81.0": {
+      "kr": "급성 폐부종",
+      "en": "Acute pulmonary oedema",
+      "source": "Excel v6"
+    },
+    "J44.0": {
+      "kr": "급성 하기도감염을 동반한 만성 폐쇄성 폐질환",
+      "en": "Chronic obstructive pulmonary disease with acute lower respiratory infection",
+      "source": "Excel v6"
+    },
+    "J70.2": {
+      "kr": "",
+      "en": "",
+      "source": "unavailable"
+    },
+    "Q22.0": {
+      "kr": "",
+      "en": "",
+      "source": "unavailable"
+    },
+    "J38.7": {
+      "kr": "",
+      "en": "",
+      "source": "unavailable"
+    },
+    "Q76.8": {
+      "kr": "",
+      "en": "",
+      "source": "unavailable"
+    },
+    "J32.8": {
+      "kr": "",
+      "en": "",
+      "source": "unavailable"
+    },
+    "P23.3": {
+      "kr": "",
+      "en": "",
+      "source": "unavailable"
+    },
+    "J70.4": {
+      "kr": "",
+      "en": "",
+      "source": "unavailable"
+    },
+    "Q33.0": {
+      "kr": "",
+      "en": "",
+      "source": "unavailable"
+    },
+    "J17.2": {
+      "kr": "",
+      "en": "",
+      "source": "unavailable"
+    },
+    "J63": {
+      "kr": "기타 무기물먼지에 의한 진폐증",
+      "en": "Pneumoconiosis due to other inorganic dusts",
+      "source": "Excel v6"
+    },
+    "Q32.4": {
+      "kr": "",
+      "en": "",
+      "source": "unavailable"
+    },
+    "J98.01": {
+      "kr": "",
+      "en": "",
+      "source": "unavailable"
+    },
+    "J20": {
+      "kr": "급성 기관지염",
+      "en": "Acute bronchitis",
+      "source": "Excel v6"
+    },
+    "J04.1": {
+      "kr": "",
+      "en": "",
+      "source": "unavailable"
+    },
+    "P22.1": {
+      "kr": "",
+      "en": "",
+      "source": "unavailable"
+    },
+    "Q34.1": {
+      "kr": "",
+      "en": "",
+      "source": "unavailable"
+    },
+    "J98.11": {
+      "kr": "",
+      "en": "",
+      "source": "unavailable"
+    },
+    "C34.1": {
+      "kr": "상엽, 기관지 또는 폐의 악성 신생물",
+      "en": "Malignant neoplasm of upper lobe, bronchus or lung",
+      "source": "Excel v6"
+    },
+    "D86": {
+      "kr": "사르코이드증",
+      "en": "Sarcoidosis",
+      "source": "Excel v6"
+    },
+    "J95.01": {
+      "kr": "",
+      "en": "",
+      "source": "unavailable"
+    },
+    "A16.0": {
+      "kr": "세균학적 및 조직학적으로 음성인 폐결핵",
+      "en": "Tuberculosis of lung, bacteriologically and histologically negative",
+      "source": "Excel v6"
+    },
+    "J84.1": {
+      "en": "Other interstitial pulmonary diseases with fibrosis",
+      "kr": "섬유증을 동반한 기타 간질성 폐질환",
+      "source": "WHO ICD-10 Vol.1"
+    },
+    "J15.5": {
+      "en": "Pneumonia due to Escherichia coli",
+      "kr": "대장균에 의한 폐렴",
+      "source": "WHO ICD-10 Vol.1"
+    },
+    "J32.0": {
+      "kr": "",
+      "en": "",
+      "source": "unavailable"
+    },
+    "Q34": {
+      "kr": "호흡계통의 기타 선천기형",
+      "en": "Other congenital malformations of respiratory system",
+      "source": "Excel v6"
+    },
+    "I65": {
+      "kr": "뇌경색증을 유발하지 않은 뇌전동맥의 폐쇄 및 협착",
+      "en": "Occlusion and stenosis of precerebral arteries, not resulting in cerebral infarction",
+      "source": "Excel v6"
+    },
+    "J16.0": {
+      "en": "Chlamydial pneumonia",
+      "kr": "클라미디아 폐렴",
+      "source": "WHO ICD-10 Vol.1"
+    },
+    "J96.12": {
+      "kr": "",
+      "en": "",
+      "source": "unavailable"
+    },
+    "J43.9": {
+      "kr": "",
+      "en": "",
+      "source": "unavailable"
+    },
+    "J17.3": {
+      "kr": "",
+      "en": "",
+      "source": "unavailable"
+    },
+    "J95.04": {
+      "kr": "",
+      "en": "",
+      "source": "unavailable"
+    },
+    "J12.3": {
+      "kr": "",
+      "en": "",
+      "source": "unavailable"
+    },
+    "J11.8": {
+      "kr": "",
+      "en": "",
+      "source": "unavailable"
+    },
+    "J47.9": {
+      "kr": "상세불명의 기관지확장증",
+      "en": "Bronchiectasis, unspecified",
+      "source": "Excel v6"
+    },
+    "J84.17": {
+      "kr": "",
+      "en": "",
+      "source": "unavailable"
+    },
+    "J20.3": {
+      "kr": "",
+      "en": "",
+      "source": "unavailable"
+    },
+    "J67.1": {
+      "kr": "",
+      "en": "",
+      "source": "unavailable"
+    },
+    "I66.9": {
+      "kr": "",
+      "en": "",
+      "source": "unavailable"
+    },
+    "J03": {
+      "kr": "급성 편도염",
+      "en": "Acute tonsillitis",
+      "source": "Excel v6"
+    },
+    "J11": {
+      "kr": "바이러스가 확인되지 않은 인플루엔자",
+      "en": "Influenza, virus not identified",
+      "source": "Excel v6"
+    },
+    "J96.00": {
+      "en": "Acute respiratory failure, unspecified",
+      "kr": "상세불명의 급성 호흡부전",
+      "source": "WHO ICD-10 Vol.1"
+    },
+    "J33": {
+      "kr": "코폴립",
+      "en": "Nasal polyp",
+      "source": "Excel v6"
+    },
+    "J44.8": {
+      "kr": "기타 명시된 만성 폐쇄성 폐질환",
+      "en": "Other specified chronic obstructive pulmonary disease",
+      "source": "Excel v6"
+    },
+    "I27.29": {
+      "kr": "",
+      "en": "",
+      "source": "unavailable"
+    },
+    "I37.2": {
+      "kr": "",
+      "en": "",
+      "source": "unavailable"
+    },
+    "J45.1": {
+      "kr": "비알레르기천식",
+      "en": "Nonallergic asthma",
+      "source": "Excel v6"
+    },
+    "J17.0": {
+      "kr": "",
+      "en": "",
+      "source": "unavailable"
+    },
+    "P26": {
+      "kr": "출생전후기에 기원한 폐출혈",
+      "en": "Pulmonary haemorrhage originating in the perinatal period",
+      "source": "Excel v6"
+    },
+    "P27.0": {
+      "kr": "",
+      "en": "",
+      "source": "unavailable"
+    },
+    "Q32.3": {
+      "kr": "",
+      "en": "",
+      "source": "unavailable"
+    },
+    "C34.2": {
+      "en": "Middle lobe, bronchus or lung",
+      "kr": "중엽, 기관지 또는 폐",
+      "source": "WHO ICD-10 Vol.1"
+    },
+    "J64": {
+      "en": "Unspecified pneumoconiosis",
+      "kr": "상세불명의 진폐증",
+      "source": "WHO ICD-10 Vol.1"
+    },
+    "J20.4": {
+      "kr": "",
+      "en": "",
+      "source": "unavailable"
+    },
+    "Q22.2": {
+      "kr": "",
+      "en": "",
+      "source": "unavailable"
+    },
+    "J85.1": {
+      "kr": "",
+      "en": "",
+      "source": "unavailable"
+    },
+    "J68": {
+      "kr": "화학물질, 가스, 훈증기 및 물김의 흡입에 의한 호흡기병태",
+      "en": "Respiratory conditions due to inhalation of chemicals, gases, fumes and vapours",
+      "source": "Excel v6"
+    },
+    "J32": {
+      "kr": "만성 부비동염",
+      "en": "Chronic sinusitis",
+      "source": "Excel v6"
+    },
+    "J80": {
+      "kr": "급성호흡곤란증후군",
+      "en": "Acute respiratory distress syndrome [ARDS]",
+      "source": "Excel v6"
+    },
+    "P25": {
+      "kr": "출생전후기에 기원한 간질성 폐기종 및 관련 병태",
+      "en": "Interstitial emphysema and related conditions originating in the perinatal period",
+      "source": "Excel v6"
+    },
+    "J43.8": {
+      "kr": "",
+      "en": "",
+      "source": "unavailable"
+    },
+    "J47.1": {
+      "kr": "급성 악화를 동반한 기관지확장증",
+      "en": "Bronchiectasis with acute exacerbation",
+      "source": "Excel v6"
+    },
+    "J21.1": {
+      "kr": "",
+      "en": "",
+      "source": "unavailable"
+    },
+    "J62": {
+      "kr": "실리카를 함유한 먼지에 의한 진폐증",
+      "en": "Pneumoconiosis due to dust containing silica",
+      "source": "Excel v6"
+    },
+    "J95.86": {
+      "kr": "",
+      "en": "",
+      "source": "unavailable"
+    },
+    "J99": {
+      "kr": "달리 분류된 질환에서의 호흡장애",
+      "en": "Respiratory disorders in diseases classified elsewhere",
+      "source": "Excel v6"
+    },
+    "J45.8": {
+      "kr": "혼합형 천식",
+      "en": "Mixed asthma",
+      "source": "Excel v6"
+    },
+    "I26.92": {
+      "kr": "",
+      "en": "",
+      "source": "unavailable"
+    },
+    "J98.00": {
+      "kr": "",
+      "en": "",
+      "source": "unavailable"
+    },
+    "P25.0": {
+      "kr": "",
+      "en": "",
+      "source": "unavailable"
+    },
+    "A15.8": {
+      "kr": "세균학적 및 조직학적으로 확인된 기타 호흡기결핵",
+      "en": "Other respiratory tuberculosis, confirmed bacteriologically and histologically",
+      "source": "Excel v6"
+    },
+    "P28.4": {
+      "kr": "신생아의 기타 무호흡",
+      "en": "Other apnoea of newborn",
+      "source": "Excel v6"
+    },
+    "I65.2": {
+      "kr": "",
+      "en": "",
+      "source": "unavailable"
+    },
+    "J10.0": {
+      "en": "Influenza due to other identified influenza virus with pneumonia",
+      "kr": "기타 식별 인플루엔자 바이러스에 의한 폐렴 동반 인플루엔자",
+      "source": "WHO ICD-10 Vol.1"
+    },
+    "I71.2": {
+      "kr": "파열에 대한 언급이 없는 흉부대동맥동맥류",
+      "en": "Thoracic aortic aneurysm, without mention of rupture",
+      "source": "Excel v6"
+    },
+    "J47.0": {
+      "kr": "하기도감염을 동반한 기관지확장증",
+      "en": "Bronchiectasis with acute lower respiratory infection",
+      "source": "Excel v6"
+    },
+    "I37.9": {
+      "kr": "",
+      "en": "",
+      "source": "unavailable"
+    },
+    "J02.9": {
+      "kr": "",
+      "en": "",
+      "source": "unavailable"
+    },
+    "J95.2": {
+      "en": "Acute pulmonary insufficiency following nonthoracic surgery",
+      "kr": "비흉부수술후 급성 폐기능부전",
+      "source": "WHO ICD-10 Vol.1"
+    },
+    "J67.7": {
+      "kr": "",
+      "en": "",
+      "source": "unavailable"
+    },
+    "J06.9": {
+      "kr": "",
+      "en": "",
+      "source": "unavailable"
+    },
+    "I28.8": {
+      "kr": "",
+      "en": "",
+      "source": "unavailable"
+    },
+    "J63.4": {
+      "kr": "",
+      "en": "",
+      "source": "unavailable"
+    },
+    "J67.3": {
+      "kr": "",
+      "en": "",
+      "source": "unavailable"
+    },
+    "I26.90": {
+      "kr": "",
+      "en": "",
+      "source": "unavailable"
+    },
+    "Q22.1": {
+      "kr": "",
+      "en": "",
+      "source": "unavailable"
+    },
+    "J16.8": {
+      "en": "Pneumonia due to other specified infectious organisms",
+      "kr": "기타 명시된 감염성 병원체에 의한 폐렴",
+      "source": "WHO ICD-10 Vol.1"
+    },
+    "J21.0": {
+      "kr": "",
+      "en": "",
+      "source": "unavailable"
+    },
+    "C38.0": {
+      "kr": "",
+      "en": "",
+      "source": "unavailable"
+    },
+    "J44": {
+      "kr": "기타 만성 폐쇄성 폐질환",
+      "en": "Other chronic obstructive pulmonary disease",
+      "source": "Excel v6"
+    },
+    "I66.0": {
+      "kr": "",
+      "en": "",
+      "source": "unavailable"
+    },
+    "I66.4": {
+      "kr": "",
+      "en": "",
+      "source": "unavailable"
+    },
+    "J15.0": {
+      "en": "Pneumonia due to Klebsiella pneumoniae",
+      "kr": "클렙시엘라 폐렴균에 의한 폐렴",
+      "source": "WHO ICD-10 Vol.1"
+    },
+    "J68.8": {
+      "kr": "",
+      "en": "",
+      "source": "unavailable"
+    },
+    "J20.5": {
+      "kr": "",
+      "en": "",
+      "source": "unavailable"
+    },
+    "C78.02": {
+      "kr": "",
+      "en": "",
+      "source": "unavailable"
+    },
+    "J96.0": {
+      "kr": "급성 호흡부전",
+      "en": "Acute respiratory failure",
+      "source": "Excel v6"
+    },
+    "J95.4": {
+      "kr": "",
+      "en": "",
+      "source": "unavailable"
+    },
+    "J41": {
+      "kr": "단순성 및 점액화농성 만성 기관지염",
+      "en": "Simple and mucopurulent chronic bronchitis",
+      "source": "Excel v6"
+    },
+    "J68.1": {
+      "kr": "",
+      "en": "",
+      "source": "unavailable"
+    },
+    "J32.1": {
+      "kr": "",
+      "en": "",
+      "source": "unavailable"
+    },
+    "J93.11": {
+      "kr": "",
+      "en": "",
+      "source": "unavailable"
+    },
+    "J47": {
+      "en": "Bronchiectasis",
+      "kr": "기관지확장증",
+      "source": "WHO ICD-10 Vol.1"
+    },
+    "J43.0": {
+      "kr": "",
+      "en": "",
+      "source": "unavailable"
+    },
+    "J31.0": {
+      "kr": "",
+      "en": "",
+      "source": "unavailable"
+    },
+    "J37": {
+      "kr": "만성 후두염 및 후두기관염",
+      "en": "Chronic laryngitis and laryngotracheitis",
+      "source": "Excel v6"
+    },
+    "J38.2": {
+      "kr": "",
+      "en": "",
+      "source": "unavailable"
+    },
+    "J12.2": {
+      "kr": "",
+      "en": "",
+      "source": "unavailable"
+    },
+    "P28.3": {
+      "kr": "",
+      "en": "",
+      "source": "unavailable"
+    },
+    "J92": {
+      "kr": "흉막판",
+      "en": "Pleural plaque",
+      "source": "Excel v6"
+    },
+    "J20.1": {
+      "kr": "",
+      "en": "",
+      "source": "unavailable"
+    },
+    "C38.8": {
+      "kr": "",
+      "en": "",
+      "source": "unavailable"
+    },
+    "I28.0": {
+      "kr": "",
+      "en": "",
+      "source": "unavailable"
+    },
+    "J95.851": {
+      "kr": "",
+      "en": "",
+      "source": "unavailable"
+    },
+    "A16.3": {
+      "kr": "세균학적 또는 조직학적 확인에 대한 언급이 없는 흉곽내림프절의 결핵",
+      "en": "Tuberculosis of intrathoracic lymph nodes, without mention of bacteriological or histological confirmation",
+      "source": "Excel v6"
+    },
+    "J05.1": {
+      "kr": "급성 후두개염",
+      "en": "Acute epiglottitis",
+      "source": "Excel v6"
+    },
+    "J35.2": {
+      "kr": "",
+      "en": "",
+      "source": "unavailable"
+    },
+    "A16.5": {
+      "kr": "세균학적 또는 조직학적 확인에 대한 언급이 없는 결핵성 흉막염",
+      "en": "Tuberculous pleurisy, without mention of bacteriological or histological confirmation",
+      "source": "Excel v6"
+    },
+    "J95.02": {
+      "kr": "",
+      "en": "",
+      "source": "unavailable"
+    },
+    "J45.41": {
+      "kr": "",
+      "en": "",
+      "source": "unavailable"
+    },
+    "I65.1": {
+      "kr": "",
+      "en": "",
+      "source": "unavailable"
+    },
+    "I71.1": {
+      "kr": "파열된 흉부대동맥동맥류",
+      "en": "Thoracic aortic aneurysm, ruptured",
+      "source": "Excel v6"
+    },
+    "P20.0": {
+      "kr": "",
+      "en": "",
+      "source": "unavailable"
+    },
+    "J15": {
+      "kr": "달리 분류되지 않은 세균성 폐렴",
+      "en": "Bacterial pneumonia, NEC",
+      "source": "Excel v6"
+    },
+    "Q76": {
+      "kr": "척추 및 골성 흉곽의 선천기형",
+      "en": "Congenital malformations of spine and bony thorax",
+      "source": "Excel v6"
+    },
+    "J35.8": {
+      "kr": "",
+      "en": "",
+      "source": "unavailable"
+    },
+    "I65.8": {
+      "kr": "",
+      "en": "",
+      "source": "unavailable"
+    },
+    "J63.8": {
+      "kr": "",
+      "en": "",
+      "source": "unavailable"
+    },
+    "J96.20": {
+      "kr": "",
+      "en": "",
+      "source": "unavailable"
+    },
+    "J90": {
+      "en": "Pleural effusion, NEC",
+      "kr": "달리 분류되지 않은 흉막삼출",
+      "source": "WHO ICD-10 Vol.1"
+    },
+    "J05.0": {
+      "kr": "",
+      "en": "",
+      "source": "unavailable"
+    },
+    "J45": {
+      "kr": "천식",
+      "en": "Asthma",
+      "source": "Excel v6"
+    },
+    "I66": {
+      "kr": "뇌경색증을 유발하지 않은 대뇌동맥의 폐쇄 및 협착",
+      "en": "Occlusion and stenosis of cerebral arteries, not resulting in cerebral infarction",
+      "source": "Excel v6"
+    },
+    "J37.1": {
+      "kr": "",
+      "en": "",
+      "source": "unavailable"
+    },
+    "J04.2": {
+      "kr": "",
+      "en": "",
+      "source": "unavailable"
+    },
+    "A16.7": {
+      "kr": "세균학적 또는 조직학적 확인에 대한 언급이 없는 일차호흡기결핵",
+      "en": "Primary respiratory tuberculosis , without mention of bacteriological or histological confirmation",
+      "source": "Excel v6"
+    },
+    "J96.92": {
+      "kr": "",
+      "en": "",
+      "source": "unavailable"
+    },
+    "J96.9": {
+      "kr": "상세불명의 호흡부전",
+      "en": "Respiratory failure, unspecified",
+      "source": "Excel v6"
+    },
+    "Q33.3": {
+      "kr": "",
+      "en": "",
+      "source": "unavailable"
+    },
+    "J91.8": {
+      "kr": "",
+      "en": "",
+      "source": "unavailable"
+    },
+    "J31.1": {
+      "kr": "",
+      "en": "",
+      "source": "unavailable"
+    },
+    "Q76.2": {
+      "kr": "",
+      "en": "",
+      "source": "unavailable"
+    },
+    "J21.8": {
+      "kr": "기타 명시된 병원체에 의한 급성 세기관지염",
+      "en": "Acute bronchiolitis due to other specified organisms",
+      "source": "Excel v6"
+    },
+    "A15.2": {
+      "kr": "조직학적으로 확인된 폐결핵",
+      "en": "Tuberculosis of lung, confirmed histologically",
+      "source": "Excel v6"
+    },
+    "J95.6": {
+      "kr": "",
+      "en": "",
+      "source": "unavailable"
+    },
+    "J30.8": {
+      "kr": "",
+      "en": "",
+      "source": "unavailable"
+    },
+    "J66.0": {
+      "kr": "",
+      "en": "",
+      "source": "unavailable"
+    },
+    "Q33.8": {
+      "kr": "",
+      "en": "",
+      "source": "unavailable"
+    },
+    "J35.9": {
+      "kr": "",
+      "en": "",
+      "source": "unavailable"
+    },
+    "J68.0": {
+      "kr": "",
+      "en": "",
+      "source": "unavailable"
+    },
+    "J86": {
+      "kr": "농흉",
+      "en": "Pyothorax",
+      "source": "Excel v6"
+    },
+    "J41.8": {
+      "kr": "",
+      "en": "",
+      "source": "unavailable"
+    },
+    "Q33.6": {
+      "kr": "",
+      "en": "",
+      "source": "unavailable"
+    },
+    "J67.4": {
+      "kr": "",
+      "en": "",
+      "source": "unavailable"
+    },
+    "J11.0": {
+      "kr": "",
+      "en": "",
+      "source": "unavailable"
+    },
+    "J61": {
+      "en": "Pneumoconiosis due to asbestos and other mineral fibers",
+      "kr": "석면 및 기타 광물섬유에 의한 진폐증",
+      "source": "WHO ICD-10 Vol.1"
+    },
+    "Q33.9": {
+      "kr": "",
+      "en": "",
+      "source": "unavailable"
+    },
+    "J96.90": {
+      "kr": "",
+      "en": "",
+      "source": "unavailable"
+    },
+    "J15.9": {
+      "en": "Bacterial pneumonia, unspecified",
+      "kr": "상세불명의 세균성 폐렴",
+      "source": "WHO ICD-10 Vol.1"
+    },
+    "Q34.9": {
+      "kr": "",
+      "en": "",
+      "source": "unavailable"
+    },
+    "J96.10": {
+      "en": "Chronic respiratory failure, unspecified",
+      "kr": "상세불명의 만성 호흡부전",
+      "source": "WHO ICD-10 Vol.1"
+    },
+    "J95.85": {
+      "kr": "",
+      "en": "",
+      "source": "unavailable"
+    },
+    "Q67.6": {
+      "kr": "",
+      "en": "",
+      "source": "unavailable"
+    },
+    "J38.4": {
+      "kr": "후두부종",
+      "en": "Oedema of larynx",
+      "source": "Excel v6"
+    },
+    "P23": {
+      "kr": "선천폐렴",
+      "en": "Congenital pneumonia",
+      "source": "Excel v6"
+    },
+    "I65.9": {
+      "kr": "",
+      "en": "",
+      "source": "unavailable"
+    },
+    "P20.9": {
+      "kr": "",
+      "en": "",
+      "source": "unavailable"
+    },
+    "P28.9": {
+      "kr": "",
+      "en": "",
+      "source": "unavailable"
+    },
+    "C78.00": {
+      "kr": "",
+      "en": "",
+      "source": "unavailable"
+    },
+    "J01.4": {
+      "kr": "급성 범부비동염",
+      "en": "Acute pansinusitis",
+      "source": "Excel v6"
+    },
+    "J95.859": {
+      "kr": "",
+      "en": "",
+      "source": "unavailable"
+    },
+    "J84": {
+      "kr": "기타 간질성 폐질환",
+      "en": "Other interstitial pulmonary diseases",
+      "source": "Excel v6"
+    },
+    "J01.2": {
+      "kr": "급성 사골동염",
+      "en": "Acute ethmoidal sinusitis",
+      "source": "Excel v6"
+    },
+    "J13": {
+      "en": "Pneumonia due to Streptococcus pneumoniae",
+      "kr": "폐렴구균에 의한 폐렴",
+      "source": "WHO ICD-10 Vol.1"
+    },
+    "J95.9": {
+      "kr": "",
+      "en": "",
+      "source": "unavailable"
+    },
+    "Q67.5": {
+      "kr": "",
+      "en": "",
+      "source": "unavailable"
+    },
+    "I63": {
+      "kr": "",
+      "en": "",
+      "source": "unavailable"
+    },
+    "Q22": {
+      "kr": "폐동맥판 및 삼첨판의 선천기형",
+      "en": "Congenital malformations of pulmonary and tricuspid valves",
+      "source": "Excel v6"
+    },
+    "P23.9": {
+      "kr": "",
+      "en": "",
+      "source": "unavailable"
+    },
+    "Q33.4": {
+      "kr": "",
+      "en": "",
+      "source": "unavailable"
+    },
+    "J12.9": {
+      "kr": "",
+      "en": "",
+      "source": "unavailable"
+    },
+    "Q76.0": {
+      "kr": "",
+      "en": "",
+      "source": "unavailable"
+    },
+    "P23.6": {
+      "kr": "",
+      "en": "",
+      "source": "unavailable"
+    },
+    "J45.51": {
+      "kr": "",
+      "en": "",
+      "source": "unavailable"
+    },
+    "J84.10": {
+      "kr": "",
+      "en": "",
+      "source": "unavailable"
+    },
+    "C38.1": {
+      "kr": "",
+      "en": "",
+      "source": "unavailable"
+    },
+    "J03.9": {
+      "kr": "상세불명의 급성 편도염",
+      "en": "Acute tonsillitis, unspecified",
+      "source": "Excel v6"
+    },
+    "A16": {
+      "kr": "세균학적으로나 조직학적으로 확인되지 않은 호흡기결핵",
+      "en": "Respiratory tuberculosis, not confirmed bacteriologically or histologically",
+      "source": "Excel v6"
+    },
+    "A16.8": {
+      "kr": "세균학적 또는 조직학적 확인에 대한 언급이 없는 기타 호흡기결핵",
+      "en": "Other respiratory tuberculosis, without mention of bacteriological or histological confirmation",
+      "source": "Excel v6"
+    },
+    "J38": {
+      "kr": "달리 분류되지 않은 성대 및 후두의 질환",
+      "en": "Diseases of vocal cords and larynx, NEC",
+      "source": "Excel v6"
+    },
+    "Q32": {
+      "kr": "기관 및 기관지의 선천기형",
+      "en": "Congenital malformations of trachea and bronchus",
+      "source": "Excel v6"
+    },
+    "P22.0": {
+      "kr": "",
+      "en": "",
+      "source": "unavailable"
+    },
+    "J20.8": {
+      "kr": "기타 명시된 병원체에 의한 급성 기관지염",
+      "en": "Acute bronchitis due to other specified organisms",
+      "source": "Excel v6"
+    },
+    "P25.3": {
+      "kr": "",
+      "en": "",
+      "source": "unavailable"
+    },
+    "A15.3": {
+      "kr": "상세불명의 수단으로 확인된 폐결핵",
+      "en": "Tuberculosis of lung, confirmed by unspecified means",
+      "source": "Excel v6"
+    },
+    "I27.20": {
+      "kr": "",
+      "en": "",
+      "source": "unavailable"
+    },
+    "Q76.7": {
+      "kr": "",
+      "en": "",
+      "source": "unavailable"
+    },
+    "I27": {
+      "kr": "기타 폐성 심장질환",
+      "en": "Other pulmonary heart diseases",
+      "source": "Excel v6"
+    },
+    "J95.81": {
+      "kr": "",
+      "en": "",
+      "source": "unavailable"
+    },
+    "J92.9": {
+      "kr": "",
+      "en": "",
+      "source": "unavailable"
+    },
+    "G47.31": {
+      "kr": "",
+      "en": "",
+      "source": "unavailable"
+    },
+    "J94.2": {
+      "kr": "",
+      "en": "",
+      "source": "unavailable"
+    },
+    "P27.9": {
+      "kr": "",
+      "en": "",
+      "source": "unavailable"
+    },
+    "J92.0": {
+      "kr": "",
+      "en": "",
+      "source": "unavailable"
+    },
+    "J95.83": {
+      "kr": "",
+      "en": "",
+      "source": "unavailable"
+    },
+    "J99.1": {
+      "kr": "",
+      "en": "",
+      "source": "unavailable"
+    },
+    "P28.8": {
+      "kr": "",
+      "en": "",
+      "source": "unavailable"
+    },
+    "J95.822": {
+      "kr": "",
+      "en": "",
+      "source": "unavailable"
+    },
+    "J17.8": {
+      "kr": "",
+      "en": "",
+      "source": "unavailable"
+    },
+    "J85": {
+      "kr": "폐 및 종격의 농양",
+      "en": "Abscess of lung and mediastinum",
+      "source": "Excel v6"
+    },
+    "J70": {
+      "kr": "기타 외부요인에 의한 호흡기병태",
+      "en": "Respiratory conditions due to other external agents",
+      "source": "Excel v6"
+    },
+    "J15.1": {
+      "en": "Pneumonia due to Pseudomonas",
+      "kr": "녹농균에 의한 폐렴",
+      "source": "WHO ICD-10 Vol.1"
+    },
+    "J16": {
+      "kr": "달리 분류되지 않은 기타 감염성 병원체에 의한 폐렴",
+      "en": "Pneumonia due to other infectious organisms, NEC",
+      "source": "Excel v6"
+    },
+    "J12": {
+      "kr": "달리 분류되지 않은 바이러스폐렴",
+      "en": "Viral pneumonia, NEC",
+      "source": "Excel v6"
+    },
+    "J43": {
+      "kr": "폐기종",
+      "en": "Emphysema",
+      "source": "Excel v6"
+    },
+    "G47.35": {
+      "kr": "",
+      "en": "",
+      "source": "unavailable"
+    },
+    "P23.0": {
+      "kr": "",
+      "en": "",
+      "source": "unavailable"
+    },
+    "J86.0": {
+      "kr": "",
+      "en": "",
+      "source": "unavailable"
+    },
+    "J02.8": {
+      "kr": "",
+      "en": "",
+      "source": "unavailable"
+    },
+    "J06.8": {
+      "kr": "",
+      "en": "",
+      "source": "unavailable"
+    },
+    "P23.1": {
+      "kr": "",
+      "en": "",
+      "source": "unavailable"
+    },
+    "A16.2": {
+      "kr": "세균학적 또는 조직학적 확인에 대한 언급이 없는 폐결핵",
+      "en": "Tuberculosis of lung, without mention of bacteriological or histological confirmation",
+      "source": "Excel v6"
+    },
+    "J38.1": {
+      "kr": "성대 및 후두의 폴립",
+      "en": "Polyp of vocal cord and larynx",
+      "source": "Excel v6"
+    },
+    "Q67.7": {
+      "kr": "",
+      "en": "",
+      "source": "unavailable"
+    },
+    "P20": {
+      "kr": "자궁내저산소증",
+      "en": "Intrauterine hypoxia",
+      "source": "Excel v6"
+    },
+    "J35.3": {
+      "kr": "",
+      "en": "",
+      "source": "unavailable"
+    },
+    "I37": {
+      "kr": "폐동맥판장애",
+      "en": "Pulmonary valve disorders",
+      "source": "Excel v6"
+    },
+    "C78.0": {
+      "kr": "폐의 이차성 악성 신생물",
+      "en": "Secondary malignant neoplasm of lung",
+      "source": "Excel v6"
+    },
+    "J70.1": {
+      "kr": "",
+      "en": "",
+      "source": "unavailable"
+    },
+    "P25.8": {
+      "kr": "",
+      "en": "",
+      "source": "unavailable"
+    },
+    "J34.1": {
+      "kr": "",
+      "en": "",
+      "source": "unavailable"
+    },
+    "J03.8": {
+      "kr": "기타 명시된 병원체에 의한 급성 편도염",
+      "en": "Acute tonsillitis due to other specified organisms",
+      "source": "Excel v6"
+    },
+    "P20.1": {
+      "kr": "",
+      "en": "",
+      "source": "unavailable"
+    },
+    "U04": {
+      "kr": "중증급성호흡증후군[SARS]",
+      "en": "Severe acute respiratory syndrome[SARS]",
+      "source": "Excel v6"
+    },
+    "J95": {
+      "kr": "달리 분류되지 않은 처치후 호흡장애",
+      "en": "Postprocedural respiratory disorders, NEC",
+      "source": "Excel v6"
+    },
+    "J11.1": {
+      "kr": "",
+      "en": "",
+      "source": "unavailable"
+    },
+    "J62.0": {
+      "kr": "",
+      "en": "",
+      "source": "unavailable"
+    },
+    "J30.1": {
+      "kr": "",
+      "en": "",
+      "source": "unavailable"
+    },
+    "I63.5": {
+      "kr": "대뇌동맥의 상세불명 폐쇄 또는 협착에 의한 뇌경색증",
+      "en": "Cerebral infarction due to unspecified occlusion or stenosis of cerebral arteries",
+      "source": "Excel v6"
+    },
+    "J33.0": {
+      "kr": "",
+      "en": "",
+      "source": "unavailable"
+    },
+    "J18.1": {
+      "en": "Lobar pneumonia, unspecified organism",
+      "kr": "상세불명 병원체의 대엽성 폐렴",
+      "source": "WHO ICD-10 Vol.1"
+    },
+    "J06.0": {
+      "kr": "",
+      "en": "",
+      "source": "unavailable"
+    },
+    "I63.2": {
+      "kr": "뇌전동맥의 상세불명 폐쇄 또는 협착에 의한 뇌경색증",
+      "en": "Cerebral infarction due to unspecified occlusion or stenosis of precerebral arteries",
+      "source": "Excel v6"
+    },
+    "G47.30": {
+      "en": "Sleep apnea, unspecified",
+      "kr": "상세불명의 수면무호흡",
+      "source": "WHO ICD-10 Vol.1"
+    },
+    "J42": {
+      "en": "Unspecified chronic bronchitis",
+      "kr": "상세불명의 만성 기관지염",
+      "source": "WHO ICD-10 Vol.1"
+    },
+    "A15.5": {
+      "kr": "세균학적 및 조직학적으로 확인된 후두, 기관 및 기관지의 결핵",
+      "en": "Tuberculosis of larynx, trachea and bronchus, confirmed bacteriologically and histologically",
+      "source": "Excel v6"
+    },
+    "C78.01": {
+      "kr": "",
+      "en": "",
+      "source": "unavailable"
+    },
+    "I66.8": {
+      "kr": "",
+      "en": "",
+      "source": "unavailable"
+    },
+    "J96.02": {
+      "en": "Acute respiratory failure with hypercapnia",
+      "kr": "고탄산혈증 동반 급성 호흡부전",
+      "source": "WHO ICD-10 Vol.1"
+    },
+    "J32.3": {
+      "kr": "",
+      "en": "",
+      "source": "unavailable"
+    },
+    "J01.1": {
+      "kr": "급성 전두동염",
+      "en": "Acute frontal sinusitis",
+      "source": "Excel v6"
+    },
+    "J94.9": {
+      "kr": "",
+      "en": "",
+      "source": "unavailable"
+    },
+    "P28.5": {
+      "kr": "",
+      "en": "",
+      "source": "unavailable"
+    },
+    "U04.9": {
+      "kr": "",
+      "en": "",
+      "source": "unavailable"
+    },
+    "J00": {
+      "kr": "",
+      "en": "",
+      "source": "unavailable"
+    },
+    "J06": {
+      "kr": "다발성 및 상세불명 부위의 급성 상기도감염",
+      "en": "Acute upper respiratory infections of multiple and unspecified sites",
+      "source": "Excel v6"
+    },
+    "P26.8": {
+      "kr": "",
+      "en": "",
+      "source": "unavailable"
+    },
+    "A15": {
+      "kr": "세균학적 및 조직학적으로 확인된 호흡기결핵",
+      "en": "Respiratory tuberculosis, bacteriologically and histologically confirmed",
+      "source": "Excel v6"
+    },
+    "J34.2": {
+      "kr": "",
+      "en": "",
+      "source": "unavailable"
+    },
+    "I28.1": {
+      "kr": "",
+      "en": "",
+      "source": "unavailable"
+    },
+    "G47.39": {
+      "kr": "",
+      "en": "",
+      "source": "unavailable"
+    },
+    "A15.9": {
+      "kr": "세균학적 및 조직학적으로 확인된 상세불명의 호흡기결핵",
+      "en": "Respiratory tuberculosis unspecified, confirmed bacteriologically and histologically",
+      "source": "Excel v6"
+    },
+    "J95.88": {
+      "kr": "",
+      "en": "",
+      "source": "unavailable"
+    },
+    "J98.41": {
+      "kr": "",
+      "en": "",
+      "source": "unavailable"
+    },
+    "D86.9": {
+      "kr": "",
+      "en": "",
+      "source": "unavailable"
+    },
+    "J99.0": {
+      "kr": "",
+      "en": "",
+      "source": "unavailable"
+    },
+    "J95.7": {
+      "kr": "",
+      "en": "",
+      "source": "unavailable"
+    },
+    "Q32.1": {
+      "kr": "",
+      "en": "",
+      "source": "unavailable"
+    },
+    "P26.1": {
+      "kr": "",
+      "en": "",
+      "source": "unavailable"
+    },
+    "J81.1": {
+      "kr": "만성 폐부종",
+      "en": "Chronic pulmonary oedema",
+      "source": "Excel v6"
+    },
+    "J32.4": {
+      "kr": "",
+      "en": "",
+      "source": "unavailable"
+    },
+    "Q67.8": {
+      "kr": "",
+      "en": "",
+      "source": "unavailable"
+    },
+    "J44.9": {
+      "kr": "상세불명의 만성 폐쇄성 폐질환",
+      "en": "Chronic obstructive pulmonary disease, unspecified",
+      "source": "Excel v6"
+    },
+    "J70.3": {
+      "kr": "",
+      "en": "",
+      "source": "unavailable"
+    },
+    "C34.0": {
+      "kr": "주기관지의 악성 신생물",
+      "en": "Malignant neoplasm of main bronchus",
+      "source": "Excel v6"
+    },
+    "J67.5": {
+      "kr": "",
+      "en": "",
+      "source": "unavailable"
+    },
+    "J96.01": {
+      "en": "Acute respiratory failure with hypoxia",
+      "kr": "저산소혈증 동반 급성 호흡부전",
+      "source": "WHO ICD-10 Vol.1"
+    },
+    "C78": {
+      "kr": "호흡 및 소화기관의 이차성 악성 신생물",
+      "en": "Secondary malignant neoplasm of respiratory and digestive organs",
+      "source": "Excel v6"
+    },
+    "J10": {
+      "kr": "확인된 계절성 인플루엔자바이러스에 의한 인플루엔자",
+      "en": "Influenza due to identified seasonal influenza virus",
+      "source": "Excel v6"
+    },
+    "J62.8": {
+      "kr": "",
+      "en": "",
+      "source": "unavailable"
+    },
+    "I27.0": {
+      "en": "Primary pulmonary hypertension",
+      "kr": "일차성 폐고혈압",
+      "source": "WHO ICD-10 Vol.1"
+    },
+    "J60": {
+      "en": "Coal workers' pneumoconiosis",
+      "kr": "탄광부 진폐증",
+      "source": "WHO ICD-10 Vol.1"
+    },
+    "J67": {
+      "kr": "유기물먼지에 의한 과민성 폐렴",
+      "en": "Hypersensitivity pneumonitis due to organic dust",
+      "source": "Excel v6"
+    },
+    "J98.0": {
+      "kr": "달리 분류되지 않은 기관지의 질환",
+      "en": "Diseases of bronchus, NEC",
+      "source": "Excel v6"
+    },
+    "G47.3": {
+      "kr": "수면무호흡",
+      "en": "Sleep apnoea",
+      "source": "Excel v6"
+    },
+    "J02": {
+      "kr": "급성 인두염",
+      "en": "Acute pharyngitis",
+      "source": "Excel v6"
+    },
+    "Q34.8": {
+      "kr": "",
+      "en": "",
+      "source": "unavailable"
+    },
+    "P27": {
+      "kr": "출생전후기에 기원한 만성 호흡기질환",
+      "en": "Chronic respiratory disease originating in the perinatal period",
+      "source": "Excel v6"
+    },
+    "J66.1": {
+      "kr": "",
+      "en": "",
+      "source": "unavailable"
+    },
+    "J95.09": {
+      "kr": "",
+      "en": "",
+      "source": "unavailable"
+    },
+    "I26.09": {
+      "kr": "",
+      "en": "",
+      "source": "unavailable"
+    },
+    "J96.22": {
+      "kr": "",
+      "en": "",
+      "source": "unavailable"
+    },
+    "J20.7": {
+      "kr": "",
+      "en": "",
+      "source": "unavailable"
+    },
+    "J32.9": {
+      "kr": "",
+      "en": "",
+      "source": "unavailable"
+    },
+    "C38.2": {
+      "kr": "",
+      "en": "",
+      "source": "unavailable"
+    },
+    "P23.2": {
+      "kr": "",
+      "en": "",
+      "source": "unavailable"
+    },
+    "P23.5": {
+      "kr": "",
+      "en": "",
+      "source": "unavailable"
+    },
+    "G47.36": {
+      "kr": "",
+      "en": "",
+      "source": "unavailable"
+    },
+    "J67.6": {
+      "kr": "",
+      "en": "",
+      "source": "unavailable"
+    },
+    "I26.02": {
+      "kr": "",
+      "en": "",
+      "source": "unavailable"
+    },
+    "J94.1": {
+      "kr": "",
+      "en": "",
+      "source": "unavailable"
+    },
+    "J95.812": {
+      "kr": "",
+      "en": "",
+      "source": "unavailable"
+    },
+    "J18": {
+      "kr": "상세불명 병원체의 폐렴",
+      "en": "Pneumonia, organism unspecified",
+      "source": "Excel v6"
+    },
+    "J95.0": {
+      "en": "Tracheostomy malfunction",
+      "kr": "기관조루술 기능장애",
+      "source": "WHO ICD-10 Vol.1"
+    },
+    "J95.03": {
+      "kr": "",
+      "en": "",
+      "source": "unavailable"
+    },
+    "Q33.1": {
+      "kr": "",
+      "en": "",
+      "source": "unavailable"
+    },
+    "J45.31": {
+      "kr": "",
+      "en": "",
+      "source": "unavailable"
+    },
+    "I26.99": {
+      "kr": "",
+      "en": "",
+      "source": "unavailable"
+    },
+    "J38.5": {
+      "kr": "",
+      "en": "",
+      "source": "unavailable"
+    },
+    "A15.6": {
+      "kr": "세균학적 및 조직학적으로 확인된 결핵성 흉막염",
+      "en": "Tuberculous pleurisy, confirmed bacteriologically and histologically",
+      "source": "Excel v6"
+    },
+    "C38.4": {
+      "kr": "",
+      "en": "",
+      "source": "unavailable"
+    },
+    "I50.20": {
+      "kr": "",
+      "en": "",
+      "source": "unavailable"
+    },
+    "J98.4": {
+      "kr": "폐의 기타 장애",
+      "en": "Other disorders of lung",
+      "source": "Excel v6"
+    },
+    "J30.0": {
+      "kr": "",
+      "en": "",
+      "source": "unavailable"
+    },
+    "Q32.0": {
+      "kr": "",
+      "en": "",
+      "source": "unavailable"
+    },
+    "Q33.2": {
+      "kr": "",
+      "en": "",
+      "source": "unavailable"
+    },
+    "J41.1": {
+      "kr": "",
+      "en": "",
+      "source": "unavailable"
+    },
+    "J98.09": {
+      "kr": "",
+      "en": "",
+      "source": "unavailable"
+    },
+    "J10.8": {
+      "en": "Influenza due to other identified influenza virus with other manifestations",
+      "kr": "기타 식별 인플루엔자 바이러스에 의한 기타 발현 인플루엔자",
+      "source": "WHO ICD-10 Vol.1"
+    },
+    "I66.3": {
+      "kr": "",
+      "en": "",
+      "source": "unavailable"
+    },
+    "J31": {
+      "kr": "만성 비염, 비인두염 및 인두염",
+      "en": "Chronic rhinitis, nasopharyngitis and pharyngitis",
+      "source": "Excel v6"
+    },
+    "P26.0": {
+      "kr": "",
+      "en": "",
+      "source": "unavailable"
+    },
+    "A16.4": {
+      "kr": "세균학적 또는 조직학적 확인에 대한 언급이 없는 후두, 기관 및 기관지 결핵",
+      "en": "Tuberculosis of larynx, trachea and bronchus, without mention of bacteriological or histological confirmation",
+      "source": "Excel v6"
+    },
+    "J70.5": {
+      "kr": "",
+      "en": "",
+      "source": "unavailable"
+    },
+    "J39.3": {
+      "kr": "",
+      "en": "",
+      "source": "unavailable"
+    },
+    "J95.00": {
+      "kr": "",
+      "en": "",
+      "source": "unavailable"
+    },
+    "J67.9": {
+      "kr": "",
+      "en": "",
+      "source": "unavailable"
+    },
+    "Q34.0": {
+      "kr": "",
+      "en": "",
+      "source": "unavailable"
+    },
+    "J68.3": {
+      "kr": "",
+      "en": "",
+      "source": "unavailable"
+    },
+    "I28.9": {
+      "kr": "",
+      "en": "",
+      "source": "unavailable"
+    },
+    "D86.1": {
+      "en": "Sarcoidosis of lymph nodes",
+      "kr": "림프절의 사르코이드증",
+      "source": "WHO ICD-10 Vol.1"
+    },
+    "J01": {
+      "kr": "급성 부비동염",
+      "en": "Acute sinusitis",
+      "source": "Excel v6"
+    },
+    "J05": {
+      "kr": "급성 폐색성 후두염[크룹] 및 후두개염",
+      "en": "Acute obstructive laryngitis [croup] and epiglottitis",
+      "source": "Excel v6"
+    },
+    "J95.821": {
+      "kr": "",
+      "en": "",
+      "source": "unavailable"
+    },
+    "J96.21": {
+      "kr": "",
+      "en": "",
+      "source": "unavailable"
+    },
+    "J68.4": {
+      "kr": "",
+      "en": "",
+      "source": "unavailable"
+    },
+    "J45.0": {
+      "kr": "주로 알레르기성 천식",
+      "en": "Predominantly allergic asthma",
+      "source": "Excel v6"
+    },
+    "J70.9": {
+      "kr": "",
+      "en": "",
+      "source": "unavailable"
+    },
+    "P28": {
+      "kr": "출생전후기에 기원한 기타 호흡기병태",
+      "en": "Other respiratory conditions originating in the perinatal period",
+      "source": "Excel v6"
+    },
+    "J01.8": {
+      "kr": "기타 급성 부비동염",
+      "en": "Other acute sinusitis",
+      "source": "Excel v6"
+    },
+    "I50.21": {
+      "kr": "",
+      "en": "",
+      "source": "unavailable"
+    },
+    "C34.8": {
+      "kr": "기관지 및 폐의 중복병변의 악성 신생물",
+      "en": "Malignant neoplasm of overlapping lesion of bronchus and lung",
+      "source": "Excel v6"
+    },
+    "J94.0": {
+      "kr": "",
+      "en": "",
+      "source": "unavailable"
+    },
+    "J04.0": {
+      "kr": "",
+      "en": "",
+      "source": "unavailable"
+    },
+    "J65": {
+      "en": "Pneumoconiosis associated with tuberculosis",
+      "kr": "결핵 동반 진폐증",
+      "source": "WHO ICD-10 Vol.1"
+    },
+    "J01.9": {
+      "kr": "상세불명의 급성 부비동염",
+      "en": "Acute sinusitis, unspecified",
+      "source": "Excel v6"
+    },
+    "A15.0": {
+      "kr": "배양 유무에 관계없이 가래 현미경 검사로 확인된 폐결핵",
+      "en": "Tuberculosis of lung, confirmed by sputum microscopy with or without culture",
+      "source": "Excel v6"
+    },
+    "C34": {
+      "kr": "기관지 및 폐의 악성 신생물",
+      "en": "Malignant neoplasm of bronchus and lung",
+      "source": "Excel v6"
+    },
+    "D86.2": {
+      "en": "Sarcoidosis of lung with sarcoidosis of lymph nodes",
+      "kr": "림프절 사르코이드증 동반 폐 사르코이드증",
+      "source": "WHO ICD-10 Vol.1"
+    },
+    "J96": {
+      "kr": "달리 분류되지 않은 호흡부전",
+      "en": "Respiratory failure, NEC",
+      "source": "Excel v6"
+    },
+    "Q76.1": {
+      "kr": "",
+      "en": "",
+      "source": "unavailable"
+    },
+    "J34.3": {
+      "kr": "",
+      "en": "",
+      "source": "unavailable"
+    },
+    "G47.33": {
+      "en": "Obstructive sleep apnea (adult)(pediatric)",
+      "kr": "폐쇄성 수면무호흡",
+      "source": "WHO ICD-10 Vol.1"
+    },
+    "P28.1": {
+      "kr": "",
+      "en": "",
+      "source": "unavailable"
+    },
+    "J39.9": {
+      "kr": "",
+      "en": "",
+      "source": "unavailable"
+    },
+    "J20.9": {
+      "kr": "",
+      "en": "",
+      "source": "unavailable"
+    },
+    "J95.8": {
+      "kr": "",
+      "en": "",
+      "source": "unavailable"
+    },
+    "J30.2": {
+      "kr": "",
+      "en": "",
+      "source": "unavailable"
+    },
+    "C38.3": {
+      "kr": "",
+      "en": "",
+      "source": "unavailable"
+    },
+    "J21": {
+      "kr": "급성 세기관지염",
+      "en": "Acute bronchiolitis",
+      "source": "Excel v6"
+    },
+    "J95.89": {
+      "kr": "",
+      "en": "",
+      "source": "unavailable"
+    },
+    "J33.8": {
+      "kr": "",
+      "en": "",
+      "source": "unavailable"
+    },
+    "J84.9": {
+      "en": "Interstitial pulmonary disease, unspecified",
+      "kr": "상세불명의 간질성 폐질환",
+      "source": "WHO ICD-10 Vol.1"
+    },
+    "I65.3": {
+      "kr": "",
+      "en": "",
+      "source": "unavailable"
+    },
+    "A15.1": {
+      "kr": "배양만으로 확인된 폐결핵",
+      "en": "Tuberculosis of lung, confirmed by culture only",
+      "source": "Excel v6"
+    },
+    "J46": {
+      "en": "Status asthmaticus",
+      "kr": "천식지속상태",
+      "source": "WHO ICD-10 Vol.1"
+    },
+    "I66.2": {
+      "kr": "",
+      "en": "",
+      "source": "unavailable"
+    },
+    "J93.9": {
+      "en": "Pneumothorax, unspecified",
+      "kr": "상세불명의 기흉",
+      "source": "WHO ICD-10 Vol.1"
+    },
+    "J10.1": {
+      "en": "Influenza due to other identified influenza virus with other respiratory manifestations",
+      "kr": "기타 식별 인플루엔자 바이러스에 의한 호흡기 발현 인플루엔자",
+      "source": "WHO ICD-10 Vol.1"
+    },
+    "J67.8": {
+      "kr": "",
+      "en": "",
+      "source": "unavailable"
+    },
+    "J82": {
+      "kr": "달리 분류되지 않은 폐호산구증가",
+      "en": "Pulmonary eosinophilia, NEC",
+      "source": "Excel v6"
+    },
+    "J69.0": {
+      "en": "Pneumonitis due to food and vomit",
+      "kr": "음식 및 구토물에 의한 폐렴",
+      "source": "WHO ICD-10 Vol.1"
+    },
+    "J63.5": {
+      "kr": "",
+      "en": "",
+      "source": "unavailable"
+    },
+    "I71": {
+      "kr": "",
+      "en": "",
+      "source": "unavailable"
+    },
+    "I28": {
+      "kr": "폐혈관의 기타 질환",
+      "en": "Other diseases of pulmonary vessels",
+      "source": "Excel v6"
+    },
+    "J39.8": {
+      "kr": "",
+      "en": "",
+      "source": "unavailable"
+    },
+    "D86.0": {
+      "en": "Sarcoidosis of lung",
+      "kr": "폐의 사르코이드증",
+      "source": "WHO ICD-10 Vol.1"
+    },
+    "J66": {
+      "kr": "특정 유기물먼지에 의한 기도질환",
+      "en": "Airway disease due to specific organic dust",
+      "source": "Excel v6"
+    },
+    "A15.4": {
+      "kr": "세균학적 및 조직학적으로 확인된 흉곽내림프절의 결핵",
+      "en": "Tuberculosis of intrathoracic lymph nodes, confirmed bacteriologically and histologically",
+      "source": "Excel v6"
+    },
+    "J94.8": {
+      "kr": "",
+      "en": "",
+      "source": "unavailable"
+    },
+    "Q33.5": {
+      "kr": "",
+      "en": "",
+      "source": "unavailable"
+    },
+    "J43.1": {
+      "kr": "",
+      "en": "",
+      "source": "unavailable"
+    },
+    "J17": {
+      "kr": "달리 분류된 질환에서의 폐렴",
+      "en": "Pneumonia in diseases classified elsewhere",
+      "source": "Excel v6"
+    },
+    "P26.9": {
+      "kr": "",
+      "en": "",
+      "source": "unavailable"
+    },
+    "J01.0": {
+      "kr": "급성 상악동염",
+      "en": "Acute maxillary sinusitis",
+      "source": "Excel v6"
+    },
+    "J84.112": {
+      "kr": "",
+      "en": "",
+      "source": "unavailable"
+    },
+    "J43.2": {
+      "kr": "",
+      "en": "",
+      "source": "unavailable"
+    },
+    "J44.1": {
+      "kr": "급성 악화를 동반한 상세불명의 만성 폐쇄성 폐질환",
+      "en": "Chronic obstructive pulmonary disease with acute exacerbation, unspecified",
+      "source": "Excel v6"
+    },
+    "P27.1": {
+      "kr": "출생전후기에 기원한 기관지폐형성이상",
+      "en": "Bronchopulmonary dysplasia originating in the perinatal period",
+      "source": "Excel v6"
+    },
+    "J93.1": {
+      "en": "Other spontaneous pneumothorax",
+      "kr": "기타 자발성 기흉",
+      "source": "WHO ICD-10 Vol.1"
+    },
+    "J86.9": {
+      "kr": "",
+      "en": "",
+      "source": "unavailable"
+    },
+    "Q76.5": {
+      "kr": "",
+      "en": "",
+      "source": "unavailable"
+    },
+    "J93.12": {
+      "kr": "",
+      "en": "",
+      "source": "unavailable"
+    },
+    "J93": {
+      "kr": "기흉",
+      "en": "Pneumothorax",
+      "source": "Excel v6"
+    },
+    "P23.8": {
+      "kr": "",
+      "en": "",
+      "source": "unavailable"
+    },
+    "P25.1": {
+      "kr": "",
+      "en": "",
+      "source": "unavailable"
+    },
+    "J38.0": {
+      "kr": "성대 및 후두의 마비",
+      "en": "Paralysis of vocal cords and larynx",
+      "source": "Excel v6"
+    },
+    "J39.1": {
+      "kr": "",
+      "en": "",
+      "source": "unavailable"
+    },
+    "J04": {
+      "kr": "급성 후두염 및 기관염",
+      "en": "Acute laryngitis and tracheitis",
+      "source": "Excel v6"
+    },
+    "Q32.2": {
+      "kr": "",
+      "en": "",
+      "source": "unavailable"
+    },
+    "J85.2": {
+      "kr": "",
+      "en": "",
+      "source": "unavailable"
+    },
+    "J14": {
+      "en": "Pneumonia due to Hemophilus influenzae",
+      "kr": "헤모필루스 인플루엔자에 의한 폐렴",
+      "source": "WHO ICD-10 Vol.1"
+    },
+    "J33.1": {
+      "kr": "",
+      "en": "",
+      "source": "unavailable"
+    },
+    "I37.1": {
+      "kr": "",
+      "en": "",
+      "source": "unavailable"
+    },
+    "J70.8": {
+      "kr": "",
+      "en": "",
+      "source": "unavailable"
+    },
+    "C39.0": {
+      "kr": "",
+      "en": "",
+      "source": "unavailable"
+    },
+    "J45.21": {
+      "kr": "",
+      "en": "",
+      "source": "unavailable"
+    },
+    "J15.6": {
+      "en": "Pneumonia due to other aerobic gram-negative bacteria",
+      "kr": "기타 호기성 그람음성균에 의한 폐렴",
+      "source": "WHO ICD-10 Vol.1"
+    },
+    "J18.9": {
+      "en": "Pneumonia, unspecified",
+      "kr": "상세불명의 폐렴",
+      "source": "WHO ICD-10 Vol.1"
+    },
+    "J93.0": {
+      "en": "Spontaneous tension pneumothorax",
+      "kr": "자발성 긴장성 기흉",
+      "source": "WHO ICD-10 Vol.1"
+    },
+    "J96.1": {
+      "kr": "만성 호흡부전",
+      "en": "Chronic respiratory failure",
+      "source": "Excel v6"
+    },
+    "I26": {
+      "kr": "폐색전증",
+      "en": "Pulmonary embolism",
+      "source": "Excel v6"
+    },
+    "J20.0": {
+      "kr": "",
+      "en": "",
+      "source": "unavailable"
+    },
+    "C34.9": {
+      "kr": "상세불명의 기관지 또는 폐의 악성 신생물",
+      "en": "Malignant neoplasm of bronchus or lung, unspecified",
+      "source": "Excel v6"
+    },
+    "J38.3": {
+      "kr": "",
+      "en": "",
+      "source": "unavailable"
+    },
+    "A15.7": {
+      "kr": "세균학적 및 조직학적으로 확인된 일차호흡기결핵",
+      "en": "Primary respiratory tuberculosis, confirmed bacteriologically and histologically",
+      "source": "Excel v6"
+    },
+    "J20.6": {
+      "kr": "",
+      "en": "",
+      "source": "unavailable"
+    },
+    "I37.8": {
+      "kr": "",
+      "en": "",
+      "source": "unavailable"
+    },
+    "P22.9": {
+      "kr": "",
+      "en": "",
+      "source": "unavailable"
+    },
+    "J37.0": {
+      "kr": "",
+      "en": "",
+      "source": "unavailable"
+    },
+    "J30.5": {
+      "kr": "",
+      "en": "",
+      "source": "unavailable"
+    },
+    "P22": {
+      "kr": "신생아의 호흡곤란",
+      "en": "Respiratory distress of newborn",
+      "source": "Excel v6"
+    },
+    "J67.0": {
+      "kr": "",
+      "en": "",
+      "source": "unavailable"
+    },
+    "Q76.4": {
+      "kr": "",
+      "en": "",
+      "source": "unavailable"
+    },
+    "I26.0": {
+      "en": "Pulmonary embolism with mention of acute cor pulmonale",
+      "kr": "급성 폐성심을 동반한 폐색전증",
+      "source": "WHO ICD-10 Vol.1"
+    },
+    "C39.9": {
+      "kr": "",
+      "en": "",
+      "source": "unavailable"
+    },
+    "Q67": {
+      "kr": "머리, 얼굴, 척추 및 흉부의 선천성 근골격변형",
+      "en": "Congenital musculoskeletal deformities of head, face, spine and chest",
+      "source": "Excel v6"
+    },
+    "J91.0": {
+      "kr": "",
+      "en": "",
+      "source": "unavailable"
+    },
+    "J21.9": {
+      "kr": "",
+      "en": "",
+      "source": "unavailable"
+    },
+    "J17.1": {
+      "kr": "",
+      "en": "",
+      "source": "unavailable"
+    },
+    "J33.9": {
+      "kr": "",
+      "en": "",
+      "source": "unavailable"
+    },
+    "J95.1": {
+      "en": "Acute pulmonary insufficiency following thoracic surgery",
+      "kr": "흉부수술후 급성 폐기능부전",
+      "source": "WHO ICD-10 Vol.1"
+    },
+    "J02.0": {
+      "kr": "",
+      "en": "",
+      "source": "unavailable"
+    },
+    "J34.0": {
+      "kr": "",
+      "en": "",
+      "source": "unavailable"
+    },
+    "J35.1": {
+      "kr": "",
+      "en": "",
+      "source": "unavailable"
+    },
+    "Q76.6": {
+      "kr": "",
+      "en": "",
+      "source": "unavailable"
+    },
+    "J98.49": {
+      "kr": "",
+      "en": "",
+      "source": "unavailable"
+    },
+    "C39.8": {
+      "kr": "",
+      "en": "",
+      "source": "unavailable"
+    },
+    "I27.21": {
+      "kr": "",
+      "en": "",
+      "source": "unavailable"
+    },
+    "J12.0": {
+      "kr": "",
+      "en": "",
+      "source": "unavailable"
+    },
+    "G47.37": {
+      "kr": "",
+      "en": "",
+      "source": "unavailable"
+    },
+    "J32.2": {
+      "kr": "",
+      "en": "",
+      "source": "unavailable"
+    },
+    "P28.2": {
+      "kr": "",
+      "en": "",
+      "source": "unavailable"
+    },
+    "J34": {
+      "kr": "코 및 비동의 기타 장애",
+      "en": "Other disorders of nose and nasal sinuses",
+      "source": "Excel v6"
+    },
+    "J95.84": {
+      "kr": "",
+      "en": "",
+      "source": "unavailable"
+    },
+    "Q33": {
+      "kr": "폐의 선천기형",
+      "en": "Congenital malformations of lung",
+      "source": "Excel v6"
+    },
+    "J98.1": {
+      "kr": "폐허탈",
+      "en": "Pulmonary collapse",
+      "source": "Excel v6"
+    },
+    "A16.1": {
+      "kr": "세균학적 및 조직학적 검사를 하지 않은 폐결핵",
+      "en": "Tuberculosis of lung, bacteriological and histological examination not done",
+      "source": "Excel v6"
+    },
+    "P28.0": {
+      "kr": "",
+      "en": "",
+      "source": "unavailable"
+    },
+    "J39.0": {
+      "kr": "",
+      "en": "",
+      "source": "unavailable"
+    },
+    "J68.9": {
+      "kr": "",
+      "en": "",
+      "source": "unavailable"
+    },
+    "J98.19": {
+      "kr": "",
+      "en": "",
+      "source": "unavailable"
+    },
+    "Q22.3": {
+      "kr": "",
+      "en": "",
+      "source": "unavailable"
+    },
+    "J66.8": {
+      "kr": "",
+      "en": "",
+      "source": "unavailable"
+    },
+    "Q76.3": {
+      "kr": "",
+      "en": "",
+      "source": "unavailable"
+    },
+    "J69": {
+      "kr": "고체 및 액체에 의한 폐렴",
+      "en": "Pneumonitis due to solids and liquids",
+      "source": "Excel v6"
+    },
+    "I50.1": {
+      "kr": "",
+      "en": "",
+      "source": "unavailable"
+    },
+    "J95.811": {
+      "kr": "",
+      "en": "",
+      "source": "unavailable"
+    },
+    "J94": {
+      "kr": "기타 흉막의 병태",
+      "en": "Other pleural conditions",
+      "source": "Excel v6"
+    },
+    "J39": {
+      "kr": "상기도의 기타 질환",
+      "en": "Other diseases of upper respiratory tract",
+      "source": "Excel v6"
+    },
+    "J66.2": {
+      "kr": "",
+      "en": "",
+      "source": "unavailable"
+    },
+    "P23.4": {
+      "kr": "",
+      "en": "",
+      "source": "unavailable"
+    },
+    "C39": {
+      "kr": "기타 및 부위불명의 호흡기 및 흉곽내기관의 악성 신생물",
+      "en": "Malignant neoplasm of other and ill-defined sites in the respiratory system and intrathoracic organs",
+      "source": "Excel v6"
+    },
+    "J99.8": {
+      "kr": "",
+      "en": "",
+      "source": "unavailable"
+    },
+    "J12.1": {
+      "kr": "",
+      "en": "",
+      "source": "unavailable"
+    },
+    "C38": {
+      "kr": "심장, 종격 및 흉막의 악성 신생물",
+      "en": "Malignant neoplasm of heart, mediastinum and pleura",
+      "source": "Excel v6"
+    },
+    "Q76.9": {
+      "kr": "",
+      "en": "",
+      "source": "unavailable"
+    },
+    "J98": {
+      "kr": "기타 호흡장애",
+      "en": "Other respiratory disorders",
+      "source": "Excel v6"
+    },
+    "A16.9": {
+      "kr": "세균학적 또는 조직학적 확인에 대한 언급이 없는 상세불명의 호흡기결핵",
+      "en": "Respiratory tuberculosis unspecified, without mention of bacteriological or histological confirmation",
+      "source": "Excel v6"
+    },
+    "J96.91": {
+      "kr": "",
+      "en": "",
+      "source": "unavailable"
+    },
+    "G47.34": {
+      "kr": "",
+      "en": "",
+      "source": "unavailable"
+    },
+    "P22.8": {
+      "kr": "",
+      "en": "",
+      "source": "unavailable"
+    },
+    "J67.2": {
+      "kr": "",
+      "en": "",
+      "source": "unavailable"
+    },
+    "J96.11": {
+      "kr": "",
+      "en": "",
+      "source": "unavailable"
+    },
+    "J01.3": {
+      "kr": "급성 접형동염",
+      "en": "Acute sphenoidal sinusitis",
+      "source": "Excel v6"
+    },
+    "J03.0": {
+      "kr": "연쇄알균편도염",
+      "en": "Streptococcal tonsillitis",
+      "source": "Excel v6"
+    },
+    "J35.0": {
+      "kr": "",
+      "en": "",
+      "source": "unavailable"
+    },
+    "J63.0": {
+      "kr": "",
+      "en": "",
+      "source": "unavailable"
+    },
+    "P25.2": {
+      "kr": "",
+      "en": "",
+      "source": "unavailable"
+    },
+    "G47.32": {
+      "kr": "",
+      "en": "",
+      "source": "unavailable"
+    },
+    "P27.8": {
+      "kr": "",
+      "en": "",
+      "source": "unavailable"
+    },
+    "J30": {
+      "kr": "혈관운동성 및 알레르기성 비염",
+      "en": "Vasomotor and allergic rhinitis",
+      "source": "Excel v6"
+    },
+    "J95.3": {
+      "en": "Chronic pulmonary insufficiency following surgery",
+      "kr": "수술후 만성 폐기능부전",
+      "source": "WHO ICD-10 Vol.1"
+    },
+    "J39.2": {
+      "kr": "",
+      "en": "",
+      "source": "unavailable"
+    },
+    "J18.0": {
+      "en": "Bronchopneumonia, unspecified organism",
+      "kr": "상세불명 병원체의 기관지폐렴",
+      "source": "WHO ICD-10 Vol.1"
+    },
+    "C34.3": {
+      "kr": "하엽, 기관지 또는 폐의 악성 신생물",
+      "en": "Malignant neoplasm of lower lobe, bronchus or lung",
+      "source": "Excel v6"
+    },
+    "I37.0": {
+      "kr": "",
+      "en": "",
+      "source": "unavailable"
+    },
+    "I65.0": {
+      "kr": "",
+      "en": "",
+      "source": "unavailable"
+    },
+    "J30.9": {
+      "kr": "",
+      "en": "",
+      "source": "unavailable"
+    },
+    "J31.2": {
+      "kr": "",
+      "en": "",
+      "source": "unavailable"
+    },
+    "J38.6": {
+      "kr": "",
+      "en": "",
+      "source": "unavailable"
+    },
+    "J63.1": {
+      "kr": "",
+      "en": "",
+      "source": "unavailable"
+    },
+    "J34.8": {
+      "kr": "",
+      "en": "",
+      "source": "unavailable"
+    },
+    "J63.3": {
+      "kr": "",
+      "en": "",
+      "source": "unavailable"
+    },
+    "J70.0": {
+      "kr": "",
+      "en": "",
+      "source": "unavailable"
+    },
+    "I66.1": {
+      "kr": "",
+      "en": "",
+      "source": "unavailable"
+    },
+    "J41.0": {
+      "kr": "",
+      "en": "",
+      "source": "unavailable"
+    },
+    "J12.8": {
+      "kr": "기타 바이러스폐렴",
+      "en": "Other viral pneumonia",
+      "source": "Excel v6"
+    }
+  }
+}

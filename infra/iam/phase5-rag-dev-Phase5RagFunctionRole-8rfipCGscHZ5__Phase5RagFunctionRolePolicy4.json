@@ -1,0 +1,14 @@
+{
+    "Statement": [
+        {
+            "Action": [
+                "s3:GetObject"
+            ],
+            "Resource": [
+                "arn:aws:s3:::say2-2team-bucket/Phase_1/hpo_official.json",
+                "arn:aws:s3:::say2-2team-bucket/RAG/*"
+            ],
+            "Effect": "Allow"
+        }
+    ]
+}

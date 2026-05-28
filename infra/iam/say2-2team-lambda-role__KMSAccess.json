@@ -1,0 +1,18 @@
+{
+    "Version": "2012-10-17",
+    "Statement": [
+        {
+            "Effect": "Allow",
+            "Action": [
+                "kms:Decrypt",
+                "kms:GenerateDataKey"
+            ],
+            "Resource": "arn:aws:kms:ap-northeast-2:666803869796:key/*",
+            "Condition": {
+                "StringLike": {
+                    "kms:RequestAlias": "alias/say2-2team-data-key"
+                }
+            }
+        }
+    ]
+}

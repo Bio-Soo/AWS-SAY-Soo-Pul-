@@ -1,0 +1,10 @@
+{
+    "LayerArn": "arn:aws:lambda:ap-northeast-2:666803869796:layer:phase5-lr-deps-dev",
+    "LayerVersionArn": "arn:aws:lambda:ap-northeast-2:666803869796:layer:phase5-lr-deps-dev:1",
+    "Version": 1,
+    "Description": "psycopg2-binary + PyYAML",
+    "CompatibleRuntimes": [
+        "python3.11"
+    ],
+    "CreatedDate": "2026-05-18T06:43:09.111+0000"
+}

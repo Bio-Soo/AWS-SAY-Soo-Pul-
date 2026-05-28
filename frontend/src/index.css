@@ -1,0 +1,38 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Global zoom · 80% (rem 기반 모든 사이즈 0.8x) */
+html { font-size: 80%; }
+
+/* Base resets for Rare-Link AI
+ * Latin font (IBM Plex Sans) is listed first so Latin glyphs render with
+ * Latin-tuned metrics; Korean falls through to IBM Plex Sans KR per-glyph.
+ * 환자가 외국인일 때(예: "John Smith", "Müller") 영문 가독성 확보 목적.
+ */
+body {
+  margin: 0;
+  font-family: 'IBM Plex Sans', 'IBM Plex Sans KR', sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  color: #0A1628;
+  background: #F8FAFC;
+  /* keep-all: 영문/한글 혼용 시 단어 중간에서 끊지 않음 */
+  word-break: keep-all;
+  overflow-wrap: anywhere;
+}
+
+* { box-sizing: border-box; }
+
+/* Latin-only inputs (foreign patient names, English dx labels):
+ * - lang="en" 명시 → 브라우저 hyphenation/spacing이 영어 규칙을 사용
+ * - 약간의 letter-spacing 보정 → Plex KR과 섞일 때 시각적 균형
+ */
+.t-en, [lang="en"] {
+  font-family: 'IBM Plex Sans', 'IBM Plex Sans KR', sans-serif;
+  letter-spacing: -0.003em;
+}
+.t-en-serif {
+  font-family: 'IBM Plex Serif', Georgia, serif;
+  letter-spacing: -0.005em;
+}

@@ -1,0 +1,159 @@
+{
+  "execution_id": "exec-mock-26-301102",
+  "case_id": "26-301102",
+  "patient_summary": {
+    "mrn": "26-301102",
+    "age": 35,
+    "sex": "female",
+    "scenario": "rare-lam"
+  },
+  "started_at": "2026-05-12T08:30:00+09:00",
+  "overall_status": "DONE",
+  "phases": {
+    "phase1": {
+      "status": "succeeded",
+      "delay_ms": 1500,
+      "result": {
+        "positive_hpos": [
+          {
+            "code": "HP:0002094",
+            "label": "Dyspnea"
+          },
+          {
+            "code": "HP:0002107",
+            "label": "Pneumothorax"
+          },
+          {
+            "code": "HP:0030880",
+            "label": "Pulmonary cyst"
+          }
+        ]
+      }
+    },
+    "phase2": {
+      "status": "succeeded",
+      "delay_ms": 2000,
+      "result": {
+        "labels_top": [
+          {
+            "name": "Pneumothorax",
+            "score": 0.78
+          },
+          {
+            "name": "Enlarged Cardiomediastinum",
+            "score": 0.61
+          }
+        ],
+        "heatmap_url": "/mock_fhir/heatmaps/26-301102.png"
+      }
+    },
+    "phase3": {
+      "status": "succeeded",
+      "delay_ms": 800,
+      "result": {
+        "label": "draft",
+        "top_n": [
+          {
+            "rank": 1,
+            "name": "Primary spontaneous pneumothorax (recurrent)",
+            "name_kr": "재발성 자발 기흉",
+            "icd10": "J93.11",
+            "prob": 0.38,
+            "rare": false
+          },
+          {
+            "rank": 2,
+            "name": "Bullous emphysema",
+            "name_kr": "수포성 폐기종",
+            "icd10": "J43.9",
+            "prob": 0.22,
+            "rare": false
+          }
+        ]
+      }
+    },
+    "phase4": {
+      "status": "succeeded",
+      "delay_ms": 4500,
+      "result": {
+        "revised_ranking": [
+          {
+            "rank": 1,
+            "name": "Primary spontaneous pneumothorax (recurrent)",
+            "name_kr": "재발성 자발 기흉",
+            "icd10": "J93.11",
+            "prob": 0.38,
+            "rare": false
+          },
+          {
+            "rank": 2,
+            "name": "Bullous emphysema",
+            "name_kr": "수포성 폐기종",
+            "icd10": "J43.9",
+            "prob": 0.22,
+            "rare": false
+          }
+        ],
+        "guardrails_passed": [
+          "dose_safety",
+          "age_appropriate",
+          "rare_flag",
+          "drug_interaction",
+          "contraindication",
+          "citation_check"
+        ],
+        "note": ""
+      }
+    },
+    "phase5": {
+      "status": "succeeded",
+      "delay_ms": 1500,
+      "result": {
+        "rare_candidates": [
+          {
+            "name": "Lymphangioleiomyomatosis (LAM)",
+            "name_kr": "림프관평활근종증",
+            "orpha": "ORPHA:538",
+            "prob": 0.86,
+            "rare": true,
+            "dontMiss": false,
+            "rationale": "가임기 여성 35F, VEGF-D 1200 pg/mL (LAM cut-off 800), 재발성 기흉 ×2, 모친 angiomyolipoma 가족력 → TSC-LAM 가능성",
+            "genes": [
+              "TSC1",
+              "TSC2"
+            ],
+            "next_steps": [
+              "HRCT 흉부+복부 (양측 폐 낭종 + AML)",
+              "신장 초음파",
+              "ECHO (PH 평가)",
+              "TSC 유전자 검사",
+              "Sirolimus 적응증 평가"
+            ]
+          },
+          {
+            "name": "Pulmonary Langerhans Cell Histiocytosis",
+            "name_kr": "폐 랑게르한스세포 조직구증",
+            "orpha": "ORPHA:99874",
+            "prob": 0.21,
+            "rare": true,
+            "rationale": "감별 — 흡연력 없음으로 가능성 낮음",
+            "genes": [
+              "BRAF"
+            ],
+            "next_steps": [
+              "BAL · CD1a 면역염색"
+            ]
+          }
+        ]
+      }
+    },
+    "final": {
+      "status": "succeeded",
+      "delay_ms": 3500,
+      "result": {
+        "report_url": "/mock_fhir/reports/26-301102.md",
+        "similar_cases_count": 5
+      }
+    }
+  }
+}

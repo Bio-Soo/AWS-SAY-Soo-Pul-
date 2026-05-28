@@ -1,0 +1,1011 @@
+{
+  "date": "2026-04-23",
+  "count": 30,
+  "patients": [
+    {
+      "mrn": "20-145982",
+      "name": "김○○",
+      "sex": "M",
+      "age": 58,
+      "time": "08:30",
+      "visit": "초진",
+      "visitDate": null,
+      "complaint": "호흡곤란 3개월 · 마른기침 · 체중감소 4kg",
+      "allergy": "Penicillin",
+      "cxr": "arrived",
+      "status": "ready",
+      "rare": true,
+      "dontMiss": true,
+      "acknowledged": false,
+      "resultAt": "08:21",
+      "pendingEmrUpdates": 2,
+      "topDx": null,
+      "preview": [
+        {
+          "name": "특발성 폐섬유증 (IPF)",
+          "prob": 0.84,
+          "rare": true,
+          "dontMiss": true,
+          "orpha": "ORPHA:2032"
+        },
+        {
+          "name": "Sarcoidosis",
+          "prob": 0.62,
+          "rare": false
+        },
+        {
+          "name": "과민성 폐렴 (HP)",
+          "prob": 0.41,
+          "rare": false
+        }
+      ]
+    },
+    {
+      "mrn": "21-093127",
+      "name": "이○○",
+      "sex": "F",
+      "age": 42,
+      "time": "09:00",
+      "visit": "재진",
+      "visitDate": null,
+      "complaint": "만성기침 2주 · 가래",
+      "allergy": null,
+      "cxr": "arrived",
+      "status": "ready",
+      "rare": false,
+      "dontMiss": false,
+      "acknowledged": true,
+      "resultAt": "07:55",
+      "pendingEmrUpdates": 0,
+      "topDx": "Pneumonia",
+      "preview": [
+        {
+          "name": "Community-acquired Pneumonia",
+          "prob": 0.76,
+          "rare": false
+        },
+        {
+          "name": "Acute Bronchitis",
+          "prob": 0.52,
+          "rare": false
+        },
+        {
+          "name": "Asthma exacerbation",
+          "prob": 0.18,
+          "rare": false
+        }
+      ]
+    },
+    {
+      "mrn": "22-014556",
+      "name": "박○○",
+      "sex": "F",
+      "age": 34,
+      "time": "09:30",
+      "visit": "초진",
+      "visitDate": null,
+      "complaint": "객혈 · 야간 발한 2주",
+      "allergy": null,
+      "cxr": "arrived",
+      "status": "analyzing",
+      "rare": true,
+      "dontMiss": true,
+      "acknowledged": null,
+      "resultAt": null,
+      "pendingEmrUpdates": 0,
+      "topDx": null,
+      "preview": null
+    },
+    {
+      "mrn": "19-445621",
+      "name": "최○○",
+      "sex": "M",
+      "age": 67,
+      "time": "10:00",
+      "visit": "재진",
+      "visitDate": null,
+      "complaint": "흉통 · 호흡곤란 · 부종",
+      "allergy": null,
+      "cxr": "arrived",
+      "status": "ready",
+      "rare": false,
+      "dontMiss": false,
+      "acknowledged": true,
+      "resultAt": "08:42",
+      "pendingEmrUpdates": 0,
+      "topDx": "CHF",
+      "preview": [
+        {
+          "name": "Congestive Heart Failure",
+          "prob": 0.81,
+          "rare": false
+        },
+        {
+          "name": "Pleural Effusion · RT",
+          "prob": 0.54,
+          "rare": false
+        },
+        {
+          "name": "Pneumonia",
+          "prob": 0.22,
+          "rare": false
+        }
+      ]
+    },
+    {
+      "mrn": "22-089433",
+      "name": "정○○",
+      "sex": "F",
+      "age": 29,
+      "time": "10:30",
+      "visit": "초진",
+      "visitDate": null,
+      "complaint": "호흡곤란 · 재발성 기흉",
+      "allergy": null,
+      "cxr": "arrived",
+      "status": "ready",
+      "rare": true,
+      "dontMiss": false,
+      "acknowledged": false,
+      "resultAt": "08:58",
+      "pendingEmrUpdates": 1,
+      "topDx": null,
+      "preview": [
+        {
+          "name": "Lymphangioleiomyomatosis (LAM)",
+          "prob": 0.58,
+          "rare": true,
+          "orpha": "ORPHA:538"
+        },
+        {
+          "name": "Pulmonary Langerhans Cell Histiocytosis",
+          "prob": 0.31,
+          "rare": true,
+          "orpha": "ORPHA:99874"
+        },
+        {
+          "name": "재발성 기흉 (idiopathic)",
+          "prob": 0.18,
+          "rare": false
+        }
+      ]
+    },
+    {
+      "mrn": "18-332108",
+      "name": "한○○",
+      "sex": "M",
+      "age": 71,
+      "time": "11:00",
+      "visit": "재진",
+      "visitDate": null,
+      "complaint": "만성 흡연력 · 객담 · 운동 시 호흡곤란",
+      "allergy": null,
+      "cxr": "pending",
+      "status": "pending",
+      "rare": false,
+      "dontMiss": false,
+      "acknowledged": null,
+      "resultAt": null,
+      "pendingEmrUpdates": 0,
+      "topDx": null,
+      "preview": null
+    },
+    {
+      "mrn": "22-145012",
+      "name": "윤○○",
+      "sex": "F",
+      "age": 51,
+      "time": "11:30",
+      "visit": "초진",
+      "visitDate": null,
+      "complaint": "흉통 · 두근거림 1주",
+      "allergy": null,
+      "cxr": "arrived",
+      "status": "analyzing",
+      "rare": false,
+      "dontMiss": false,
+      "acknowledged": null,
+      "resultAt": null,
+      "pendingEmrUpdates": 0,
+      "topDx": null,
+      "preview": null
+    },
+    {
+      "mrn": "22-145098",
+      "name": "오○○",
+      "sex": "M",
+      "age": 45,
+      "time": "13:00",
+      "visit": "초진",
+      "visitDate": null,
+      "complaint": "단순 건강검진 · CXR 이상 소견 FU",
+      "allergy": null,
+      "cxr": "pending",
+      "status": "pending",
+      "rare": false,
+      "dontMiss": false,
+      "acknowledged": null,
+      "resultAt": null,
+      "pendingEmrUpdates": 0,
+      "topDx": null,
+      "preview": null
+    },
+    {
+      "mrn": "22-145103",
+      "name": "장○○",
+      "sex": "F",
+      "age": 62,
+      "time": "13:30",
+      "visit": "초진",
+      "visitDate": null,
+      "complaint": "기침 · 체중감소 · 류마티스 관절염 과거력",
+      "allergy": null,
+      "cxr": "arrived",
+      "status": "ready",
+      "rare": true,
+      "dontMiss": true,
+      "acknowledged": false,
+      "resultAt": "07:12",
+      "pendingEmrUpdates": 0,
+      "topDx": null,
+      "preview": [
+        {
+          "name": "RA-associated ILD (NSIP pattern)",
+          "prob": 0.69,
+          "rare": true,
+          "dontMiss": true,
+          "orpha": "ORPHA:79126"
+        },
+        {
+          "name": "과민성 폐렴 (HP)",
+          "prob": 0.42,
+          "rare": false
+        },
+        {
+          "name": "IPF",
+          "prob": 0.28,
+          "rare": true,
+          "orpha": "ORPHA:2032"
+        }
+      ]
+    },
+    {
+      "mrn": "23-145220",
+      "name": "원○○",
+      "sex": "F",
+      "age": 22,
+      "time": "14:00",
+      "visit": "재진",
+      "visitDate": null,
+      "complaint": "과호흡 · 두근거림 · 시험 기간 스트레스",
+      "allergy": null,
+      "cxr": "arrived",
+      "status": "ready",
+      "rare": false,
+      "dontMiss": false,
+      "acknowledged": false,
+      "resultAt": "13:42",
+      "pendingEmrUpdates": 0,
+      "topDx": "HVS",
+      "preview": [
+        {
+          "name": "Hyperventilation Syndrome (과호흡증후군)",
+          "prob": 0.71,
+          "rare": false
+        },
+        {
+          "name": "Anxiety · Panic attack",
+          "prob": 0.58,
+          "rare": false
+        },
+        {
+          "name": "Asthma exacerbation",
+          "prob": 0.16,
+          "rare": false
+        }
+      ]
+    },
+    {
+      "mrn": "26-FOR0042",
+      "name": "John Müller",
+      "sex": "M",
+      "age": 47,
+      "time": "14:30",
+      "visit": "초진",
+      "visitDate": null,
+      "complaint": "Progressive dyspnea on exertion · 6 weeks · non-productive cough",
+      "allergy": null,
+      "cxr": "arrived",
+      "status": "ready",
+      "rare": true,
+      "dontMiss": false,
+      "acknowledged": false,
+      "resultAt": "14:18",
+      "pendingEmrUpdates": 0,
+      "topDx": "IPF",
+      "preview": [
+        {
+          "name": "Idiopathic Pulmonary Fibrosis (IPF)",
+          "prob": 0.72,
+          "rare": true,
+          "orpha": "ORPHA:2032"
+        },
+        {
+          "name": "Hypersensitivity Pneumonitis",
+          "prob": 0.41,
+          "rare": false
+        },
+        {
+          "name": "Sarcoidosis",
+          "prob": 0.24,
+          "rare": false
+        }
+      ]
+    },
+    {
+      "mrn": "26-145982",
+      "name": "김○○",
+      "sex": "M",
+      "age": 65,
+      "time": "08:00",
+      "visit": "초진",
+      "visitDate": null,
+      "complaint": "지역사회획득 폐렴 의증 · 발열 3일 · 객담 동반 기침",
+      "allergy": null,
+      "cxr": "arrived",
+      "status": "ready",
+      "rare": false,
+      "dontMiss": false,
+      "acknowledged": false,
+      "resultAt": "08:35",
+      "pendingEmrUpdates": 0,
+      "topDx": "CAP",
+      "preview": [
+        {
+          "name": "Community-acquired Pneumonia (CAP)",
+          "prob": 0.88,
+          "rare": false
+        },
+        {
+          "name": "Bronchopneumonia",
+          "prob": 0.41,
+          "rare": false
+        },
+        {
+          "name": "Lung abscess",
+          "prob": 0.12,
+          "rare": false
+        }
+      ]
+    },
+    {
+      "mrn": "26-098234",
+      "name": "이○○",
+      "sex": "M",
+      "age": 68,
+      "time": "08:30",
+      "visit": "재진",
+      "visitDate": null,
+      "complaint": "COPD 급성 악화 의증 · 흡연력 50 pack-yr · 호흡곤란 악화",
+      "allergy": null,
+      "cxr": "arrived",
+      "status": "ready",
+      "rare": false,
+      "dontMiss": true,
+      "acknowledged": false,
+      "resultAt": "09:15",
+      "pendingEmrUpdates": 0,
+      "topDx": "COPD AE",
+      "preview": [
+        {
+          "name": "COPD acute exacerbation",
+          "prob": 0.83,
+          "rare": false,
+          "dontMiss": true
+        },
+        {
+          "name": "Pneumonia 합병",
+          "prob": 0.46,
+          "rare": false
+        },
+        {
+          "name": "Heart failure",
+          "prob": 0.21,
+          "rare": false
+        }
+      ]
+    },
+    {
+      "mrn": "26-204017",
+      "name": "박○○",
+      "sex": "M",
+      "age": 71,
+      "time": "09:30",
+      "visit": "초진",
+      "visitDate": null,
+      "complaint": "특발성 폐섬유증 의증 · 만성 마른기침 6개월 · 활동시 호흡곤란",
+      "allergy": null,
+      "cxr": "arrived",
+      "status": "ready",
+      "rare": true,
+      "dontMiss": true,
+      "acknowledged": false,
+      "resultAt": "10:05",
+      "pendingEmrUpdates": 3,
+      "topDx": "IPF",
+      "preview": [
+        {
+          "name": "Idiopathic Pulmonary Fibrosis (IPF)",
+          "prob": 0.79,
+          "rare": true,
+          "dontMiss": true,
+          "orpha": "ORPHA:2032"
+        },
+        {
+          "name": "Hypersensitivity Pneumonitis",
+          "prob": 0.34,
+          "rare": false
+        },
+        {
+          "name": "RA-associated ILD",
+          "prob": 0.22,
+          "rare": true,
+          "orpha": "ORPHA:79126"
+        }
+      ]
+    },
+    {
+      "mrn": "26-301102",
+      "name": "정○○",
+      "sex": "F",
+      "age": 34,
+      "time": "10:30",
+      "visit": "초진",
+      "visitDate": null,
+      "complaint": "림프관평활근종증 의증 (LAM) · 점진적 호흡곤란 · 좌측 흉통",
+      "allergy": null,
+      "cxr": "arrived",
+      "status": "ready",
+      "rare": true,
+      "dontMiss": false,
+      "acknowledged": false,
+      "resultAt": "10:55",
+      "pendingEmrUpdates": 1,
+      "topDx": "LAM",
+      "preview": [
+        {
+          "name": "Lymphangioleiomyomatosis (LAM)",
+          "prob": 0.74,
+          "rare": true,
+          "orpha": "ORPHA:538"
+        },
+        {
+          "name": "Pulmonary Langerhans Cell Histiocytosis",
+          "prob": 0.28,
+          "rare": true,
+          "orpha": "ORPHA:99874"
+        },
+        {
+          "name": "Birt-Hogg-Dubé syndrome",
+          "prob": 0.11,
+          "rare": true,
+          "orpha": "ORPHA:122"
+        }
+      ]
+    },
+    {
+      "mrn": "26-415523",
+      "name": "최○○",
+      "sex": "M",
+      "age": 66,
+      "time": "11:00",
+      "visit": "초진",
+      "visitDate": null,
+      "complaint": "우상엽 폐 종괴 · 결핵 vs 악성 종양 vs 폐농양 감별 필요",
+      "allergy": null,
+      "cxr": "arrived",
+      "status": "ready",
+      "rare": false,
+      "dontMiss": true,
+      "acknowledged": false,
+      "resultAt": "11:35",
+      "pendingEmrUpdates": 0,
+      "topDx": "Lung mass",
+      "preview": [
+        {
+          "name": "Lung adenocarcinoma 의심",
+          "prob": 0.48,
+          "rare": false,
+          "dontMiss": true
+        },
+        {
+          "name": "Tuberculoma (활동성 결핵)",
+          "prob": 0.39,
+          "rare": false,
+          "dontMiss": true
+        },
+        {
+          "name": "Lung abscess",
+          "prob": 0.18,
+          "rare": false
+        }
+      ]
+    },
+    {
+      "mrn": "24-115301",
+      "name": "강○○",
+      "sex": "M",
+      "age": 73,
+      "time": "15:00",
+      "visit": "재진",
+      "visitDate": null,
+      "complaint": "기관지확장증 추적관찰 · 만성 객담 · 반복 감염",
+      "allergy": null,
+      "cxr": "arrived",
+      "status": "ready",
+      "rare": false,
+      "dontMiss": false,
+      "acknowledged": true,
+      "resultAt": "14:48",
+      "pendingEmrUpdates": 0,
+      "topDx": "Bronchiectasis",
+      "preview": [
+        {
+          "name": "Bronchiectasis",
+          "prob": 0.81,
+          "rare": false
+        },
+        {
+          "name": "Chronic bronchitis",
+          "prob": 0.45,
+          "rare": false
+        },
+        {
+          "name": "NTM 감염 합병",
+          "prob": 0.27,
+          "rare": false
+        }
+      ]
+    },
+    {
+      "mrn": "24-201888",
+      "name": "송○○",
+      "sex": "F",
+      "age": 58,
+      "time": "15:30",
+      "visit": "초진",
+      "visitDate": null,
+      "complaint": "양측 폐문 림프절 종대 · 마른기침 · 안면 결절성 홍반",
+      "allergy": null,
+      "cxr": "arrived",
+      "status": "ready",
+      "rare": true,
+      "dontMiss": false,
+      "acknowledged": false,
+      "resultAt": "15:18",
+      "pendingEmrUpdates": 0,
+      "topDx": "Sarcoidosis",
+      "preview": [
+        {
+          "name": "Sarcoidosis (Stage II)",
+          "prob": 0.74,
+          "rare": true,
+          "orpha": "ORPHA:797"
+        },
+        {
+          "name": "Tuberculosis (림프절형)",
+          "prob": 0.31,
+          "rare": false
+        },
+        {
+          "name": "Lymphoma",
+          "prob": 0.15,
+          "rare": false
+        }
+      ]
+    },
+    {
+      "mrn": "24-302445",
+      "name": "홍○○",
+      "sex": "M",
+      "age": 62,
+      "time": "15:30",
+      "visit": "응급",
+      "visitDate": null,
+      "complaint": "급성 흉통 + 호흡곤란 · 우하지 부종 · 장기 침상안정 후",
+      "allergy": null,
+      "cxr": "arrived",
+      "status": "ready",
+      "rare": false,
+      "dontMiss": true,
+      "acknowledged": false,
+      "resultAt": "15:22",
+      "pendingEmrUpdates": 2,
+      "topDx": "PE",
+      "preview": [
+        {
+          "name": "Pulmonary Embolism (massive)",
+          "prob": 0.86,
+          "rare": false,
+          "dontMiss": true
+        },
+        {
+          "name": "Acute MI",
+          "prob": 0.27,
+          "rare": false,
+          "dontMiss": true
+        },
+        {
+          "name": "Pneumothorax",
+          "prob": 0.11,
+          "rare": false
+        }
+      ]
+    },
+    {
+      "mrn": "23-088107",
+      "name": "류○○",
+      "sex": "F",
+      "age": 45,
+      "time": "16:00",
+      "visit": "재진",
+      "visitDate": null,
+      "complaint": "천식 악화 · 야간 발작성 호흡곤란 · 알러지성 비염 동반",
+      "allergy": null,
+      "cxr": "arrived",
+      "status": "ready",
+      "rare": false,
+      "dontMiss": false,
+      "acknowledged": true,
+      "resultAt": "15:48",
+      "pendingEmrUpdates": 0,
+      "topDx": "Asthma AE",
+      "preview": [
+        {
+          "name": "Severe persistent asthma exacerbation",
+          "prob": 0.79,
+          "rare": false
+        },
+        {
+          "name": "Allergic bronchopulmonary aspergillosis (ABPA)",
+          "prob": 0.22,
+          "rare": true,
+          "orpha": "ORPHA:1163"
+        },
+        {
+          "name": "Eosinophilic pneumonia",
+          "prob": 0.14,
+          "rare": true,
+          "orpha": "ORPHA:182101"
+        }
+      ]
+    },
+    {
+      "mrn": "23-156709",
+      "name": "안○○",
+      "sex": "M",
+      "age": 70,
+      "time": "16:00",
+      "visit": "초진",
+      "visitDate": null,
+      "complaint": "건강검진 LDCT 우상엽 결절 8mm · 흡연력 40 pack-yr",
+      "allergy": null,
+      "cxr": "arrived",
+      "status": "ready",
+      "rare": false,
+      "dontMiss": true,
+      "acknowledged": false,
+      "resultAt": "15:42",
+      "pendingEmrUpdates": 0,
+      "topDx": "Solitary nodule",
+      "preview": [
+        {
+          "name": "Solitary pulmonary nodule (high risk)",
+          "prob": 0.58,
+          "rare": false,
+          "dontMiss": true
+        },
+        {
+          "name": "Granuloma (post-tbc)",
+          "prob": 0.34,
+          "rare": false
+        },
+        {
+          "name": "Hamartoma",
+          "prob": 0.12,
+          "rare": false
+        }
+      ]
+    },
+    {
+      "mrn": "23-204556",
+      "name": "임○○",
+      "sex": "F",
+      "age": 39,
+      "time": "16:30",
+      "visit": "재진",
+      "visitDate": null,
+      "complaint": "원인불명 호흡곤란 · 운동내성 감소 · 우심실 확장 echo",
+      "allergy": null,
+      "cxr": "arrived",
+      "status": "ready",
+      "rare": true,
+      "dontMiss": true,
+      "acknowledged": false,
+      "resultAt": "16:14",
+      "pendingEmrUpdates": 1,
+      "topDx": "PAH",
+      "preview": [
+        {
+          "name": "Idiopathic Pulmonary Arterial Hypertension",
+          "prob": 0.71,
+          "rare": true,
+          "dontMiss": true,
+          "orpha": "ORPHA:422"
+        },
+        {
+          "name": "Chronic thromboembolic PH (CTEPH)",
+          "prob": 0.38,
+          "rare": true,
+          "orpha": "ORPHA:70591"
+        },
+        {
+          "name": "Connective tissue disease-associated PAH",
+          "prob": 0.21,
+          "rare": true
+        }
+      ]
+    },
+    {
+      "mrn": "26-411289",
+      "name": "신○○",
+      "sex": "M",
+      "age": 28,
+      "time": "16:30",
+      "visit": "응급",
+      "visitDate": null,
+      "complaint": "급성 좌측 흉통 + 호흡곤란 · 마른 체형 · 흡연 안 함",
+      "allergy": null,
+      "cxr": "arrived",
+      "status": "ready",
+      "rare": false,
+      "dontMiss": true,
+      "acknowledged": false,
+      "resultAt": "16:38",
+      "pendingEmrUpdates": 0,
+      "topDx": "Pneumothorax",
+      "preview": [
+        {
+          "name": "Primary spontaneous pneumothorax",
+          "prob": 0.82,
+          "rare": false,
+          "dontMiss": true
+        },
+        {
+          "name": "Pleurisy",
+          "prob": 0.21,
+          "rare": false
+        },
+        {
+          "name": "Pulmonary embolism",
+          "prob": 0.14,
+          "rare": false,
+          "dontMiss": true
+        }
+      ]
+    },
+    {
+      "mrn": "22-318902",
+      "name": "조○○",
+      "sex": "F",
+      "age": 55,
+      "time": "17:00",
+      "visit": "재진",
+      "visitDate": null,
+      "complaint": "만성기침 6주 · GERD 동반 · 흡연력 없음",
+      "allergy": null,
+      "cxr": "arrived",
+      "status": "ready",
+      "rare": false,
+      "dontMiss": false,
+      "acknowledged": true,
+      "resultAt": "16:42",
+      "pendingEmrUpdates": 0,
+      "topDx": "Chronic cough",
+      "preview": [
+        {
+          "name": "GERD-associated cough",
+          "prob": 0.66,
+          "rare": false
+        },
+        {
+          "name": "Cough-variant asthma",
+          "prob": 0.42,
+          "rare": false
+        },
+        {
+          "name": "Upper airway cough syndrome (UACS)",
+          "prob": 0.31,
+          "rare": false
+        }
+      ]
+    },
+    {
+      "mrn": "20-445188",
+      "name": "권○○",
+      "sex": "M",
+      "age": 80,
+      "time": "17:00",
+      "visit": "초진",
+      "visitDate": null,
+      "complaint": "치매 · 식사 후 흉부 답답 · 미열 · 신경계 이상 후 oral intake 감소",
+      "allergy": null,
+      "cxr": "arrived",
+      "status": "analyzing",
+      "rare": false,
+      "dontMiss": true,
+      "acknowledged": null,
+      "resultAt": null,
+      "pendingEmrUpdates": 0,
+      "topDx": null,
+      "preview": null
+    },
+    {
+      "mrn": "26-501712",
+      "name": "황○○",
+      "sex": "F",
+      "age": 26,
+      "time": "17:30",
+      "visit": "초진",
+      "visitDate": null,
+      "complaint": "재발성 부비동염 · 만성 객담 · 어릴 때부터 자주 폐렴",
+      "allergy": null,
+      "cxr": "arrived",
+      "status": "ready",
+      "rare": true,
+      "dontMiss": false,
+      "acknowledged": false,
+      "resultAt": "17:18",
+      "pendingEmrUpdates": 4,
+      "topDx": "CF",
+      "preview": [
+        {
+          "name": "Cystic Fibrosis (atypical/late-onset)",
+          "prob": 0.68,
+          "rare": true,
+          "orpha": "ORPHA:586"
+        },
+        {
+          "name": "Primary Ciliary Dyskinesia (PCD)",
+          "prob": 0.39,
+          "rare": true,
+          "orpha": "ORPHA:244"
+        },
+        {
+          "name": "Bronchiectasis (idiopathic)",
+          "prob": 0.27,
+          "rare": false
+        }
+      ]
+    },
+    {
+      "mrn": "21-509822",
+      "name": "노○○",
+      "sex": "M",
+      "age": 64,
+      "time": "17:30",
+      "visit": "재진",
+      "visitDate": null,
+      "complaint": "수술 후 7일 · 우측 종아리 통증 + 부종 · 갑작스런 빈호흡",
+      "allergy": null,
+      "cxr": "arrived",
+      "status": "analyzing",
+      "rare": false,
+      "dontMiss": true,
+      "acknowledged": null,
+      "resultAt": null,
+      "pendingEmrUpdates": 0,
+      "topDx": null,
+      "preview": null
+    },
+    {
+      "mrn": "22-721033",
+      "name": "배○○",
+      "sex": "F",
+      "age": 48,
+      "time": "18:00",
+      "visit": "재진",
+      "visitDate": null,
+      "complaint": "우측 흉수 동반 호흡곤란 · 체중감소 · 야간 발한",
+      "allergy": null,
+      "cxr": "pending",
+      "status": "pending",
+      "rare": false,
+      "dontMiss": true,
+      "acknowledged": null,
+      "resultAt": null,
+      "pendingEmrUpdates": 0,
+      "topDx": null,
+      "preview": null
+    },
+    {
+      "mrn": "26-FOR0089",
+      "name": "Sarah Johnson",
+      "sex": "F",
+      "age": 52,
+      "time": "18:00",
+      "visit": "초진",
+      "visitDate": null,
+      "complaint": "Chronic productive cough · low-grade fever · weight loss 4kg over 3 months",
+      "allergy": null,
+      "cxr": "arrived",
+      "status": "ready",
+      "rare": true,
+      "dontMiss": true,
+      "acknowledged": false,
+      "resultAt": "17:52",
+      "pendingEmrUpdates": 0,
+      "topDx": "NTM",
+      "preview": [
+        {
+          "name": "Mycobacterium avium complex (MAC) lung disease",
+          "prob": 0.74,
+          "rare": true,
+          "dontMiss": true,
+          "orpha": "ORPHA:97257"
+        },
+        {
+          "name": "Pulmonary tuberculosis (active)",
+          "prob": 0.33,
+          "rare": false,
+          "dontMiss": true
+        },
+        {
+          "name": "Bronchiectasis with chronic infection",
+          "prob": 0.28,
+          "rare": false
+        }
+      ]
+    },
+    {
+      "mrn": "26-FOR0117",
+      "name": "Akira Tanaka",
+      "sex": "M",
+      "age": 56,
+      "time": "18:30",
+      "visit": "초진",
+      "visitDate": null,
+      "complaint": "Recurrent epistaxis since adolescence · dyspnea on exertion · cyanotic mucosa",
+      "allergy": null,
+      "cxr": "arrived",
+      "status": "ready",
+      "rare": true,
+      "dontMiss": true,
+      "acknowledged": false,
+      "resultAt": "18:18",
+      "pendingEmrUpdates": 2,
+      "topDx": "HHT",
+      "preview": [
+        {
+          "name": "Hereditary Hemorrhagic Telangiectasia w/ pulmonary AVM",
+          "prob": 0.69,
+          "rare": true,
+          "dontMiss": true,
+          "orpha": "ORPHA:774"
+        },
+        {
+          "name": "Pulmonary arteriovenous malformation (sporadic)",
+          "prob": 0.41,
+          "rare": true,
+          "orpha": "ORPHA:3270"
+        },
+        {
+          "name": "Hepatopulmonary syndrome",
+          "prob": 0.18,
+          "rare": true,
+          "orpha": "ORPHA:2129"
+        }
+      ]
+    }
+  ]
+}

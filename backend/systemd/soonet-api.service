@@ -1,0 +1,22 @@
+[Unit]
+Description=Soo-Pul Main Backend (FastAPI)
+After=network.target
+
+[Service]
+Type=simple
+User=root
+WorkingDirectory=/srv/soonet-pulmonary
+ExecStart=/opt/conda/envs/rl312/bin/uvicorn api.app.main:app --host 0.0.0.0 --port 8000 --loop asyncio
+Restart=always
+RestartSec=5
+EnvironmentFile=/etc/soonet-api/db.env
+Environment=POLL_MODE=mock
+Environment=POLL_INTERVAL=8
+Environment=DEV_BYPASS_AUTH=1
+Environment=DEV_STEPFN_DUMMY=0
+Environment=LOG_LEVEL=INFO
+Environment=EMR_DATA_SOURCE=s3-mock
+Environment=AWS_REGION=ap-northeast-2
+
+[Install]
+WantedBy=multi-user.target

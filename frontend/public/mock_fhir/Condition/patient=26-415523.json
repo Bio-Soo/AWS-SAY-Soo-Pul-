@@ -1,0 +1,51 @@
+{
+  "resourceType": "Bundle",
+  "type": "searchset",
+  "total": 1,
+  "entry": [
+    {
+      "resource": {
+        "resourceType": "Condition",
+        "clinicalStatus": {
+          "coding": [
+            {
+              "system": "http://terminology.hl7.org/CodeSystem/condition-clinical",
+              "code": "active"
+            }
+          ]
+        },
+        "verificationStatus": {
+          "coding": [
+            {
+              "system": "http://terminology.hl7.org/CodeSystem/condition-ver-status",
+              "code": "differential"
+            }
+          ]
+        },
+        "code": {
+          "coding": [
+            {
+              "system": "http://hl7.org/fhir/sid/icd-10-cm",
+              "code": "R91.1",
+              "display": "Solitary pulmonary nodule"
+            }
+          ],
+          "text": "우상엽 폐 종괴 — 결핵 vs 악성 종양 vs 폐농양 감별 필요"
+        },
+        "subject": {
+          "reference": "Patient/26-415523"
+        },
+        "encounter": {
+          "reference": "Encounter/26-415523-encounter"
+        },
+        "recordedDate": "2026-05-11T11:30:00+09:00",
+        "note": [
+          {
+            "text": "감별진단: ① 결핵 (한국 endemic, 객혈+체중감소+공동성 병변) ② 폐암 편평세포암 (35갑년 흡연, 상엽 mass) ③ 폐농양 ④ Aspergilloma. AFB·세포진·CT 추가 필요."
+          }
+        ]
+      },
+      "fullUrl": "Condition/?"
+    }
+  ]
+}

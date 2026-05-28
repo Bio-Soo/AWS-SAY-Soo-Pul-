@@ -1,0 +1,45 @@
+{
+  "resourceType": "Bundle",
+  "type": "searchset",
+  "total": 1,
+  "entry": [
+    {
+      "resource": {
+        "resourceType": "DocumentReference",
+        "status": "current",
+        "type": {
+          "coding": [
+            {
+              "system": "http://loinc.org",
+              "code": "11506-3",
+              "display": "Progress note"
+            }
+          ]
+        },
+        "subject": {
+          "reference": "Patient/26-301102"
+        },
+        "context": {
+          "encounter": [
+            {
+              "reference": "Encounter/26-301102-encounter"
+            }
+          ]
+        },
+        "date": "2026-05-11T10:50:00+09:00",
+        "description": "외래 재진 노트 — LAM 의증, 가임기 여성, VEGF-D 1200 pg/mL, 재발성 기흉",
+        "content": [
+          {
+            "attachment": {
+              "contentType": "text/plain; charset=utf-8",
+              "language": "ko",
+              "data": "W+yEseq3oOq0gOuMgO2Vmeq1kOuzkeybkCDtmLjtnaHquLDrgrTqs7wg7Jm4656YXQrtmZjsnpA6IOygleKXi+KXiyAoRi8zNSksIE1STiAyNi0zMDExMDIK7J287IucOiAyMDI2LTA1LTExIDEwOjUwICjsoJXrr7zsiJgg6rO87J6lKQoKIyDso7ztmLjshowgKENoaWVmIENvbXBsYWludCkK7Jq064+ZIOyLnCDtmLjtnaHqs6TrnoAgM+qwnOyblCwg7J6Q67CcIOq4sO2diSAy7ZqMIOqzvOqxsOugpQoKIyDtmITrs5HroKUgKEhQSSkKMzXshLgg6rCA7J6E6riwIOyXrOyEsS4g7Y+J7IaMIOyatOuPmSDsoovslYTtlZjrjZgg7J6QLgoz6rCc7JuUIOyghOu2gO2EsCAzMOu2hCDsobDquYUg7IucIO2YuO2doeqzpOuegCwg7KCQ7KCQIOynp+ydgCDsmrTrj5nsl5Drj4Qg67Cc7IOdLgoy64WEIOyghCDsmrDsuKEg7J6Q67CcIOq4sO2diSwgMeuFhCDsoIQg7KKM7LihIOyekOuwnCDquLDtnYkg4oCUIOuRkCDrsogg66qo65GQIO2dieq0gOyCveq0gCDtm4Qg7Zi47KCELgrri7nsi5wg7Jm467aAIOuzkeybkOyXkOyEnCAi7YKkIO2BsCDrp4jrpbgg7Jes7J6QIO2dlO2VnCDsnbzssKjshLEg6riw7Z2JIuycvOuhnCDshKTrqoUg67Cb7J2MLgrsnqzrsJwg67mI64+E7JmAIOyatOuPmSDsi5wg7Zi47Z2h6rOk656AIOynhO2WieycvOuhnCDrs7jsm5Ag7J2Y66KwLgrsnoTsi6DroKU6IEcwICjstpzsgrAg6rK97ZeYIOyXhuydjCwg66+47Zi8KS4g7JuU6rK9IOq3nOy5meyggSwg7Zi466W066qsIO2UvOyehCDsgqzsmqkg7JeG7J2MLgrssrTspJHqsJDshozCt+uwnOyXtMK36rCB7ZiIIOyXhuydjC4g6rCA7Iq0IO2GteymnSDqsIDrgZQg7Jqw7LihLCDsnpDshLgg66y06rSALgoKIyDqs7zqsbDroKUgKFBNSCkK7J6Q67CcIOq4sO2diSDDlyAyICgyMDI0LCAyMDI1KQrtg4Ag7Yq57J20IOyniO2ZmCDsl4bsnYwuIOqysO2VtcK37LKc7IudIOqzvOqxsOugpSDsl4bsnYwuCuyVveusvCDrs7Xsmqkg7JeG7J2MCgojIOqwgOyhseugpSAvIOyCrO2ajOugpQrrqqjsuZw6IOyLoOyepSDtmIjqtIDqt7zsp4DrsKnsooUoYW5naW9teW9saXBvbWEpIOyImOyIoOugpSDigJQgVFNDIOqwgOuKpeyEsSDsi5zsgqwK67aA7LmcOiDqsbTqsJUK7ZiV7KCcIDHrqoUsIOqysOygiOyEsSDqsr3tmZTspp0oVFNDKSDsp4Tri6jroKUg7JeG7Jy864KYIOqygOyCrCDslYgg7ZWoCu2CpCAxNjggY20sIOyytOykkSA1MiBrZyAoQk1JIDE4LjQpCuu5hO2doeyXsC4g7IKs66y07KeBLgoKIyDsi6DssrTqsoDsp4QK7Zmc66Cl7KeV7ZuEOiBCUCAxMTAvNjgsIEhSIDkwLCBSUiAxOCwgVCAzNi414oSDLCBTcE8yIDk1JSBSQQrsnbzrsJg6IOuniOuluCDssrTtmJUsIOydmOyLnSDrqoXro4wsIOyYgeyWkSDslpHtmLgK6rCA7Iq0OiDtmLjtnaHsnYwg7JaR7LihIOu5hOq1kOyggSDquajrgZcKICAgICAgIOqyveuvuO2VnCDslpHsuKEg7Zi47Z2h7J2MIOqwkOyGjCAo7Yq57Z6IIOyDgeyXvSkKICAgICAgIOyWkey4oSDtnYnqtIAg7IK97J6FIO2die2EsCAoNGNtIMOXIDIpCuyLrOyepTog7KCV7IOBCu2UvOu2gDogVFNDIO2KueynlSDqsoDsgqwg4oCUIGFuZ2lvZmlicm9tYcK3aHlwb21lbGFub3RpYyBtYWN1bGUg7JeG7J2MICjsmKTripgg6rKA7IKs7IOBKQoKIyDqsoDsgqwKLSBDQkM6IFdCQyA3LDIwMCAvzrxMLCBIYiAxMy4yLCBQbHQgMjQ1SyAo7KCV7IOBKQotIO2YiOyyre2ZlO2VmTog7KCV7IOBCi0g7Je87KadOiBDUlAgMS44IG1nL0wgKOygleyDgSksIFByb2NhbGNpdG9uaW4gKOygleyDgSkKLSDsnoTsi6Ag6rKA7IKsOiDOsi1oQ0cg7J2M7ISxCi0gTEFNIO2KueydtOyggSDtkZzsp4DsnpA6CiAgLSBWRUdGLUQ6IDEsMjAwIHBnL21MIChISCwgTEFNIGN1dC1vZmYgODAwKQogICAg4oaSIOKJpTgwMCBwZy9tTOydtOqzoCDsnoTsg4HCt+yYgeyDgSDsnbzsuZgg7IucIOynhOuLqOyggSAoQVRTL0pSUyAyMDE3KQoKIyBQRlQKLSBGRVYxIDc1JSBwcmVkaWN0ZWQgKG1pbGQgb2JzdHJ1Y3Rpb24pCi0gRkVWMS9GVkMgMC42NSAob2JzdHJ1Y3RpdmUpCi0gVExDIOygleyDgQotIERMQ08gNjIlIHByZWRpY3RlZCAo6rCQ7IaMKQogIOKGkiDtj5Dsh4TshLEgKyDqsIDsiqTqtZDtmZgg7J6l7JWgIChMQU0g7KCE7ZiVKQoKIyDsmIHsg4EgKENYUiBQQSwgdmlldzFfZnJvbnRhbCkKLSDsoozsuKEg66+47IS4IOq4sO2diSDsnpTrpZgg6rCA64ql7ISxICjshozrn4kpCi0g7JaR7LihIO2PkCDrr7jshLgg64Kt7KKF7J2AIENYUuuhnCDtmZXsnbgg7Ja066Ck7JuACi0g7Ius67mE64yAIOydmOyLrCAoQ2hlWHBlcnQgQUkgZmxhZyDigJQgRW5sYXJnZWQgQ2FyZGlvbWVkaWFzdGludW0pCiAg4oaSIOyasOyLrOu2gOyghCDsi5wg7Y+Q6rOg7ZiI7JWVIOuPmeuwmCDqsIDriqUsIEVDSE8g6raM6rOgCltDaGVYcGVydCBBSTogUG5ldW1vdGhvcmF4IDAuNzgsIEVubGFyZ2VkIENhcmRpb21lZGlhc3RpbnVtIDAuNjEsIFN1cHBvcnQgRGV2aWNlcyAwLjU1CiAo7J207KCEIO2dieq0gCDtnZTsoIEg6rCA64ql7ISxKV0KCiMgSFJDVCAo67OE64+EIOydmOuisCDqtozqs6ApCi0gTEFNIOynhOuLqOydhCDsnITtlZwgdGhpbi1zZWN0aW9uIEhSQ1Qg7ZWE7JqUCi0g7JiI7IOBIOyGjOqyrDog7JaR7LihIO2PkCDrr7jrp4zshLEg7JaH7J2AIOuyvSDrgq3sooUgKOq3oOuTsSDrtoTtj6wpLAogIOyLrOunicK37Zqh6rKp66eJ6rmM7KeAIOy5qOuylCwgc2VwdGFsIHRoaWNrZW5pbmcg7JeG7J2MCgojIO2PieqwgCAvIOqzhO2ajQoxLiDrprztlITqtIDtj4ntmZzqt7zsooXspp0gKExBTSkg7KeE64uoIOunpOyasCDqsJXroKXtlZjqsowg7J2Y7IusCiAgIC0gQVRTL0pSUyAyMDE3IOynhOuLqCDquLDspIAgKGNsaW5pY2FsIExBTSk6CiAgICAgwrcg6rCA7J6E6riwIOyXrOyEsSDinJMKICAgICDCtyDsp4TtlonshLEg7Zi47Z2h6rOk656AICsg7J6Q67CcIOq4sO2diSDinJMKICAgICDCtyBWRUdGLUQg4omlIDgwMCBwZy9tTCDinJMgKDEsMjAwIHBnL21MKQogICAgIMK3IEhSQ1QgY3lzdCDtmZXsnbgg4oaSIOy2lOqwgCDtlYTsmpQKICAgLSBJQ0QtMTA6IEo4NC44MSAvIE9SUEhBOiA1MzgKMi4gSFJDVCDsponsi5wg7J2Y66KwIChjaGVzdCArIGFiZG9tZW4g4oCUIGFuZ2lvbXlvbGlwb21hIOqygOyDiSkKMy4g7Iug7J6lIOy0iOydjO2MjC9DVCDigJQgYW5naW9teW9saXBvbWEg64+Z67CYIOqygOyDiSAo66qo7LmcIOuzkeugpSkKNC4gRUNITyDigJQgcHVsbW9uYXJ5IGh5cGVydGVuc2lvbiDtj4nqsIAKNS4gVFNDMi9UU0MxIOycoOyghOyekCDqsoDsgqwg7J2Y66KwIChUU0MtTEFNIHZzIHNwb3JhZGljIExBTSDqsJDrs4QpCiAgIC0g6rCA7KGx66ClKOuqqOy5nCBhbmdpb215b2xpcG9tYSkg6rOg66CkIOyLnCBUU0Mg6raM6rOgCjYuIOyVveusvCDsuZjro4wg7Ji17IWYICjsp4Tri6gg7ZmV7KCVIOyLnCk6CiAgIC0gU2lyb2xpbXVzIChtVE9SIGluaGliaXRvcikg4oCUIEZWQyA8IDcwJSBwcmVkIOuYkOuKlCDsp4TtlonshLHsnbwg65WMCiAgIC0g7LKrIDEy6rCc7JuUIO2aqOqzvCDtj4nqsIAKNy4g7J6E7IugIOyDgeuLtCDigJQgTEFNIOynhO2WiSDqsIDsho3tmZQg6rCA64qlLCDqsIDsobHqs4Ttmo0g7ZWE7JqUIOyLnAo4LiDqsrDsoIjshLEg6rK97ZmU7KadIOqwgOyhseugpSDihpIg7ZiV7KCc64+EIGV2YWx1YXRpb24g6raM6rOgCjkuIO2dieu2gOyZuOqzvCDtmJHsp4Qg4oCUIOyerOuwnOyEsSDquLDtnYkgY2hlbWljYWwvc3VyZ2ljYWwgcGxldXJvZGVzaXMg6rKA7YagCgojIOuplOuqqAotIExBTeydgCDqsIDsnoTquLAg7Jes7ISx7JeQ7IScIOuwnO2YhO2VmOuKlCDsp4TtlonshLEg7Z2s6reAIO2PkOyniO2ZmAotIO2VnOq1rSDsnKDrs5HrpaA6IH4zLTcgLyAxMDDrp4wKLSBWRUdGLUQgKyDqsIDsnoTquLAg7Jes7ISxICsg7J6s67Cc7ISxIOq4sO2diSB0cmlmZWN0YSDihpIg67O4IOyLnOyKpO2FnCBQaGFzZSA1IOygle2Zle2eiCDsnqHslYTslbwg7ZWoCg==",
+              "title": "patient-04-lam.note.txt"
+            }
+          }
+        ]
+      },
+      "fullUrl": "DocumentReference/?"
+    }
+  ]
+}

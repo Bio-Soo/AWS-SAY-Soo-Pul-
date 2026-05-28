@@ -1,0 +1,324 @@
+{
+  "source": "Rare-Link AI 내부 지식베이스 · Orphadata 2026-Q1 기반 큐레이션",
+  "updated": "2026-05-20",
+  "note": "외부 검색은 직접 API 호출 없이 공식 레퍼런스로 링크 연계만 제공합니다.",
+  "diseases": [
+    {
+      "id": "ipf",
+      "name_kr": "특발성 폐섬유증",
+      "name_en": "Idiopathic Pulmonary Fibrosis",
+      "abbr": "IPF",
+      "orpha": "2032",
+      "icd10": "J84.112",
+      "omim": "178500",
+      "category": "간질성 폐질환 (ILD)",
+      "prevalence": "1–9 / 100,000",
+      "onset": "성인 · 50–70대",
+      "inheritance": "산발성 (가족형 약 5%)",
+      "summary": "원인 불명의 만성·진행성 섬유화성 간질성 폐렴. UIP 양상을 보이며 예후가 불량하다. 항섬유화제(피르페니돈·닌테다닙)로 진행을 늦춘다.",
+      "key_features": ["노작성 호흡곤란", "마른기침", "흡기말 fine crackles", "곤봉지", "HRCT상 기저부·흉막하 honeycombing"],
+      "hpo": [
+        { "code": "HP:0002206", "label": "Pulmonary fibrosis" },
+        { "code": "HP:0002094", "label": "Dyspnea" },
+        { "code": "HP:0031246", "label": "Nonproductive cough" },
+        { "code": "HP:0030828", "label": "Fine crackles" },
+        { "code": "HP:0002091", "label": "Restrictive ventilatory defect" }
+      ],
+      "guideline": "ATS/ERS/JRS/ALAT 2022 — Raghu et al. (PMID 35486072)"
+    },
+    {
+      "id": "nsip",
+      "name_kr": "비특이성 간질성 폐렴",
+      "name_en": "Nonspecific Interstitial Pneumonia",
+      "abbr": "NSIP",
+      "orpha": "79126",
+      "icd10": "J84.89",
+      "omim": null,
+      "category": "간질성 폐질환 (ILD)",
+      "prevalence": "1–5 / 100,000",
+      "onset": "성인 · 40–60대",
+      "inheritance": "산발성 · 결합조직질환 동반 빈번",
+      "summary": "균일한 시간적 양상의 간질 염증·섬유화. IPF보다 예후가 양호하며 결합조직질환(특히 근염·경피증)과 흔히 동반된다. 스테로이드 반응이 좋다.",
+      "key_features": ["아급성 호흡곤란", "HRCT상 양측 ground-glass", "기저부 우세 망상음영", "honeycombing 드묾", "결합조직질환 선별 필요"],
+      "hpo": [
+        { "code": "HP:0006530", "label": "Interstitial pulmonary abnormality" },
+        { "code": "HP:0002094", "label": "Dyspnea" },
+        { "code": "HP:0002088", "label": "Abnormal lung morphology" }
+      ],
+      "guideline": "ATS/ERS Classification of IIP 2013 — Travis et al. (PMID 24032382)"
+    },
+    {
+      "id": "sarcoidosis",
+      "name_kr": "사르코이드증",
+      "name_en": "Sarcoidosis",
+      "abbr": null,
+      "orpha": "797",
+      "icd10": "D86.0",
+      "omim": "181000",
+      "category": "육아종성 질환",
+      "prevalence": "10–50 / 100,000",
+      "onset": "성인 · 20–40대",
+      "inheritance": "다인자성",
+      "summary": "원인 불명의 비건락성 육아종이 다장기를 침범하는 질환. 폐·종격동 림프절을 가장 흔히 침범하며 상당수는 자연 관해된다.",
+      "key_features": ["양측 폐문 림프절 종대", "마른기침·호흡곤란", "결절홍반·포도막염", "혈중 ACE 상승", "고칼슘혈증"],
+      "hpo": [
+        { "code": "HP:0100749", "label": "Chest pain" },
+        { "code": "HP:0002088", "label": "Abnormal lung morphology" },
+        { "code": "HP:0002731", "label": "Granuloma" }
+      ],
+      "guideline": "ATS Clinical Practice Guideline 2020 — Crouser et al. (PMID 32293205)"
+    },
+    {
+      "id": "lam",
+      "name_kr": "림프관평활근종증",
+      "name_en": "Lymphangioleiomyomatosis",
+      "abbr": "LAM",
+      "orpha": "538",
+      "icd10": "J84.81",
+      "omim": "606690",
+      "category": "낭성 폐질환",
+      "prevalence": "1 / 400,000 (여성)",
+      "onset": "가임기 여성",
+      "inheritance": "산발성 · 결절성 경화증 동반형",
+      "summary": "비정상 평활근 유사 세포 증식으로 폐에 다발성 낭종이 형성되는 질환. 거의 전적으로 여성에서 발생하며 반복성 기흉·유미흉이 특징. mTOR 억제제(시롤리무스)로 치료한다.",
+      "key_features": ["반복성 기흉", "노작성 호흡곤란", "유미흉·유미복수", "HRCT상 균일·다발성 박벽 낭종", "신혈관근지방종 동반"],
+      "hpo": [
+        { "code": "HP:0002107", "label": "Pneumothorax" },
+        { "code": "HP:0002094", "label": "Dyspnea" },
+        { "code": "HP:0006520", "label": "Cystic lung disease" }
+      ],
+      "guideline": "ATS/JRS Clinical Practice Guideline 2017 — McCormack et al. (PMID 28934559)"
+    },
+    {
+      "id": "hp",
+      "name_kr": "과민성 폐장염",
+      "name_en": "Hypersensitivity Pneumonitis",
+      "abbr": "HP",
+      "orpha": "1303",
+      "icd10": "J67.9",
+      "omim": null,
+      "category": "간질성 폐질환 (ILD)",
+      "prevalence": "1–9 / 100,000",
+      "onset": "전 연령",
+      "inheritance": "환경 노출성",
+      "summary": "유기 항원·화학물질의 반복 흡입으로 발생하는 면역매개 간질성 폐질환. 비섬유화형과 섬유화형으로 나뉘며 노출원 제거가 핵심.",
+      "key_features": ["노출력(조류·곰팡이 등)", "호흡곤란·기침", "HRCT상 소엽중심성 결절·mosaic attenuation", "air-trapping", "BAL 림프구 증가"],
+      "hpo": [
+        { "code": "HP:0006530", "label": "Interstitial pulmonary abnormality" },
+        { "code": "HP:0002094", "label": "Dyspnea" },
+        { "code": "HP:0002099", "label": "Asthma" }
+      ],
+      "guideline": "ATS/JRS/ALAT Guideline 2020 — Raghu et al. (PMID 32706311)"
+    },
+    {
+      "id": "lch",
+      "name_kr": "랑게르한스세포 조직구증 (폐)",
+      "name_en": "Pulmonary Langerhans Cell Histiocytosis",
+      "abbr": "PLCH",
+      "orpha": "60032",
+      "icd10": "C96.6",
+      "omim": "604856",
+      "category": "낭성 폐질환",
+      "prevalence": "1 / 100,000 미만",
+      "onset": "성인 · 20–40대",
+      "inheritance": "산발성 (흡연 연관 · BRAF V600E)",
+      "summary": "랑게르한스세포 클론 증식으로 폐에 결절·낭종을 형성하는 흡연 연관 질환. 금연이 1차 치료이며 일부는 자연 호전된다.",
+      "key_features": ["흡연력(대부분)", "마른기침·호흡곤란", "기흉", "HRCT상 상엽 우세 결절+불규칙 낭종", "BRAF V600E 변이 가능"],
+      "hpo": [
+        { "code": "HP:0002107", "label": "Pneumothorax" },
+        { "code": "HP:0006520", "label": "Cystic lung disease" },
+        { "code": "HP:0031246", "label": "Nonproductive cough" }
+      ],
+      "guideline": "ERS Task Force Statement 2021 (PMID 33833030)"
+    },
+    {
+      "id": "pap",
+      "name_kr": "폐포단백증",
+      "name_en": "Pulmonary Alveolar Proteinosis",
+      "abbr": "PAP",
+      "orpha": "747",
+      "icd10": "J84.01",
+      "omim": "610910",
+      "category": "폐포 충전 질환",
+      "prevalence": "1 / 1,000,000",
+      "onset": "성인 · 30–50대",
+      "inheritance": "자가면역형(90%) · 유전형",
+      "summary": "계면활성제가 폐포에 축적되어 가스교환을 저해하는 질환. 대부분 항-GM-CSF 항체에 의한 자가면역형이며 전폐세척이 표준 치료.",
+      "key_features": ["서서히 진행하는 호흡곤란", "HRCT상 crazy-paving", "지도형 ground-glass", "항-GM-CSF 항체 양성", "LDH 상승"],
+      "hpo": [
+        { "code": "HP:0006530", "label": "Interstitial pulmonary abnormality" },
+        { "code": "HP:0002094", "label": "Dyspnea" },
+        { "code": "HP:0002883", "label": "Abnormal pulmonary function test" }
+      ],
+      "guideline": "ERS Statement 2022 — Bonella et al. (PMID 35777774)"
+    },
+    {
+      "id": "aatd",
+      "name_kr": "알파-1 항트립신 결핍증",
+      "name_en": "Alpha-1 Antitrypsin Deficiency",
+      "abbr": "AATD",
+      "orpha": "60",
+      "icd10": "E88.01",
+      "omim": "613490",
+      "category": "유전성 대사질환 (폐·간)",
+      "prevalence": "1 / 2,000–5,000 (서구)",
+      "onset": "성인 조기 폐기종 · 신생아 간질환",
+      "inheritance": "상염색체 공우성 (SERPINA1)",
+      "summary": "SERPINA1 변이로 알파-1 항트립신이 결핍되어 조기 폐기종과 간질환을 유발하는 유전질환. 비흡연자·젊은 나이 폐기종에서 의심하고 혈중 농도를 측정한다.",
+      "key_features": ["45세 이전 조기 폐기종", "기저부 우세 폐기종", "비흡연자 COPD", "원인 불명 간질환", "혈중 AAT 농도 저하"],
+      "hpo": [
+        { "code": "HP:0006510", "label": "Chronic obstructive pulmonary disease" },
+        { "code": "HP:0002097", "label": "Emphysema" },
+        { "code": "HP:0001392", "label": "Abnormality of the liver" }
+      ],
+      "guideline": "ATS/ERS Statement · 한국 진단 권고 2021"
+    },
+    {
+      "id": "pcd",
+      "name_kr": "원발성 섬모운동이상증",
+      "name_en": "Primary Ciliary Dyskinesia",
+      "abbr": "PCD",
+      "orpha": "244",
+      "icd10": "Q34.8",
+      "omim": "244400",
+      "category": "유전성 기도질환",
+      "prevalence": "1 / 10,000–20,000",
+      "onset": "신생아·소아기",
+      "inheritance": "상염색체 열성 (다수 유전자)",
+      "summary": "섬모 구조·기능 이상으로 점액섬모청소가 저하되는 유전질환. 만성 부비동·기관지 감염, 기관지확장증, 내장역위(Kartagener)가 특징.",
+      "key_features": ["신생아기 호흡곤란", "만성 습성 기침·부비동염", "기관지확장증", "내장역위 (약 50%)", "비강 NO 저하"],
+      "hpo": [
+        { "code": "HP:0002110", "label": "Bronchiectasis" },
+        { "code": "HP:0011109", "label": "Chronic sinusitis" },
+        { "code": "HP:0001696", "label": "Situs inversus totalis" }
+      ],
+      "guideline": "ERS Guideline for diagnosis 2017 (PMID 27836958)"
+    },
+    {
+      "id": "pah",
+      "name_kr": "특발성 폐동맥고혈압",
+      "name_en": "Idiopathic Pulmonary Arterial Hypertension",
+      "abbr": "IPAH",
+      "orpha": "422",
+      "icd10": "I27.0",
+      "omim": "178600",
+      "category": "폐혈관 질환",
+      "prevalence": "1–9 / 1,000,000",
+      "onset": "성인 · 여성 우세",
+      "inheritance": "산발성 · 유전형(BMPR2)",
+      "summary": "원인 불명의 폐동맥압 상승으로 우심부전을 초래하는 진행성 질환. 우심도자술로 확진하며 표적 혈관확장제로 치료한다.",
+      "key_features": ["진행성 노작성 호흡곤란", "실신·흉통", "우심부전 징후", "심초음파상 우심실 부하", "우심도자상 mPAP ≥ 20 mmHg"],
+      "hpo": [
+        { "code": "HP:0002092", "label": "Pulmonary arterial hypertension" },
+        { "code": "HP:0002094", "label": "Dyspnea" },
+        { "code": "HP:0001662", "label": "Bradycardia" }
+      ],
+      "guideline": "ESC/ERS Guidelines 2022 — Humbert et al. (PMID 36017548)"
+    },
+    {
+      "id": "gpa",
+      "name_kr": "육아종증 다발혈관염",
+      "name_en": "Granulomatosis with Polyangiitis",
+      "abbr": "GPA",
+      "orpha": "900",
+      "icd10": "M31.3",
+      "omim": null,
+      "category": "ANCA 연관 혈관염",
+      "prevalence": "2–3 / 100,000",
+      "onset": "성인 · 45–65대",
+      "inheritance": "산발성 (자가면역)",
+      "summary": "상·하기도와 신장을 침범하는 괴사성 육아종성 혈관염. PR3-ANCA 양성이 특징이며 폐결절·공동, 사구체신염을 동반한다.",
+      "key_features": ["만성 비염·부비동염·안장코", "폐결절·공동·폐포출혈", "사구체신염", "PR3-ANCA(c-ANCA) 양성", "객혈"],
+      "hpo": [
+        { "code": "HP:0002107", "label": "Pneumothorax" },
+        { "code": "HP:0002105", "label": "Hemoptysis" },
+        { "code": "HP:0000099", "label": "Glomerulonephritis" }
+      ],
+      "guideline": "ACR/Vasculitis Foundation Guideline 2021 (PMID 34235894)"
+    },
+    {
+      "id": "cf",
+      "name_kr": "낭성 섬유증",
+      "name_en": "Cystic Fibrosis",
+      "abbr": "CF",
+      "orpha": "586",
+      "icd10": "E84.0",
+      "omim": "219700",
+      "category": "유전성 기도질환",
+      "prevalence": "1 / 3,000–25,000 (인종별)",
+      "onset": "소아기 (신생아 선별)",
+      "inheritance": "상염색체 열성 (CFTR)",
+      "summary": "CFTR 변이로 외분비선 점액이 비정상적으로 끈끈해지는 다장기 유전질환. 만성 기도감염·췌장기능부전이 특징이며 동아시아에서는 드물다.",
+      "key_features": ["만성 화농성 기침·기관지확장증", "녹농균 만성 감염", "췌장기능부전·지방변", "땀 염소 농도 상승", "남성 불임"],
+      "hpo": [
+        { "code": "HP:0002110", "label": "Bronchiectasis" },
+        { "code": "HP:0006538", "label": "Recurrent bronchopulmonary infections" },
+        { "code": "HP:0001738", "label": "Exocrine pancreatic insufficiency" }
+      ],
+      "guideline": "Cystic Fibrosis Foundation Consensus 2017"
+    },
+    {
+      "id": "cpfe",
+      "name_kr": "복합 폐섬유증-폐기종",
+      "name_en": "Combined Pulmonary Fibrosis and Emphysema",
+      "abbr": "CPFE",
+      "orpha": "300571",
+      "icd10": "J84.89",
+      "omim": null,
+      "category": "간질성 폐질환 (ILD)",
+      "prevalence": "희귀 (정확한 추정 부족)",
+      "onset": "성인 · 흡연 남성 우세",
+      "inheritance": "흡연 연관",
+      "summary": "상엽 폐기종과 하엽 섬유화가 공존하는 증후군. 폐용적이 보존된 반면 확산능이 심하게 저하되고 폐고혈압 합병이 흔하다.",
+      "key_features": ["중증 흡연력", "보존된 폐활량 + 심한 DLCO 저하", "상엽 폐기종 + 하엽 섬유화", "폐고혈압 동반 빈번", "운동시 저산소혈증"],
+      "hpo": [
+        { "code": "HP:0002206", "label": "Pulmonary fibrosis" },
+        { "code": "HP:0002097", "label": "Emphysema" },
+        { "code": "HP:0002092", "label": "Pulmonary arterial hypertension" }
+      ],
+      "guideline": "ATS/ERS Research Statement 2022 (PMID 36173644)"
+    },
+    {
+      "id": "dipnech",
+      "name_kr": "미만성 특발성 폐신경내분비세포 과형성",
+      "name_en": "Diffuse Idiopathic Pulmonary Neuroendocrine Cell Hyperplasia",
+      "abbr": "DIPNECH",
+      "orpha": "293376",
+      "icd10": "D38.1",
+      "omim": null,
+      "category": "기도·신경내분비 질환",
+      "prevalence": "1 / 1,000,000 미만",
+      "onset": "성인 · 중년 여성 우세",
+      "inheritance": "산발성",
+      "summary": "폐 신경내분비세포의 미만성 과형성으로 carcinoid tumorlet의 전구병변으로 간주된다. 비흡연 중년 여성의 만성 기침·폐쇄성 환기장애로 발현한다.",
+      "key_features": ["비흡연 여성", "만성 기침·천명", "폐쇄성 환기장애", "HRCT상 모자이크 감쇠+다발 결절", "carcinoid tumorlet 동반"],
+      "hpo": [
+        { "code": "HP:0031246", "label": "Nonproductive cough" },
+        { "code": "HP:0030828", "label": "Fine crackles" },
+        { "code": "HP:0006510", "label": "Chronic obstructive pulmonary disease" }
+      ],
+      "guideline": "케이스 시리즈 기반 · 표준 가이드라인 부재"
+    },
+    {
+      "id": "birt-hogg",
+      "name_kr": "버트-호그-듀베 증후군",
+      "name_en": "Birt-Hogg-Dubé Syndrome",
+      "abbr": "BHD",
+      "orpha": "122",
+      "icd10": "Q85.8",
+      "omim": "135150",
+      "category": "낭성 폐질환 (유전성)",
+      "prevalence": "1 / 200,000 미만",
+      "onset": "성인",
+      "inheritance": "상염색체 우성 (FLCN)",
+      "summary": "FLCN 변이로 피부 섬유모낭종, 폐 낭종·기흉, 신장 종양이 발생하는 유전 증후군. 반복성 기흉과 신세포암 위험이 핵심 관리 포인트.",
+      "key_features": ["반복성 자연기흉", "기저부·흉막하 다발 낭종", "피부 섬유모낭종", "신장 종양(다발·양측)", "FLCN 변이 가족력"],
+      "hpo": [
+        { "code": "HP:0002107", "label": "Pneumothorax" },
+        { "code": "HP:0006520", "label": "Cystic lung disease" },
+        { "code": "HP:0009726", "label": "Renal neoplasm" }
+      ],
+      "guideline": "유럽 BHD Consortium Consensus 2009"
+    }
+  ]
+}

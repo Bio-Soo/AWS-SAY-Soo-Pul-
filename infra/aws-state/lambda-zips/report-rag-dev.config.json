@@ -1,0 +1,63 @@
+{
+    "FunctionName": "report-rag-dev",
+    "FunctionArn": "arn:aws:lambda:ap-northeast-2:666803869796:function:report-rag-dev",
+    "Runtime": "python3.11",
+    "Role": "arn:aws:iam::666803869796:role/phase5-rag-dev-Phase5RagFunctionRole-8rfipCGscHZ5",
+    "Handler": "handler.lambda_handler",
+    "CodeSize": 26122,
+    "Description": "Phase5 RAG pipeline — Hybrid Dual RAG with Bedrock + Aurora",
+    "Timeout": 300,
+    "MemorySize": 1024,
+    "LastModified": "2026-05-26T13:28:45.000+0000",
+    "CodeSha256": "1ZzY5H0t/ofvJPpDER4fsS6i4oy9XqyETQPR8grV9y8=",
+    "Version": "$LATEST",
+    "VpcConfig": {
+        "SubnetIds": [
+            "subnet-02eed659772bac6aa",
+            "subnet-08f8d0eaa597b4f04"
+        ],
+        "SecurityGroupIds": [
+            "sg-03b9bc5d95699b797"
+        ],
+        "VpcId": "vpc-06dd0ad1f2335ea74",
+        "Ipv6AllowedForDualStack": false
+    },
+    "Environment": {
+        "Variables": {
+            "S3_BUCKET": "say2-2team-bucket",
+            "STAGE": "dev",
+            "BEDROCK_REGION": "ap-northeast-2",
+            "BEDROCK_MODEL_ID": "anthropic.claude-3-5-sonnet-20240620-v1:0"
+        }
+    },
+    "TracingConfig": {
+        "Mode": "Active"
+    },
+    "RevisionId": "a60a1e05-53c5-4a8b-a77e-c004fac1a35f",
+    "Layers": [
+        {
+            "Arn": "arn:aws:lambda:ap-northeast-2:666803869796:layer:phase5-deps-dev:6",
+            "CodeSize": 52909602
+        }
+    ],
+    "State": "Active",
+    "LastUpdateStatus": "Successful",
+    "PackageType": "Zip",
+    "Architectures": [
+        "x86_64"
+    ],
+    "EphemeralStorage": {
+        "Size": 512
+    },
+    "SnapStart": {
+        "ApplyOn": "None",
+        "OptimizationStatus": "Off"
+    },
+    "RuntimeVersionConfig": {
+        "RuntimeVersionArn": "arn:aws:lambda:ap-northeast-2::runtime:a0dd170e909c9230a7e18f978320f0053271b75d0b703c836ab4f98f2e3f6a5a"
+    },
+    "LoggingConfig": {
+        "LogFormat": "Text",
+        "LogGroup": "/aws/lambda/report-rag-dev"
+    }
+}

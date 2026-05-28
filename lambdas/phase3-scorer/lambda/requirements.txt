@@ -1,0 +1,2 @@
+# Phase 3 Lambda 핸들러 자체는 의존 없음 — 모든 패키지는 phase3-deps Layer에 위치.
+# 이 파일은 SAM이 Function CodeUri를 패키징할 때 빈 deps를 인지하도록 둠.

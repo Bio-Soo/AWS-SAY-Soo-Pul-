@@ -1,0 +1,46 @@
+{
+  "resourceType": "Bundle",
+  "type": "searchset",
+  "total": 1,
+  "entry": [
+    {
+      "resource": {
+        "resourceType": "Condition",
+        "clinicalStatus": {
+          "coding": [
+            {
+              "system": "http://terminology.hl7.org/CodeSystem/condition-clinical",
+              "code": "active"
+            }
+          ]
+        },
+        "verificationStatus": {
+          "coding": [
+            {
+              "system": "http://terminology.hl7.org/CodeSystem/condition-ver-status",
+              "code": "provisional"
+            }
+          ]
+        },
+        "code": {
+          "coding": [
+            {
+              "system": "http://hl7.org/fhir/sid/icd-10-cm",
+              "code": "J18.9",
+              "display": "Pneumonia, unspecified organism"
+            }
+          ],
+          "text": "지역사회획득 폐렴 의증"
+        },
+        "subject": {
+          "reference": "Patient/26-145982"
+        },
+        "encounter": {
+          "reference": "Encounter/26-145982-encounter"
+        },
+        "recordedDate": "2026-05-11T08:30:00+09:00"
+      },
+      "fullUrl": "Condition/?"
+    }
+  ]
+}
