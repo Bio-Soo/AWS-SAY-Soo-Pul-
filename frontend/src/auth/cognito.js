@@ -21,6 +21,9 @@ import {
 
 const POOL_ID   = import.meta.env.VITE_COGNITO_POOL_ID;
 const CLIENT_ID = import.meta.env.VITE_COGNITO_CLIENT_ID;
+// Mock auth: when VITE_USE_MOCK !== 'false' AND no Cognito creds (e.g. GitHub Pages
+// static demo), signIn() returns a fake doctor — any input is accepted.
+const USE_MOCK = import.meta.env.VITE_USE_MOCK !== 'false';
 
 let _pool = null;
 function getPool() {
@@ -84,6 +87,23 @@ export function signIn(doctorId, password) {
   return new Promise((resolve, reject) => {
     const pool = getPool();
     if (!pool) {
+      // Mock mode fallback (GitHub Pages demo / dev without Cognito).
+      if (USE_MOCK) {
+        const username = (doctorId || 'demo').trim() || 'demo';
+        resolve({
+          id:           username,
+          name:         username === 'demo' ? '시연 의사' : username,
+          role:         '호흡기내과 전문의',
+          institution:  'Soo-Pul 데모',
+          department:   '호흡기내과',
+          licenseNo:    'DEMO-000000',
+          emrVendor:    'smart_sandbox',
+          email:        `${username}@demo.local`,
+          worklistTime: '08:00',
+          idToken:      'mock-id-token',
+        });
+        return;
+      }
       reject(new Error('인증 설정이 누락되었습니다. 관리자에게 문의하세요.'));
       return;
     }
